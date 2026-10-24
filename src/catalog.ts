@@ -1,5 +1,5 @@
 // Unione del catalogo curato con le voci PrusaSlicer (logica pura, niente DOM).
-import type { Printer, PsPrinter } from './types.ts';
+import type { Printer, PsPrinter, Resin, ResinPrice } from './types.ts';
 
 const norm = (s: unknown): string => String(s ?? '').trim().toLowerCase();
 
@@ -46,4 +46,17 @@ export function bestModelMatch(printers: readonly Printer[], settingsId: unknown
     }
   }
   return best;
+}
+
+/** Prezzo €/L curato per una resina: prima regola la cui regex (senza maiuscole) coincide con "vendor name". */
+export function resinPriceInfo(resin: Pick<Resin, 'vendor' | 'name'>, prices: readonly ResinPrice[]): { price: number; estimated: boolean } | null {
+  const hay = `${resin.vendor} ${resin.name}`;
+  for (const p of prices) {
+    try { if (new RegExp(p.match, 'i').test(hay) && Number.isFinite(p.price_eur_l)) return { price: p.price_eur_l, estimated: p.estimated === true }; } catch { /* regex non valida: si ignora */ }
+  }
+  return null;
+}
+
+export function resinPrice(resin: Pick<Resin, 'vendor' | 'name'>, prices: readonly ResinPrice[]): number | null {
+  return resinPriceInfo(resin, prices)?.price ?? null;
 }

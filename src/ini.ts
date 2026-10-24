@@ -1,5 +1,6 @@
 // Parser per i file .ini dei profili PrusaSlicer.
-// Modulo ES senza dipendenze: usabile sia in Node sia nel browser.
+// Modulo ES (dipende solo da i18n.ts): usabile sia in Node sia nel browser.
+import { t } from './i18n.ts';
 import type { IniSections, KV } from './types.ts';
 
 const SECTION_RE = /^\[([^\]]+)\]$/;
@@ -60,7 +61,7 @@ export function resolveInherits(sections: IniSections): IniSections {
   function resolve(name: string): KV {
     const done = resolved[name];
     if (done !== undefined) return done;
-    if (visiting.has(name)) throw new Error(`Ereditarieta' circolare su "${name}"`);
+    if (visiting.has(name)) throw new Error(t('ini.circular', { name }));
     visiting.add(name);
 
     const own = sections[name] ?? {};

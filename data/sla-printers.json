@@ -1,0 +1,859 @@
+{
+  "generated": "2026-10-24",
+  "disclaimer": "Dati curati a mano da fonti pubbliche e store EU; prezzi e potenze possono essere datati. I campi elencati in 'estimated' sono stime, non valori verificati. null = dato non trovato.",
+  "printers": [
+    {
+      "id": "prusa-sl1s",
+      "brand": "Prusa",
+      "model": "SL1S SPEED",
+      "price_eur": {
+        "value": 1979,
+        "estimated": true
+      },
+      "lcd_size_in": 5.96,
+      "resolution": "2560x1620",
+      "vat_ml": null,
+      "power_w": {
+        "idle": {
+          "value": 5,
+          "estimated": true
+        },
+        "printing": {
+          "value": 50,
+          "estimated": true
+        },
+        "peak": 100
+      },
+      "lifetime_h": {
+        "value": 8000,
+        "estimated": true
+      },
+      "consumables": [
+        {
+          "name": "Pellicola FEP/nFEP",
+          "cost_eur": {
+            "value": 6,
+            "estimated": true
+          },
+          "life_prints": {
+            "value": 50,
+            "estimated": true
+          }
+        },
+        {
+          "name": "Display LCD",
+          "cost_eur": {
+            "value": 150,
+            "estimated": true
+          },
+          "life_h": {
+            "value": 2000,
+            "estimated": true
+          }
+        }
+      ],
+      "prusaslicer_models": [
+        "SL1S"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.printing",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_prints",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ],
+      "notes": "Rated power 100 W +/-5 W da rivenditore (non confermato su Prusa). Prezzo EUR da quotazione di lancio 2021 (1979 EUR), il listino attuale Prusa e' in USD. Vasca non trovata.",
+      "sources": [
+        "https://www.prusa3d.com/product/original-prusa-sl1s-speed-3d-printer",
+        "https://3dprintingindustry.com/news/prusa-launches-the-sl1s-speed-3d-printer-technical-specifications-and-pricing-191767/"
+      ]
+    },
+    {
+      "id": "elegoo-mars-3-pro",
+      "brand": "Elegoo",
+      "model": "Mars 3 Pro",
+      "price_eur": {
+        "value": 213.99,
+        "estimated": true
+      },
+      "lcd_size_in": 6.6,
+      "resolution": "4098x2560",
+      "vat_ml": null,
+      "power_w": {
+        "idle": {
+          "value": 5,
+          "estimated": true
+        },
+        "printing": {
+          "value": 32,
+          "estimated": true
+        },
+        "peak": {
+          "value": 72,
+          "estimated": true
+        }
+      },
+      "lifetime_h": {
+        "value": 8000,
+        "estimated": true
+      },
+      "consumables": [
+        {
+          "name": "Pellicola FEP/nFEP",
+          "cost_eur": {
+            "value": 6,
+            "estimated": true
+          },
+          "life_prints": {
+            "value": 50,
+            "estimated": true
+          }
+        },
+        {
+          "name": "Display LCD",
+          "cost_eur": {
+            "value": 90,
+            "estimated": true
+          },
+          "life_h": {
+            "value": 2000,
+            "estimated": true
+          }
+        }
+      ],
+      "prusaslicer_models": [],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.printing",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_prints",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ],
+      "notes": "Potenza: 72 W da printer-hub.ru, coincide con l'alimentatore 24 V / 3 A, quindi trattata come stima. Vasca non dichiarata nelle fonti trovate. Prezzo EUR da listino datato, probabilmente fuori produzione.",
+      "sources": [
+        "https://www.elegoo.com/collections/selected-accessories-for-lcd-resin-printers/products/elegoo-6-6-inches-4k-monochrome-lcd-for-mars-3-pro-3d-printer",
+        "https://www.3djake.com/elegoo/mars-3-pro",
+        "https://printer-hub.ru/en/printers/elegoo-mars-3-pro"
+      ]
+    },
+    {
+      "id": "elegoo-mars-4-ultra",
+      "brand": "Elegoo",
+      "model": "Mars 4 Ultra",
+      "price_eur": {
+        "value": 359,
+        "estimated": false
+      },
+      "lcd_size_in": 7,
+      "resolution": "8520x4320",
+      "vat_ml": null,
+      "power_w": {
+        "idle": {
+          "value": 5,
+          "estimated": true
+        },
+        "printing": {
+          "value": 27,
+          "estimated": true
+        },
+        "peak": {
+          "value": 60,
+          "estimated": true
+        }
+      },
+      "lifetime_h": {
+        "value": 8000,
+        "estimated": true
+      },
+      "consumables": [
+        {
+          "name": "Pellicola FEP/nFEP",
+          "cost_eur": {
+            "value": 6,
+            "estimated": true
+          },
+          "life_prints": {
+            "value": 50,
+            "estimated": true
+          }
+        },
+        {
+          "name": "Display LCD",
+          "cost_eur": {
+            "value": 110,
+            "estimated": true
+          },
+          "life_h": {
+            "value": 2000,
+            "estimated": true
+          }
+        }
+      ],
+      "prusaslicer_models": [],
+      "estimated": [
+        "power_w.idle",
+        "power_w.printing",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_prints",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ],
+      "notes": "Prezzo 359 EUR da rivenditore EE (Muziker). LCD 7\" 9K 8520x4320 e build volume 153.36x77.76x165 mm da rivenditori. Potenza non dichiarata: stima per classe 7\". Vasca non dichiarata.",
+      "sources": [
+        "https://www.3djake.com/elegoo/fep-film-set-of-5?sai=8162",
+        "https://muziker.ee/elegoo-mars-4-ultra",
+        "https://us.elegoo.com/products/elegoo-mars-4-ultra-msla-resin-3d-printer-with-9k-mono-lcd"
+      ]
+    },
+    {
+      "id": "elegoo-mars-5-ultra",
+      "brand": "Elegoo",
+      "model": "Mars 5 Ultra",
+      "price_eur": {
+        "value": 269.5,
+        "estimated": true
+      },
+      "lcd_size_in": 7,
+      "resolution": "8520x4320",
+      "vat_ml": null,
+      "power_w": {
+        "idle": {
+          "value": 5,
+          "estimated": true
+        },
+        "printing": {
+          "value": 27,
+          "estimated": true
+        },
+        "peak": {
+          "value": 60,
+          "estimated": true
+        }
+      },
+      "lifetime_h": {
+        "value": 8000,
+        "estimated": true
+      },
+      "consumables": [
+        {
+          "name": "Pellicola FEP/nFEP",
+          "cost_eur": {
+            "value": 6,
+            "estimated": true
+          },
+          "life_prints": {
+            "value": 50,
+            "estimated": true
+          }
+        },
+        {
+          "name": "Display LCD",
+          "cost_eur": {
+            "value": 110,
+            "estimated": true
+          },
+          "life_h": {
+            "value": 2000,
+            "estimated": true
+          }
+        }
+      ],
+      "prusaslicer_models": [],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.printing",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_prints",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ],
+      "notes": "Risoluzione 9K (8520x4320) da schede rivenditori. Prezzo EUR incl. IVA da store NL (269,50 EUR), da verificare. Potenza non trovata: stima per classe 7\" (la 24 V / 3 A della PSU non e' il consumo). Vasca non dichiarata.",
+      "sources": [
+        "https://www.galaxus.at/en/s1/product/elegoo-mars-5-ultra-3d-printers-52539082",
+        "https://www.notebookcheck.com/Mars-5-Ultra-9K-3D-Drucker-verspricht-starke-Details-und-startet-auf-Amazon-mit-grossem-Rabatt.889586.0.html"
+      ]
+    },
+    {
+      "id": "elegoo-saturn-2",
+      "brand": "Elegoo",
+      "model": "Saturn 2",
+      "price_eur": {
+        "value": 399,
+        "estimated": true
+      },
+      "lcd_size_in": 10,
+      "resolution": "7680x4320",
+      "vat_ml": null,
+      "power_w": {
+        "idle": {
+          "value": 5,
+          "estimated": true
+        },
+        "printing": {
+          "value": 45,
+          "estimated": true
+        },
+        "peak": {
+          "value": 100,
+          "estimated": true
+        }
+      },
+      "lifetime_h": {
+        "value": 8000,
+        "estimated": true
+      },
+      "consumables": [
+        {
+          "name": "Pellicola FEP/nFEP",
+          "cost_eur": {
+            "value": 6,
+            "estimated": true
+          },
+          "life_prints": {
+            "value": 50,
+            "estimated": true
+          }
+        },
+        {
+          "name": "Display LCD",
+          "cost_eur": {
+            "value": 150,
+            "estimated": true
+          },
+          "life_h": {
+            "value": 2000,
+            "estimated": true
+          }
+        }
+      ],
+      "prusaslicer_models": [],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.printing",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_prints",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ],
+      "notes": "LCD 10\" 8K 7680x4320 e build volume 218.88x123.12x250 mm da Tom's Hardware / 3DWithUs (Polyspectra indica Z 210 mm). Prezzo e potenza non trovati: stime per classe 10\".",
+      "sources": [
+        "https://tomshardware.com/reviews/elegoo-saturn-2-8k-resin-3d-printer",
+        "https://3dwithus.com/elegoo-saturn-2-review-8k-high-resolution-resin-3d-printer"
+      ]
+    },
+    {
+      "id": "elegoo-saturn-3-ultra",
+      "brand": "Elegoo",
+      "model": "Saturn 3 Ultra 12K",
+      "price_eur": {
+        "value": 329.99,
+        "estimated": false
+      },
+      "lcd_size_in": 10,
+      "resolution": "11520x5120",
+      "vat_ml": null,
+      "power_w": {
+        "idle": {
+          "value": 5,
+          "estimated": true
+        },
+        "printing": {
+          "value": 67,
+          "estimated": true
+        },
+        "peak": {
+          "value": 150,
+          "estimated": true
+        }
+      },
+      "lifetime_h": {
+        "value": 8000,
+        "estimated": true
+      },
+      "consumables": [
+        {
+          "name": "Pellicola FEP/nFEP",
+          "cost_eur": {
+            "value": 6,
+            "estimated": true
+          },
+          "life_prints": {
+            "value": 50,
+            "estimated": true
+          }
+        },
+        {
+          "name": "Display LCD",
+          "cost_eur": {
+            "value": 150,
+            "estimated": true
+          },
+          "life_h": {
+            "value": 2000,
+            "estimated": true
+          }
+        }
+      ],
+      "prusaslicer_models": [],
+      "estimated": [
+        "power_w.idle",
+        "power_w.printing",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_prints",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ],
+      "notes": "Prezzo 329,99 EUR da store EU Elegoo (listino 412,99 scontato). Build volume 218.88x122.88x260 mm. Le fonti che citano 180 W usano il calcolo da PSU 24 V / 7.5 A, non il consumo: stima 150 W peak. Vasca non dichiarata.",
+      "sources": [
+        "https://elegoo.com/products/elegoo-saturn-3-ultra-resin-3d-printer-12k",
+        "https://www.3dsourced.com/news/elegoo-launches-saturn-3-ultra/",
+        "https://eu.elegoo.com/en-at/collections/parts-accessories/products/elegoo-saturn-3-ultra-resin-3d-printer-12k"
+      ]
+    },
+    {
+      "id": "elegoo-saturn-4-ultra",
+      "brand": "Elegoo",
+      "model": "Saturn 4 Ultra 12K",
+      "price_eur": {
+        "value": 349,
+        "estimated": true
+      },
+      "lcd_size_in": 10,
+      "resolution": "11520x5120",
+      "vat_ml": null,
+      "power_w": {
+        "idle": {
+          "value": 5,
+          "estimated": true
+        },
+        "printing": {
+          "value": 65,
+          "estimated": true
+        },
+        "peak": {
+          "value": 144,
+          "estimated": true
+        }
+      },
+      "lifetime_h": {
+        "value": 8000,
+        "estimated": true
+      },
+      "consumables": [
+        {
+          "name": "Pellicola FEP/nFEP",
+          "cost_eur": {
+            "value": 6,
+            "estimated": true
+          },
+          "life_prints": {
+            "value": 50,
+            "estimated": true
+          }
+        },
+        {
+          "name": "Display LCD",
+          "cost_eur": {
+            "value": 150,
+            "estimated": true
+          },
+          "life_h": {
+            "value": 2000,
+            "estimated": true
+          }
+        }
+      ],
+      "prusaslicer_models": [],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.printing",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_prints",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ],
+      "notes": "Potenza 144 W dal solo aggregatore printer-hub.ru (non ufficiale, da confermare): stimata, printing come 45% del peak. Prezzo EUR non trovato: stima da listino lancio USD 299 con varianti superiori. Varianti 12K e 16K con build volume diversi (218.88x122.88x220 e 211.68x118.37x220 mm). Vasca non dichiarata.",
+      "sources": [
+        "https://west3d.com/products/elegoo-saturn-4-ultra-12k-high-speed-high-precision-3d-printer",
+        "https://www.123-3d.co.uk/Elegoo-Saturn-4-Ultra-16K-3D-printer-50-101-038300-i12100.html",
+        "https://printer-hub.ru/en/printers/elegoo-saturn-4-ultra"
+      ]
+    },
+    {
+      "id": "anycubic-photon-mono-2",
+      "brand": "Anycubic",
+      "model": "Photon Mono 2",
+      "price_eur": {
+        "value": 189,
+        "estimated": false
+      },
+      "lcd_size_in": 6.6,
+      "resolution": "4096x2560",
+      "vat_ml": null,
+      "power_w": {
+        "idle": {
+          "value": 5,
+          "estimated": true
+        },
+        "printing": {
+          "value": 27,
+          "estimated": true
+        },
+        "peak": {
+          "value": 60,
+          "estimated": false
+        }
+      },
+      "lifetime_h": {
+        "value": 8000,
+        "estimated": true
+      },
+      "consumables": [
+        {
+          "name": "Pellicola FEP/nFEP",
+          "cost_eur": {
+            "value": 6,
+            "estimated": true
+          },
+          "life_prints": {
+            "value": 50,
+            "estimated": true
+          }
+        },
+        {
+          "name": "Display LCD",
+          "cost_eur": {
+            "value": 90,
+            "estimated": true
+          },
+          "life_h": {
+            "value": 2000,
+            "estimated": false
+          }
+        }
+      ],
+      "prusaslicer_models": [],
+      "estimated": [
+        "power_w.idle",
+        "power_w.printing",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_prints",
+        "consumables[1].cost_eur"
+      ],
+      "notes": "Prezzo 189 EUR da store DE in saldo (listino 219 EUR); lancio 209 EUR. Consumo 60 W dal sito Anycubic Canada; lo store riporta alimentatore 48 W (rated power) e le fonti non sono concordi, quindi peak 60 W. Build volume 165x89x143 mm. Vasca non dichiarata. LCD 2000 h da specifiche.",
+      "sources": [
+        "https://de.anycubic.com/collections/jubilaumsverkauf/products/anycubic-photon-mono-2",
+        "https://www.galaxus.nl/en/s1/product/anycubic-photon-mono-2-3d-printers-25432010",
+        "https://ca.anycubic.com/products/photon-mono-2"
+      ]
+    },
+    {
+      "id": "anycubic-photon-mono-m5s",
+      "brand": "Anycubic",
+      "model": "Photon Mono M5s",
+      "price_eur": {
+        "value": 579,
+        "estimated": true
+      },
+      "lcd_size_in": 10.1,
+      "resolution": "11520x5120",
+      "vat_ml": null,
+      "power_w": {
+        "idle": {
+          "value": 5,
+          "estimated": true
+        },
+        "printing": {
+          "value": 45,
+          "estimated": true
+        },
+        "peak": {
+          "value": 100,
+          "estimated": true
+        }
+      },
+      "lifetime_h": {
+        "value": 8000,
+        "estimated": true
+      },
+      "consumables": [
+        {
+          "name": "Pellicola FEP/nFEP",
+          "cost_eur": {
+            "value": 6,
+            "estimated": true
+          },
+          "life_prints": {
+            "value": 50,
+            "estimated": true
+          }
+        },
+        {
+          "name": "Display LCD",
+          "cost_eur": {
+            "value": 150,
+            "estimated": true
+          },
+          "life_h": {
+            "value": 2000,
+            "estimated": true
+          }
+        }
+      ],
+      "prusaslicer_models": [],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.printing",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_prints",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ],
+      "notes": "Risoluzione in conflitto: store Anycubic 14K, Tom's Guide e Notebookcheck 12K (11520x5120), Galaxus 11520x5120 e 19 um. Early-bird 399 EUR a tempo limitato (Tom's Guide); prezzo 579 EUR listino datato, stima. Build volume 218x123x200 mm. Potenza non trovata: stima per classe 10\". Vasca non dichiarata.",
+      "sources": [
+        "https://anycubic.au/products/anycubic-photon-mono-m5s",
+        "https://www.notebookcheck.com/Anycubic-Photon-Mono-M5s-Guenstiger-3D-Drucker-mit-12K-Aufloesung-und-Auto-Leveling-mit-Fruehbucher-Rabatt-erhaeltlich.717914.0.html",
+        "https://www.tomsguide.com/news/anycubics-latest-resin-printer-brings-12k-leveling-free-3d-printing-to-the-consumer-market"
+      ]
+    },
+    {
+      "id": "anycubic-photon-mono-m7-pro",
+      "brand": "Anycubic",
+      "model": "Photon Mono M7 Pro",
+      "price_eur": {
+        "value": 549,
+        "estimated": false
+      },
+      "lcd_size_in": 10.1,
+      "resolution": "13320x5120",
+      "vat_ml": {
+        "value": 1000,
+        "estimated": false
+      },
+      "power_w": {
+        "idle": {
+          "value": 5,
+          "estimated": true
+        },
+        "printing": {
+          "value": 67,
+          "estimated": true
+        },
+        "peak": {
+          "value": 150,
+          "estimated": true
+        }
+      },
+      "lifetime_h": {
+        "value": 8000,
+        "estimated": true
+      },
+      "consumables": [
+        {
+          "name": "Pellicola FEP/nFEP",
+          "cost_eur": {
+            "value": 6,
+            "estimated": true
+          },
+          "life_prints": {
+            "value": 50,
+            "estimated": true
+          }
+        },
+        {
+          "name": "Display LCD",
+          "cost_eur": {
+            "value": 150,
+            "estimated": true
+          },
+          "life_h": {
+            "value": 2000,
+            "estimated": true
+          }
+        }
+      ],
+      "prusaslicer_models": [],
+      "estimated": [
+        "power_w.idle",
+        "power_w.printing",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_prints",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ],
+      "notes": "Prezzo 549 EUR incl. IVA da store EU in saldo (listino 669). Vasca fino a 1 L da store Anycubic. Build volume 223x126x230 mm. Il 240 W citato e' l'alimentatore, non il consumo: stima 150 W peak.",
+      "sources": [
+        "https://eu.anycubic.com/products/photon-mono-m7-pro",
+        "https://store.anycubic.com/products/photon-mono-m7-pro"
+      ]
+    },
+    {
+      "id": "creality-halot-mage",
+      "brand": "Creality",
+      "model": "Halot-Mage (CL-103L)",
+      "price_eur": {
+        "value": 289,
+        "estimated": true
+      },
+      "lcd_size_in": 10.3,
+      "resolution": "7680x4320",
+      "vat_ml": null,
+      "power_w": {
+        "idle": {
+          "value": 5,
+          "estimated": true
+        },
+        "printing": {
+          "value": 45,
+          "estimated": true
+        },
+        "peak": {
+          "value": 100,
+          "estimated": false
+        }
+      },
+      "lifetime_h": {
+        "value": 8000,
+        "estimated": true
+      },
+      "consumables": [
+        {
+          "name": "Pellicola FEP/nFEP",
+          "cost_eur": {
+            "value": 3,
+            "estimated": true
+          },
+          "life_prints": {
+            "value": 50,
+            "estimated": true
+          }
+        },
+        {
+          "name": "Display LCD",
+          "cost_eur": {
+            "value": 150,
+            "estimated": true
+          },
+          "life_h": {
+            "value": 2000,
+            "estimated": true
+          }
+        }
+      ],
+      "prusaslicer_models": [],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.printing",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_prints",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ],
+      "notes": "Peak 100 W da schede tecnica citate (confermato da piu' fonti). Prezzo: UK GBP 250 incl. IVA, USD 399 da comparatore, stima EU 289 EUR. Build volume 228x128x230 mm. Il Halot-Mage S (14K) e' un modello diverso. Vasca non dichiarata.",
+      "sources": [
+        "https://3dpros.com/printers/halot-mage",
+        "https://www.3djake.com/creality-3d-printers-spare-parts/halot-mage",
+        "https://www.123-3d.co.uk/Creality3D-Creality-3D-Halot-Mage-CL-103L-3D-printer-1003040102-i9564-t17986.html",
+        "https://printer-hub.ru/en/compare/creality-halot-mage-vs-elegoo-saturn-4"
+      ]
+    },
+    {
+      "id": "phrozen-sonic-mini-8k",
+      "brand": "Phrozen",
+      "model": "Sonic Mini 8K",
+      "price_eur": {
+        "value": 459.8,
+        "estimated": false
+      },
+      "lcd_size_in": 7.1,
+      "resolution": "7680x4320",
+      "vat_ml": null,
+      "power_w": {
+        "idle": {
+          "value": 5,
+          "estimated": true
+        },
+        "printing": {
+          "value": 23,
+          "estimated": true
+        },
+        "peak": {
+          "value": 50,
+          "estimated": false
+        }
+      },
+      "lifetime_h": {
+        "value": 8000,
+        "estimated": true
+      },
+      "consumables": [
+        {
+          "name": "Pellicola FEP/nFEP",
+          "cost_eur": {
+            "value": 8,
+            "estimated": true
+          },
+          "life_prints": {
+            "value": 50,
+            "estimated": true
+          }
+        },
+        {
+          "name": "Display LCD",
+          "cost_eur": {
+            "value": 90,
+            "estimated": true
+          },
+          "life_h": {
+            "value": 2000,
+            "estimated": true
+          }
+        }
+      ],
+      "prusaslicer_models": [],
+      "estimated": [
+        "power_w.idle",
+        "power_w.printing",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_prints",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ],
+      "notes": "Potenza di sistema 50 W (24 V / 3 A) dalla pagina ufficiale Phrozen, sostituisce la stima 48 W presa dalla variante Mini 8K S. Prezzo 459,80 EUR da store EU (Mini 8K S 363 EUR). Vasca non dichiarata.",
+      "sources": [
+        "https://eu.phrozen3d.com/products/sonic-mini-8k-s",
+        "https://3dprintingindustry.com/news/phrozen-launches-its-sonic-mini-8k-3d-printer-and-new-resin-technical-specifications-and-pricing-197275/",
+        "https://global.phrozen3d.com/products/sonic-mini-8k"
+      ]
+    }
+  ]
+}

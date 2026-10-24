@@ -1,5 +1,6 @@
 // Lettore minimale di .bgcode (libbgcode): legge solo i blocchi di metadati.
 import { extract } from './gcode.ts';
+import { t } from './i18n.ts';
 import type { BgcodeResult, KV } from './types.ts';
 
 const META_TYPES = new Set([0, 2, 3, 4]); // file, slicer, printer, print
@@ -26,7 +27,7 @@ export async function parseBgcode(buf: ArrayBuffer): Promise<BgcodeResult> {
   const view = new DataView(buf);
   const bytes = new Uint8Array(buf);
   if (buf.byteLength < 10 || String.fromCharCode(...bytes.slice(0, 4)) !== 'GCDE') {
-    throw new Error('File .bgcode non valido: manca la firma GCDE.');
+    throw new Error(t('bgcode.badSig'));
   }
   const checksum = view.getUint16(8, true) === 1 ? 4 : 0;
   const decoder = new TextDecoder();
@@ -36,7 +37,7 @@ export async function parseBgcode(buf: ArrayBuffer): Promise<BgcodeResult> {
 
   while (pos + 8 <= buf.byteLength) {
     const type = view.getUint16(pos, true);
-    const truncMsg = 'File troncato: intestazione di un blocco oltre i dati letti, metadati possibilmente incompleti.';
+    const truncMsg = t('bgcode.truncHdr');
     const comp = view.getUint16(pos + 2, true);
     const rawSize = view.getUint32(pos + 4, true);
     let hdr = 8, dataSize = rawSize;
@@ -48,16 +49,16 @@ export async function parseBgcode(buf: ArrayBuffer): Promise<BgcodeResult> {
     const params = type === 5 ? 6 : 2;
     if (pos + hdr + params > buf.byteLength) { warnings.push(truncMsg); break; }
     const start = pos + hdr + params;
-    if (start + dataSize > buf.byteLength) { warnings.push('File troncato: un blocco di metadati supera i dati letti, metadati possibilmente incompleti.'); break; }
+    if (start + dataSize > buf.byteLength) { warnings.push(t('bgcode.truncBlock')); break; }
 
     if (META_TYPES.has(type)) {
       try {
         const slice = bytes.slice(start, start + dataSize);
         if (comp === 0) merged[type] = parseIniKv(decoder.decode(slice));
         else if (comp === 1) merged[type] = parseIniKv(decoder.decode(await inflate(slice)));
-        else warnings.push(`Compressione ${COMP_NAMES[comp] ?? comp} non supportata: blocco di metadati saltato.`);
+        else warnings.push(t('bgcode.compress', { c: COMP_NAMES[comp] ?? comp }));
       } catch (e) {
-        warnings.push(`Blocco di metadati illeggibile (${e instanceof Error ? e.message : String(e)}).`);
+        warnings.push(t('bgcode.unreadable', { err: e instanceof Error ? e.message : String(e) }));
       }
     }
     pos = start + dataSize + checksum;
@@ -66,7 +67,11 @@ export async function parseBgcode(buf: ArrayBuffer): Promise<BgcodeResult> {
   const kv: KV = Object.assign({}, merged[0], merged[3], merged[2], merged[4]);
   const data = extract(kv);
   if (data.grams === null && data.hours === null && !warnings.length) {
-    warnings.push('Nessun dato di stampa trovato nei metadati.');
+    warnings.push(t('bgcode.noData'));
   }
-  return { data, warnings };
+  const num = (v: string | undefined): number | null => { const x = parseFloat(v ?? ''); return Number.isFinite(x) ? x : null; };
+  const perExtruderGrams = (kv['filament used [g]'] ?? '').split(/[,;]/).map((x) => parseFloat(x)).filter((x) => Number.isFinite(x));
+  const wasteGrams = num(kv['total filament used for wipe tower [g]']);
+  const toolChanges = num(kv['total toolchanges']) ?? (wasteGrams !== null ? 0 : null);
+  return { data, warnings, extra: { perExtruderGrams, wasteGrams, toolChanges } };
 }

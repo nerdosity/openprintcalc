@@ -408,6 +408,10 @@
       "prusaslicer_models": [
         "BBL A1"
       ],
+      "aliases": [
+        "Bambu Lab A1",
+        "A1"
+      ],
       "notes": "349 EUR e il prezzo del Combo (con AMS Lite) da un'offerta di terze parti scaduta, non il prezzo base. Idle 5 W e PLA 95 W dallo snippet della wiki Bambu (da confermare sulla pagina). Picco stimato. [PrusaSlicer] Nome NON verificato (vedi sopra).",
       "sources": [
         "https://wiki.bambulab.com/en/general/power-consumption",
@@ -464,6 +468,10 @@
       ],
       "prusaslicer_models": [
         "BBL A1 mini"
+      ],
+      "aliases": [
+        "Bambu Lab A1 mini",
+        "A1 mini"
       ],
       "notes": "Consumo PLA 85 W e picco 135 W dal test di Igor's Lab (singola recensione). Vita utile 4000 h stimata. [PrusaSlicer] Nome NON verificato: il repo prusa3d/PrusaSlicer-settings-non-prusa-fff non contiene una cartella Bambu. Prezzo 199 EUR dallo store ufficiale EU (eu.store.bambulab.com, pagina a1-mini; il prezzo puo variare con la destinazione).",
       "sources": [
@@ -524,6 +532,10 @@
       "prusaslicer_models": [
         "BBL H2D"
       ],
+      "aliases": [
+        "Bambu Lab H2D",
+        "H2D"
+      ],
       "notes": "Dati dalla wiki Bambu (dynamic test): PLA 197 W, standby 25-27 W, PETG 150 W, PC 395 W (il 395 e PC, non ABS). Picco 2200 W = potenza nominale a 220 V, non misurata. Prezzo 1699 EUR = Combo da un'offerta scaduta. Lifetime 6000 h stimata. [PrusaSlicer] Nome NON verificato (vedi sopra). Ricerca prezzi: nessun prezzo EUR ufficiale trovato per H2D.",
       "sources": [
         "https://wiki.bambulab.com/en/general/power-consumption",
@@ -580,6 +592,10 @@
         }
       ],
       "prusaslicer_models": [],
+      "aliases": [
+        "Bambu Lab H2S",
+        "H2S"
+      ],
       "notes": "Build 340x320x340 mm (dato di piu rivenditori), chamber fino a 65 C, hotend fino a 350 C, bed fino a 120 C. Prezzo 1285 EUR IVA incl. da Makerpoint NL (base, senza AMS): non e lo store Bambu EU (bloccato). Picco 2050 W dichiarato da Bambu a 220 V (1170 W a 110 V), con nota che tiene la massima potenza per circa 3 minuti: valore nominale, non misurato. Nessuna misura con wattmetro trovata per H2S. idle, PLA e ABS sono stime derivate dalla wiki Bambu per H2D (standby 25-27 W, PLA 197 W, PC 395 W): l'H2S con una sola testa dovrebbe consumare meno, quindi valori stimati al ribasso. bed_heater_w e hotend_heater_w stimati dal fratello H2D. Lifetime 6000 h stimata. Nome PrusaSlicer non verificato, lasciato vuoto.",
       "sources": [
         "https://www.makerpoint.nl/en-gb/3d-printing/3d-printers/fff/bambu-lab-h2s-210000007724",
@@ -640,6 +656,10 @@
         }
       ],
       "prusaslicer_models": [],
+      "aliases": [
+        "Bambu Lab P1P",
+        "P1P"
+      ],
       "notes": "Open frame (non chiusa): le pagine P1S e P1P la distinguono. Build 256x256x256 mm. Prezzo 399 EUR da eu.store.bambulab.com (snippet di ricerca, non verificato: lo store EU blocca WebFetch con 402); il prezzo barrato da 779 nello snippet e incoerente, quindi non usato. Consumi: nessuna misura trovata per P1P. idle/PLA/picco sono stime derivate dai dati P1S del forum Bambu (media 30-70 W, spunto 850 W all'avvio, idle 9-10 W), con il telaio aperto ipotizzato a idle leggermente inferiore. avg_high_temp null: senza camera chiusa non si stampa ABS/PC in sicurezza. Nome PrusaSlicer non verificato, lasciato vuoto.",
       "sources": [
         "https://eu.store.bambulab.com/en-it/products/p1p",
@@ -702,6 +722,10 @@
       "prusaslicer_models": [
         "BBL P1S"
       ],
+      "aliases": [
+        "Bambu Lab P1S",
+        "P1S"
+      ],
       "notes": "Prezzo stimato. Idle 9-10 W da utenti del forum Bambu. Media PLA 30-70 W e picco 850 W dal forum (log con smart plug, spunto all'avvio). Il valore 105 W per la camera calda deriva da wiki/blog riferiti a X1C: usato come stima. Lifetime 5000 h stimata. [PrusaSlicer] Nome NON verificato (vedi sopra). Prezzo 499 EUR \"a partire da\" dalla pagina P1 Series dello store EU (data non indicata); comparatore 1/10/2026 a 469.95 EUR.",
       "sources": [
         "https://forum.bambulab.com/t/p1s-power-consumption/173002",
@@ -761,6 +785,12 @@
       "prusaslicer_models": [
         "BBL X1C"
       ],
+      "aliases": [
+        "Bambu Lab X1 Carbon",
+        "Bambu Lab X1C",
+        "X1 Carbon",
+        "X1C"
+      ],
       "notes": "Idle 8.5-9.9 W e PLA medio 105 W dalla wiki Bambu (versione cinese, riga X1/X1C). Picco circa 1 kW durante il riscaldamento del letto a 100 C (utente del forum). ABS stimato. [PrusaSlicer] Nome NON verificato (vedi sopra). Prezzo 1049 EUR \"a partire da\" dalla pagina X1 Series dello store EU (il valore puo dipendere dalla configurazione).",
       "sources": [
         "https://wiki.bambulab.com/zh/general/power-consumption",
@@ -817,6 +847,10 @@
         }
       ],
       "prusaslicer_models": [],
+      "aliases": [
+        "Bambu Lab X1E",
+        "X1E"
+      ],
       "notes": "Build 256x256x256 mm, camera chiusa con chamber riscaldata fino a 60 C (spec ufficiale), hotend fino a 320 C. Prezzo non ufficiale: Bambu non vende X1E sul proprio store, solo tramite rivenditori. Snippet trovati: 2269 EUR escl. IVA (esaurito) e 2699 EUR escl. IVA: usato 2699 come stima. Picco 750 W dichiarato da 3DPros (valore massimo, non misurato). idle 9 W e PLA 105 W derivati dai dati X1C della wiki Bambu (stima per X1E, non misura). avg_high_temp 150 W stimato dal dato X1C. Nessuna misura con wattmetro trovata per X1E. Lifetime 6000 h stimata (versione enterprise). Nome PrusaSlicer non verificato, lasciato vuoto.",
       "sources": [
         "https://3dpros.com/printers/bambu-lab-x1e",

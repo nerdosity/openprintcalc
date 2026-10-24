@@ -4,114 +4,155 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OpenPrintCalc</title>
-  <meta name="description" content="Calcolatore di costi e preventivi per stampa 3D.">
+  <meta name="description" content="Calcolatore di costi e preventivi per stampa 3D." data-i18n-attr="content:app.desc">
+  <meta name="theme-color" content="#0d1013">
+  <link rel="manifest" href="manifest.webmanifest">
   <meta name="color-scheme" content="dark">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d1013'/%3E%3Cpath d='M6 24V8h8a5 5 0 010 10H6' fill='none' stroke='%2333e0e6' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
   <link rel="stylesheet" href="css/style.css">
+  <script>if (location.hash.startsWith('#q=')) document.documentElement.classList.add('client');</script>
 </head>
 <body>
   <header class="top">
     <h1><span class="mark">OPC</span> OpenPrintCalc</h1>
-    <p>Quanto costa davvero questa stampa.</p>
+    <p data-i18n="app.tagline">Quanto costa davvero questa stampa.</p>
+    <button type="button" class="icon-btn gear" id="open-settings" title="Impostazioni" aria-label="Impostazioni" aria-haspopup="dialog" data-i18n-attr="title:set.title;aria-label:set.title">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 14.5a1.6 1.6 0 0 0 .3 1.8l.1.1a1.9 1.9 0 1 1-2.7 2.7l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V20a1.9 1.9 0 1 1-3.8 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a1.9 1.9 0 1 1-2.7-2.7l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H4a1.9 1.9 0 1 1 0-3.8h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a1.9 1.9 0 1 1 2.7-2.7l.1.1a1.6 1.6 0 0 0 1.8.3h0a1.6 1.6 0 0 0 1-1.5V4a1.9 1.9 0 1 1 3.8 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a1.9 1.9 0 1 1 2.7 2.7l-.1.1a1.6 1.6 0 0 0-.3 1.8v0a1.6 1.6 0 0 0 1.5 1h.1a1.9 1.9 0 1 1 0 3.8h-.1a1.6 1.6 0 0 0-1.5 1z"/></svg>
+    </button>
   </header>
+
+  <main class="client-view" id="client-view"></main>
 
   <main class="layout">
     <div class="inputs">
 
       <section class="mod" aria-labelledby="h-file">
-        <h2 id="h-file">File G-code</h2>
+        <h2 id="h-file" data-i18n="file.h">File G-code</h2>
         <label class="drop" id="drop" for="file-gcode">
-          <input id="file-gcode" type="file" accept=".gcode,.bgcode,.bgc,.gco">
-          <strong>Trascina qui un .gcode o .bgcode</strong>
-          <span>oppure clicca per sceglierlo. Il file non lascia il tuo browser.</span>
+          <input id="file-gcode" type="file" accept=".gcode,.bgcode,.bgc,.gco,.3mf,.sl1,.sl1s">
+          <strong data-i18n="file.drop">Trascina qui un .gcode, .bgcode, .3mf o .sl1</strong>
+          <span data-i18n="file.dropSub">oppure clicca per sceglierlo. Il file non lascia il tuo browser.</span>
         </label>
         <ul class="msgs" id="file-msg" aria-live="polite"></ul>
-        <div id="params" hidden><h3 class="sub">Parametri di stampa</h3><ul class="msgs" id="params-list"></ul></div>
+        <div id="params" hidden><h3 class="sub" data-i18n="params.h">Parametri di stampa</h3><ul class="msgs" id="params-list"></ul></div>
       </section>
 
       <section class="mod" aria-labelledby="h-printer">
-        <h2 id="h-printer">Stampante</h2>
-        <div class="row">
-          <label for="psearch">Cerca</label>
-          <input id="psearch" type="search" placeholder="es. Creality Ender-3" autocomplete="off">
+        <h2 id="h-printer" data-i18n="printer.h">Stampante</h2>
+        <div class="seg" role="group" aria-label="Tecnologia di stampa" data-i18n-attr="aria-label:tech.label">
+          <button type="button" id="tech-fdm" data-tech="fdm" aria-pressed="true" data-i18n="tech.fdm">Filamento</button>
+          <button type="button" id="tech-sla" data-tech="sla" aria-pressed="false" data-i18n="tech.sla">Resina</button>
         </div>
-        <div class="row">
-          <label for="printer">Modello</label>
+        <div class="row fdm-only">
+          <label for="psearch" data-i18n="common.search">Cerca</label>
+          <input id="psearch" type="search" placeholder="es. Creality Ender-3" data-i18n-attr="placeholder:printer.searchPh" autocomplete="off">
+        </div>
+        <div class="row fdm-only">
+          <label for="printer" data-i18n="printer.model">Modello</label>
           <select id="printer"></select>
         </div>
-        <div class="grid2">
-          <div class="fld" data-f="watt"><label for="f-watt">Potenza media <small>W</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-watt" type="number" inputmode="decimal" min="0" step="any"></div>
-          <div class="fld" data-f="machineCost"><label for="f-machineCost">Costo macchina <small>€</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-machineCost" type="number" inputmode="decimal" min="0" step="any"></div>
-          <div class="fld" data-f="lifeH"><label for="f-lifeH">Vita utile <small>ore</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-lifeH" type="number" inputmode="decimal" min="0" step="any"></div>
-          <div class="fld" data-f="wear"><label for="f-wear">Usura <small>€/h</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-wear" type="number" inputmode="decimal" min="0" step="any"></div>
+        <div class="grid2 fdm-only">
+          <div class="fld" data-f="watt"><label for="f-watt"><span data-i18n="f.watt">Potenza media</span> <small>W</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-watt" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="machineCost"><label for="f-machineCost"><span data-i18n="f.machineCost">Costo macchina</span> <small data-i18n="u.cur">€</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-machineCost" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="lifeH"><label for="f-lifeH"><span data-i18n="f.lifeH">Vita utile</span> <small data-i18n="u.hours">ore</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-lifeH" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="wear"><label for="f-wear"><span data-i18n="f.wear">Usura</span> <small data-i18n="u.curH">€/h</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-wear" type="number" inputmode="decimal" min="0" step="any"></div>
         </div>
-        <details class="cons model" id="model">
-          <summary>Modello di consumo</summary>
+        <div class="row sla-only" hidden>
+          <label for="sprinter" data-i18n="printer.model">Modello</label>
+          <select id="sprinter"></select>
+        </div>
+        <div class="grid2 sla-only" hidden>
+          <div class="fld" data-f="sWatt"><label for="f-sWatt"><span data-i18n="f.watt">Potenza media</span> <small>W</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-sWatt" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="sMachineCost"><label for="f-sMachineCost"><span data-i18n="f.machineCost">Costo macchina</span> <small data-i18n="u.cur">€</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-sMachineCost" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="sLifeH"><label for="f-sLifeH"><span data-i18n="f.lifeH">Vita utile</span> <small data-i18n="u.hours">ore</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-sLifeH" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="sWearPrint"><label for="f-sWearPrint"><span data-i18n="f.wearPrint">Usura per stampa</span> <small data-i18n="u.curPrint">€/stampa</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-sWearPrint" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="sWearH"><label for="f-sWearH"><span data-i18n="f.wearHour">Usura oraria</span> <small data-i18n="u.curH">€/h</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-sWearH" type="number" inputmode="decimal" min="0" step="any"></div>
+        </div>
+        <details class="cons model fdm-only" id="model">
+          <summary data-i18n="model.summary">Modello di consumo</summary>
           <div class="grid2">
-            <div class="fld" data-f="mBedX"><label for="f-mBedX">Letto X <small>mm</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-mBedX" type="number" inputmode="decimal" min="0" step="any"></div>
-            <div class="fld" data-f="mBedY"><label for="f-mBedY">Letto Y <small>mm</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-mBedY" type="number" inputmode="decimal" min="0" step="any"></div>
-            <div class="fld" data-f="mBedTemp"><label for="f-mBedTemp">Temp. letto <small>°C</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-mBedTemp" type="number" inputmode="decimal" min="0" step="any"></div>
-            <div class="fld" data-f="mNozzle"><label for="f-mNozzle">Diametro ugello <small>mm</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-mNozzle" type="number" inputmode="decimal" min="0" step="any"></div>
-            <div class="fld" data-f="mNozzleTemp"><label for="f-mNozzleTemp">Temp. ugello <small>°C</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-mNozzleTemp" type="number" inputmode="decimal" min="0" step="any"></div>
-            <div class="fld" data-f="mAmbient"><label for="f-mAmbient">Ambiente <small>°C</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-mAmbient" type="number" inputmode="decimal" min="0" step="any"></div>
-            <div class="fld chk" data-f="mEnclosed"><label for="f-mEnclosed">Camera chiusa</label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-mEnclosed" type="checkbox"></div>
-            <div class="fld" data-f="mBedW"><label for="f-mBedW">Riscaldatore letto <small>W</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-mBedW" type="number" inputmode="decimal" min="0" step="any"></div>
-            <div class="fld" data-f="mHotW"><label for="f-mHotW">Riscaldatore hotend <small>W</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-mHotW" type="number" inputmode="decimal" min="0" step="any"></div>
+            <div class="fld" data-f="mBedX"><label for="f-mBedX"><span data-i18n="f.mBedX">Letto X</span> <small>mm</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-mBedX" type="number" inputmode="decimal" min="0" step="any"></div>
+            <div class="fld" data-f="mBedY"><label for="f-mBedY"><span data-i18n="f.mBedY">Letto Y</span> <small>mm</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-mBedY" type="number" inputmode="decimal" min="0" step="any"></div>
+            <div class="fld" data-f="mBedTemp"><label for="f-mBedTemp"><span data-i18n="f.mBedTemp">Temp. letto</span> <small>°C</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-mBedTemp" type="number" inputmode="decimal" min="0" step="any"></div>
+            <div class="fld" data-f="mNozzle"><label for="f-mNozzle"><span data-i18n="f.mNozzle">Diametro ugello</span> <small>mm</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-mNozzle" type="number" inputmode="decimal" min="0" step="any"></div>
+            <div class="fld" data-f="mNozzleTemp"><label for="f-mNozzleTemp"><span data-i18n="f.mNozzleTemp">Temp. ugello</span> <small>°C</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-mNozzleTemp" type="number" inputmode="decimal" min="0" step="any"></div>
+            <div class="fld" data-f="mAmbient"><label for="f-mAmbient"><span data-i18n="f.mAmbient">Ambiente</span> <small>°C</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-mAmbient" type="number" inputmode="decimal" min="0" step="any"></div>
+            <div class="fld chk" data-f="mEnclosed"><label for="f-mEnclosed"><span data-i18n="f.mEnclosed">Camera chiusa</span></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-mEnclosed" type="checkbox"></div>
+            <div class="fld" data-f="mBedW"><label for="f-mBedW"><span data-i18n="f.mBedW">Riscaldatore letto</span> <small>W</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-mBedW" type="number" inputmode="decimal" min="0" step="any"></div>
+            <div class="fld" data-f="mHotW"><label for="f-mHotW"><span data-i18n="f.mHotW">Riscaldatore hotend</span> <small>W</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-mHotW" type="number" inputmode="decimal" min="0" step="any"></div>
           </div>
         </details>
-        <p class="hint model-est"><span id="model-est"></span> <button type="button" class="btn ghost" id="model-use" hidden>Usa</button></p>
+        <p class="hint model-est fdm-only"><span id="model-est"></span> <button type="button" class="btn ghost" id="model-use" hidden data-i18n="model.use">Usa</button></p>
         <details class="cons" id="cons" hidden>
-          <summary>Consumabili conteggiati</summary>
+          <summary data-i18n="cons.summary">Consumabili conteggiati</summary>
           <table><tbody id="cons-body"></tbody></table>
         </details>
       </section>
 
       <section class="mod" aria-labelledby="h-fil">
         <h2 id="h-fil">Filamento</h2>
-        <div class="row">
-          <label for="fsearch">Cerca</label>
-          <input id="fsearch" type="search" placeholder="es. Prusament PETG" autocomplete="off">
+        <div class="row fdm-only">
+          <label for="fsearch" data-i18n="common.search">Cerca</label>
+          <input id="fsearch" type="search" placeholder="es. Prusament PETG" data-i18n-attr="placeholder:fil.searchPh" autocomplete="off">
         </div>
-        <div class="row">
-          <label for="filament">Filamento</label>
+        <div class="row fdm-only">
+          <label for="filament" data-i18n="fil.h">Filamento</label>
           <select id="filament"></select>
         </div>
-        <div class="grid2">
-          <div class="fld" data-f="eurKg"><label for="f-eurKg">Prezzo <small>€/kg</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-eurKg" type="number" inputmode="decimal" min="0" step="any"></div>
-          <div class="fld" data-f="density"><label for="f-density">Densità <small>g/cm³</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-density" type="number" inputmode="decimal" min="0" step="any"></div>
-          <div class="fld" data-f="spoolG"><label for="f-spoolG">Peso netto bobina <small>g</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-spoolG" type="number" inputmode="decimal" min="0" step="any"></div>
-          <div class="fld" data-f="spoolPrice"><label for="f-spoolPrice">Prezzo bobina <small>€</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-spoolPrice" type="number" inputmode="decimal" min="0" step="any"></div>
+        <div class="grid2 fdm-only">
+          <div class="fld" data-f="eurKg"><label for="f-eurKg"><span data-i18n="f.eurKg">Prezzo</span> <small data-i18n="u.curKg">€/kg</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-eurKg" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="density"><label for="f-density"><span data-i18n="f.density">Densità</span> <small>g/cm³</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-density" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="spoolG"><label for="f-spoolG"><span data-i18n="f.spoolG">Peso netto bobina</span> <small>g</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-spoolG" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="spoolPrice"><label for="f-spoolPrice"><span data-i18n="f.spoolPrice">Prezzo bobina</span> <small data-i18n="u.cur">€</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-spoolPrice" type="number" inputmode="decimal" min="0" step="any"></div>
         </div>
-        <p class="hint" id="spool-hint">Inserisci prezzo e peso netto della bobina: il prezzo al kg si calcola da solo.</p>
+        <div class="row sla-only" hidden>
+          <label for="rsearch" data-i18n="common.search">Cerca</label>
+          <input id="rsearch" type="search" placeholder="es. Elegoo Standard" data-i18n-attr="placeholder:rs.searchPh" autocomplete="off">
+        </div>
+        <div class="row sla-only" hidden>
+          <label for="resin" data-i18n="rs.h">Resina</label>
+          <select id="resin"></select>
+        </div>
+        <div class="grid2 sla-only" hidden>
+          <div class="fld" data-f="eurL"><label for="f-eurL"><span data-i18n="f.eurL">Prezzo</span> <small data-i18n="u.curL">€/L</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-eurL" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="rho"><label for="f-rho"><span data-i18n="f.density">Densità</span> <small>g/cm³</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-rho" type="number" inputmode="decimal" min="0" step="any"></div>
+        </div>
+        <p class="hint sla-only" hidden data-i18n="rs.hint">Prezzo curato solo per alcune resine: per le altre è una stima (≈ 30 €/L), correggila con il tuo prezzo.</p>
+        <p class="hint fdm-only" id="spool-hint" data-i18n="spool.hint">Inserisci prezzo e peso netto della bobina: il prezzo al kg si calcola da solo.</p>
       </section>
 
       <section class="mod" aria-labelledby="h-job">
-        <h2 id="h-job">Lavoro</h2>
+        <h2 id="h-job" data-i18n="job.h">Lavoro</h2>
+        <div class="row"><label for="f-job" data-i18n="job.name">Nome lavoro</label><input id="f-job" type="text" maxlength="80" autocomplete="off" placeholder="opzionale" data-i18n-attr="placeholder:job.namePh"></div>
         <div class="grid2">
-          <div class="fld" data-f="grams"><label for="f-grams">Materiale per pezzo <small>g</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-grams" type="number" inputmode="decimal" min="0" step="any"></div>
-          <div class="fld" data-f="hours"><label for="f-hours">Tempo per pezzo <small>ore</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-hours" type="number" inputmode="decimal" min="0" step="any"></div>
-          <div class="fld" data-f="energyRate"><label for="f-energyRate">Energia <small>€/kWh</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-energyRate" type="number" inputmode="decimal" min="0" step="any"></div>
-          <div class="fld" data-f="laborRate"><label for="f-laborRate">Tariffa oraria <small>€/h</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-laborRate" type="number" inputmode="decimal" min="0" step="any"></div>
-          <div class="fld" data-f="laborMin"><label for="f-laborMin">Lavoro per pezzo <small>min</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-laborMin" type="number" inputmode="decimal" min="0" step="any"></div>
-          <div class="fld" data-f="pieces"><label for="f-pieces">Pezzi</label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-pieces" type="number" inputmode="numeric" min="1" step="1"></div>
-          <div class="fld" data-f="failPct"><label for="f-failPct">Stampe fallite <small>%</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden>reset</button><input id="f-failPct" type="number" inputmode="decimal" min="0" max="95" step="any"></div>
+          <div class="fld fdm-only" data-f="grams"><label for="f-grams"><span data-i18n="f.grams">Materiale per pezzo</span> <small>g</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-grams" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld sla-only" hidden data-f="ml"><label for="f-ml"><span data-i18n="f.ml">Resina per pezzo</span> <small>ml</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-ml" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="wasteG" hidden><label for="f-wasteG"><span data-i18n="f.wasteG">Scarto multicolore</span> <small>g</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-wasteG" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="hours"><label for="f-hours"><span data-i18n="f.hours">Tempo per pezzo</span> <small data-i18n="u.hours">ore</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-hours" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="energyRate"><label for="f-energyRate"><span data-i18n="f.energyRate">Energia</span> <small data-i18n="u.curKwh">€/kWh</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-energyRate" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="laborRate"><label for="f-laborRate"><span data-i18n="f.laborRate">Tariffa oraria</span> <small data-i18n="u.curH">€/h</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-laborRate" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="laborMin"><label for="f-laborMin"><span data-i18n="f.laborMin">Lavoro per pezzo</span> <small>min</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-laborMin" type="number" inputmode="decimal" min="0" step="any"></div>
+          <div class="fld" data-f="pieces"><label for="f-pieces"><span data-i18n="f.pieces">Pezzi</span></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-pieces" type="number" inputmode="numeric" min="1" step="1"></div>
+          <div class="fld" id="start-fld" hidden><label for="f-start"><span data-i18n="f.start">Avvio stampa</span></label><input id="f-start" type="datetime-local"></div>
+          <div class="fld" data-f="failPct"><label for="f-failPct"><span data-i18n="f.failPct">Stampe fallite</span> <small>%</small></label><span class="badge" hidden></span><button type="button" class="reset" hidden data-i18n="common.reset">reset</button><input id="f-failPct" type="number" inputmode="decimal" min="0" max="95" step="any"></div>
         </div>
         <div class="fld slider" data-f="markupPct">
-          <label for="f-markupPct">Ricarico <output id="markup-out">30%</output></label>
+          <label for="f-markupPct"><span data-i18n="f.markupPct">Ricarico</span> <output id="markup-out">30%</output></label>
           <input id="f-markupPct" type="range" min="0" max="200" step="1">
         </div>
       </section>
 
       <section class="mod" aria-labelledby="h-prof">
-        <h2 id="h-prof">Profili PrusaSlicer</h2>
-        <p class="hint">Importa i file <code>.ini</code> da <code>%APPDATA%/PrusaSlicer/filament</code> e <code>/printer</code>. Restano salvati in questo browser.</p>
+        <h2 id="h-prof" data-i18n="prof.h">Profili PrusaSlicer</h2>
+        <p class="hint" data-i18n-html="prof.hint">Importa i file <code>.ini</code> da <code>%APPDATA%/PrusaSlicer/filament</code> e <code>/printer</code>. Restano salvati in questo browser.</p>
         <div class="actions">
-          <label class="btn" for="file-ini">Importa .ini</label>
+          <label class="btn" for="file-ini" data-i18n="prof.import">Importa .ini</label>
           <input id="file-ini" type="file" accept=".ini" multiple hidden>
-          <button type="button" class="btn ghost" id="clear-profiles">Rimuovi profili importati</button>
+          <button type="button" class="btn ghost" id="clear-profiles" data-i18n="prof.clear">Rimuovi profili importati</button>
         </div>
         <ul class="msgs" id="prof-msg" aria-live="polite"></ul>
       </section>
@@ -119,11 +160,11 @@
 
     <aside class="readout" aria-labelledby="h-res">
       <div class="slip">
-        <h2 id="h-res">Preventivo</h2>
-        <p class="ctx" id="ctx">Nessuna stampante selezionata</p>
+        <h2 id="h-res" data-i18n="res.h">Preventivo</h2>
+        <p class="ctx" id="ctx" data-i18n="res.ctxNone">Nessuna stampante selezionata</p>
 
         <div class="big">
-          <span class="cap">Prezzo per pezzo</span>
+          <span class="cap" data-i18n="res.pricePer">Prezzo per pezzo</span>
           <output id="r-price" class="figure">0,00 €</output>
         </div>
 
@@ -132,23 +173,91 @@
         <dl class="lines" id="lines"></dl>
 
         <dl class="lines sums">
-          <div><dt>Subtotale</dt><dd id="r-sub"></dd></div>
-          <div><dt id="r-margin-l">Ricarico</dt><dd id="r-margin"></dd></div>
+          <div><dt data-i18n="res.sub">Subtotale</dt><dd id="r-sub"></dd></div>
+          <div><dt id="r-margin-l" data-i18n="f.markupPct">Ricarico</dt><dd id="r-margin"></dd></div>
         </dl>
 
         <div class="total">
-          <span class="cap" id="r-total-l">Totale</span>
+          <span class="cap" id="r-total-l" data-i18n="res.total">Totale</span>
           <output id="r-total" class="figure sm">0,00 €</output>
         </div>
 
+        <dl class="lines sale" id="sale-lines" hidden></dl>
+
         <p class="note" id="r-note"></p>
-        <button type="button" class="btn primary" id="copy">Copia preventivo</button>
+        <button type="button" class="btn primary" id="copy" data-i18n="copy.btn">Copia preventivo</button>
+        <div class="actions share">
+          <button type="button" class="btn" id="share-int" data-i18n="share.internal" data-i18n-attr="title:share.internalTitle">Link interno</button>
+          <button type="button" class="btn" id="share-cli" data-i18n="share.client" data-i18n-attr="title:share.clientTitle">Link cliente</button>
+        </div>
         <p class="copied" id="copied" role="status"></p>
       </div>
     </aside>
   </main>
 
-  <noscript>OpenPrintCalc richiede JavaScript.</noscript>
+  <dialog id="settings" class="settings" aria-labelledby="set-title">
+    <header class="set-head">
+      <h2 id="set-title" data-i18n="set.title">Impostazioni</h2>
+      <button type="button" class="icon-btn" id="close-settings" aria-label="Chiudi" data-i18n-attr="aria-label:common.close">&times;</button>
+    </header>
+    <div class="tabs" role="tablist" aria-label="Sezioni delle impostazioni" data-i18n-attr="aria-label:set.tabs"><button type="button" role="tab" id="tab-general" aria-controls="pane-general" aria-selected="true" tabindex="0" data-tab="general" data-i18n="set.tab.general">Generale</button><button type="button" role="tab" id="tab-energy" aria-controls="pane-energy" aria-selected="false" tabindex="-1" data-tab="energy" data-i18n="set.tab.energy">Energia</button><button type="button" role="tab" id="tab-amortization" aria-controls="pane-amortization" aria-selected="false" tabindex="-1" data-tab="amortization" data-i18n="set.tab.amortization">Ammortamento</button><button type="button" role="tab" id="tab-sale" aria-controls="pane-sale" aria-selected="false" tabindex="-1" data-tab="sale" data-i18n="set.tab.sale">Vendita</button><button type="button" role="tab" id="tab-advanced" aria-controls="pane-advanced" aria-selected="false" tabindex="-1" data-tab="advanced" data-i18n="set.tab.advanced">Avanzate</button></div>
+    <div role="tabpanel" id="pane-general" aria-labelledby="tab-general" class="pane">
+      <div class="row"><label for="set-lang" data-i18n="set.lang">Lingua</label>
+        <select id="set-lang"><option value="auto" data-i18n="set.lang.auto">Automatica (browser)</option><option value="it">Italiano</option><option value="en">English</option></select></div>
+      <div class="row"><label for="set-currency" data-i18n="set.currency">Simbolo valuta</label>
+        <input id="set-currency" type="text" maxlength="4" autocomplete="off" inputmode="text"></div>
+      <div class="row"><label for="set-business" data-i18n="set.business">Nome attività</label>
+        <input id="set-business" type="text" maxlength="80" autocomplete="organization" placeholder="es. Officina 3D" data-i18n-attr="placeholder:set.businessPh"></div>
+      <div class="row top"><label for="set-notes" data-i18n="set.notes">Note per i preventivi</label>
+        <textarea id="set-notes" rows="4" maxlength="500"></textarea></div>
+      <div class="row"><label for="set-validity"><span data-i18n="set.validity">Validità del preventivo</span> <small data-i18n="set.validityUnit">giorni</small></label>
+        <input id="set-validity" type="number" inputmode="numeric" min="1" max="365" step="1"></div>
+      <p class="hint" data-i18n="set.notesHint">Nome e note vengono aggiunti al testo del preventivo copiato.</p>
+    </div>
+    <div role="tabpanel" id="pane-energy" aria-labelledby="tab-energy" class="pane" hidden>
+      <label class="chk-row"><input type="checkbox" id="set-energy-enabled"> <span data-i18n="set.enable">attiva</span></label>
+      <div class="set-fields" id="fields-energy" hidden>
+        <p class="hint" data-i18n="en.hint"></p>
+        <div class="row"><label for="set-energy-mode" data-i18n="en.mode">Fasce</label><select id="set-energy-mode"><option value="tri" data-i18n="en.mode.tri"></option><option value="bi" data-i18n="en.mode.bi"></option><option value="custom" data-i18n="en.mode.custom"></option></select></div>
+        <div class="row" data-modes="tri bi"><label for="set-energy-f1"><span data-i18n="en.f1"></span> <small data-i18n="u.curKwh">€/kWh</small></label><input id="set-energy-f1" type="number" inputmode="decimal" min="0" step="any" data-set="energy.f1"></div>
+        <div class="row" data-modes="tri"><label for="set-energy-f2"><span data-i18n="en.f2"></span> <small data-i18n="u.curKwh">€/kWh</small></label><input id="set-energy-f2" type="number" inputmode="decimal" min="0" step="any" data-set="energy.f2"></div>
+        <div class="row" data-modes="tri"><label for="set-energy-f3"><span data-i18n="en.f3"></span> <small data-i18n="u.curKwh">€/kWh</small></label><input id="set-energy-f3" type="number" inputmode="decimal" min="0" step="any" data-set="energy.f3"></div>
+        <div class="row" data-modes="bi"><label for="set-energy-f23"><span data-i18n="en.f23"></span> <small data-i18n="u.curKwh">€/kWh</small></label><input id="set-energy-f23" type="number" inputmode="decimal" min="0" step="any" data-set="energy.f23"></div>
+        <div data-modes="custom" class="bands-box"><div id="set-bands"></div><button type="button" class="btn ghost" id="add-band" data-i18n="en.add"></button><p class="hint" data-i18n="en.customHint"></p></div>
+      </div>
+    </div>
+    <div role="tabpanel" id="pane-amortization" aria-labelledby="tab-amortization" class="pane" hidden>
+      <label class="chk-row"><input type="checkbox" id="set-amortization-enabled"> <span data-i18n="set.enable">attiva</span></label>
+      <div class="set-fields" id="fields-amortization" hidden>
+        <p class="hint" data-i18n="am.hint"></p>
+        <div class="row"><label for="set-amortization-price"><span data-i18n="am.price"></span> <small data-i18n="u.cur">€</small></label><input id="set-amortization-price" type="number" inputmode="decimal" min="0" step="any" data-set="amortization.price"></div>
+        <div class="row"><label for="set-amortization-residual"><span data-i18n="am.residual"></span> <small data-i18n="u.cur">€</small></label><input id="set-amortization-residual" type="number" inputmode="decimal" min="0" step="any" data-set="amortization.residual"></div>
+        <div class="row"><label for="set-amortization-years"><span data-i18n="am.years"></span> </label><input id="set-amortization-years" type="number" inputmode="decimal" min="0" step="any" data-set="amortization.years"></div>
+        <div class="row"><label for="set-amortization-hoursPerYear"><span data-i18n="am.hoursYear"></span> <small data-i18n="u.hours">ore</small></label><input id="set-amortization-hoursPerYear" type="number" inputmode="decimal" min="0" step="any" data-set="amortization.hoursPerYear"></div>
+        <div class="row"><label for="set-amortization-maintenance"><span data-i18n="am.maint"></span> <small data-i18n="u.cur">€</small></label><input id="set-amortization-maintenance" type="number" inputmode="decimal" min="0" step="any" data-set="amortization.maintenance"></div>
+      </div>
+    </div>
+    <div role="tabpanel" id="pane-sale" aria-labelledby="tab-sale" class="pane" hidden>
+      <label class="chk-row"><input type="checkbox" id="set-sale-enabled"> <span data-i18n="set.enable">attiva</span></label>
+      <div class="set-fields" id="fields-sale" hidden>
+        <p class="hint" data-i18n="sa.hint"></p>
+        <div class="row"><label for="set-sale-vatPct"><span data-i18n="sa.vat"></span> <small>%</small></label><input id="set-sale-vatPct" type="number" inputmode="decimal" min="0" step="any" data-set="sale.vatPct"></div>
+        <div class="row"><label for="set-sale-platform" data-i18n="sa.platform"></label><select id="set-sale-platform"><option value="none" data-i18n="sa.none"></option><option value="etsy">Etsy</option><option value="shopify">Shopify</option><option value="paypal">PayPal</option><option value="stripe">Stripe</option><option value="custom" data-i18n="sa.custom"></option></select></div>
+        <div class="row"><label for="set-sale-feePct"><span data-i18n="sa.pct"></span> <small>%</small></label><input id="set-sale-feePct" type="number" inputmode="decimal" min="0" step="any" data-set="sale.feePct"></div>
+        <div class="row"><label for="set-sale-feeFixed"><span data-i18n="sa.fixed"></span> <small data-i18n="u.cur">€</small></label><input id="set-sale-feeFixed" type="number" inputmode="decimal" min="0" step="any" data-set="sale.feeFixed"></div>
+        <div class="row"><label for="set-sale-packaging"><span data-i18n="sa.pack"></span> <small data-i18n="u.cur">€</small></label><input id="set-sale-packaging" type="number" inputmode="decimal" min="0" step="any" data-set="sale.packaging"></div>
+        <div class="row"><label for="set-sale-shipping"><span data-i18n="sa.ship"></span> <small data-i18n="u.cur">€</small></label><input id="set-sale-shipping" type="number" inputmode="decimal" min="0" step="any" data-set="sale.shipping"></div>
+        <div class="row"><label for="set-sale-postMin"><span data-i18n="sa.post"></span> <small>min</small></label><input id="set-sale-postMin" type="number" inputmode="decimal" min="0" step="any" data-set="sale.postMin"></div>
+      </div>
+    </div>
+    <div role="tabpanel" id="pane-advanced" aria-labelledby="tab-advanced" class="pane" hidden>
+      <p class="hint" data-i18n="adv.hint">Lavaggio in alcool isopropilico (IPA): conta solo in modalità resina.</p>
+      <div class="row"><label for="set-advanced-ipaMl"><span data-i18n="adv.ipaMl">IPA per lavaggio</span> <small>ml</small></label><input id="set-advanced-ipaMl" type="number" inputmode="decimal" min="0" step="any" data-set="advanced.ipaMl"></div>
+      <div class="row"><label for="set-advanced-ipaEurL"><span data-i18n="adv.ipaPrice">Prezzo IPA</span> <small data-i18n="u.curL">€/L</small></label><input id="set-advanced-ipaEurL" type="number" inputmode="decimal" min="0" step="any" data-set="advanced.ipaEurL"></div>
+    </div>
+  </dialog>
+
+  <noscript data-i18n="app.noscript">OpenPrintCalc richiede JavaScript.</noscript>
   <script type="module" src="js/app.js"></script>
 </body>
 </html>

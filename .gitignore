@@ -2,3 +2,4 @@ node_modules/
 # generato da `npm run build` (tsc)
 js/
 _site/
+/sw.js

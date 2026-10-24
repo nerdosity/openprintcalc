@@ -1,0 +1,87 @@
+[
+  {
+    "match": "^Prusa Polymers Prusament Resin BioBased60",
+    "price_eur_l": 62.73,
+    "source": "https://prusa3d.com/product/prusament-resin-biobased60 - BioBased60 69,00 EUR (IVA incl., prezzo EU rilevato; dimensione confezione non indicata, assunta 1 kg); 69 / 1,1 = 62,73 EUR/L"
+  },
+  {
+    "match": "^Elegoo .*Standard",
+    "price_eur_l": 18.69,
+    "source": "https://eu.elegoo.com/products/elegoo-standard-resin-v-2-0 - Standard Resin V2.0 1 kg 16,99 EUR (store EU, IVA incl.); 16,99 EUR/kg x 1,1 (voce preesistente, non riverificata)"
+  },
+  {
+    "match": "^Elegoo .*ABS",
+    "price_eur_l": 25.29,
+    "source": "https://eu.elegoo.com/en-pl/products/elegoo-abs-like-resin - ABS-Like 1 kg 22,99 EUR (store EU); 22,99 EUR/kg x 1,1 (voce preesistente, non riverificata)"
+  },
+  {
+    "match": "^Anycubic .*Standard",
+    "price_eur_l": 28.59,
+    "source": "https://eu.anycubic.com/products/colored-uv-resin - Standard Resin 1 kg 25,99 EUR (store EU); 25,99 EUR/kg x 1,1 (voce preesistente, non riverificata)"
+  },
+  {
+    "match": "Craftsman",
+    "price_eur_l": 42.89,
+    "source": "https://eu.anycubic.com/products/dlp-craftsman-resin - DLP Craftsman 1 kg 38,99 EUR (store EU); 38,99 EUR/kg x 1,1 (voce preesistente, non riverificata)"
+  },
+  {
+    "match": "Dental|Denta\b|Medical|Surgical|Crown|\bCast|Wax|Kera|Gingiva|Anatomic|Bio-Med|NextDent|Model 2.0",
+    "price_eur_l": 120,
+    "source": "Stima per tipo: resine dentali/casting EU (~120 EUR/L)",
+    "estimated": true
+  },
+  {
+    "match": "Flex|Flexible|EL 150|FL 300|IND475",
+    "price_eur_l": 60,
+    "source": "Stima per tipo: resine flessibili EU (~60 EUR/L)",
+    "estimated": true
+  },
+  {
+    "match": "Ultracur|PRO476|HDT|ALTANA|Cubic Ink|Impact|Strong X|Clear Impact|Vulcan|XPRO|TOUGH Clear|HTR|High Temp|Type D High|Metalshine|Engineering",
+    "price_eur_l": 45,
+    "source": "Stima per tipo: resine engineering EU (~45 EUR/L)",
+    "estimated": true
+  },
+  {
+    "match": "Standard|Model|Basic|Premium|Plant-based|Plant-Based|Water Washable|Deft|Neo Clear|HR ",
+    "price_eur_l": 28,
+    "source": "Stima per tipo: resine standard/model EU (~28 EUR/L)",
+    "estimated": true
+  },
+  {
+    "match": "Tough|ABS|\bBlu\b|Tenacious|Sculpt|Simple|Easy|Fast|PlasGRAY|EcoGray|Phrozen|LCD-DLP|X10|X5|X-One|23LS|Ash Grey|Hard Grey|Rapid",
+    "price_eur_l": 35,
+    "source": "Stima per tipo: resine tough/ABS-like EU (~35 EUR/L)",
+    "estimated": true
+  },
+  {
+    "match": "^Prusa Polymers",
+    "price_eur_l": 28,
+    "source": "Stima per vendor Prusament (~28 EUR/L)",
+    "estimated": true
+  },
+  {
+    "match": "^3DM",
+    "price_eur_l": 35,
+    "source": "Stima per vendor 3DM (~35 EUR/L)",
+    "estimated": true
+  },
+  {
+    "match": "^BlueCast|^Ameralabs|^DruckWege|^Esun|^FunToDo|^Photocentric|^Monocure|^PrimaCreator|^Siraya|^MakerJuice|^3DJake|^Zortrax|^Asiga|^Dragon Resin|^Generic",
+    "price_eur_l": 35,
+    "source": "Stima per vendor resine tough EU (~35 EUR/L)",
+    "estimated": true
+  },
+  {
+    "match": "^Harz Labs",
+    "price_eur_l": 28,
+    "source": "Stima per vendor Harz Labs (~28 EUR/L)",
+    "estimated": true
+  },
+  {
+    "match": "^Resinworks|^Peopoly|^Anycubic|^Liqcreate|^Forward AM|^Henkel|^Loctite|^Altana",
+    "price_eur_l": 45,
+    "source": "Stima per vendor resine EU (~45 EUR/L)",
+    "estimated": true
+  }
+]

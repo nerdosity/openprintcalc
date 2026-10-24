@@ -1,5 +1,6 @@
 // Parser per i commenti ASCII di un G-code PrusaSlicer (statistiche + blocco config).
 // Usato anche da bgcode.ts per i metadati binari (stesse chiavi).
+import { fmtNum, hasKey, t } from './i18n.ts';
 import type { GcodeData, KV, LineWidth, PrintParams } from './types.ts';
 
 /** "1d 2h 3m 4s" -> secondi (null se non riconosciuto). */
@@ -69,17 +70,18 @@ export function extractParams(kv: KV, nozzle: number | null = null): PrintParams
 /** Righe di testo per "Parametri di stampa". */
 export function paramLines(p: PrintParams | null): string[] {
   if (!p) return [];
-  const f = (x: number, d = 2): string => Number(x).toLocaleString('it-IT', { maximumFractionDigits: d });
+  const f = (x: number, d = 2): string => fmtNum(x, d);
   const out: string[] = [];
-  if (p.perimeters !== null) out.push(`Pareti verticali: ${p.perimeters}`);
-  if (p.topSolidLayers !== null) out.push(`Strati solidi sopra: ${p.topSolidLayers}`);
-  if (p.bottomSolidLayers !== null) out.push(`Strati solidi sotto: ${p.bottomSolidLayers}`);
-  if (p.fillDensity) out.push(`Riempimento: ${p.fillDensity}`);
-  if (p.layerHeight !== null) out.push(`Altezza layer: ${f(p.layerHeight)} mm`);
+  if (p.perimeters !== null) out.push(t('pr.perimeters', { v: p.perimeters }));
+  if (p.topSolidLayers !== null) out.push(t('pr.top', { v: p.topSolidLayers }));
+  if (p.bottomSolidLayers !== null) out.push(t('pr.bottom', { v: p.bottomSolidLayers }));
+  if (p.fillDensity) out.push(t('pr.fill', { v: p.fillDensity }));
+  if (p.layerHeight !== null) out.push(t('pr.layer', { v: f(p.layerHeight) }));
   for (const [label, w] of Object.entries(p.widths)) {
-    const t = w.kind === 'auto' ? 'auto' : w.kind === 'mm' ? `${f(w.mm)} mm`
+    const v = w.kind === 'auto' ? t('pr.auto') : w.kind === 'mm' ? `${f(w.mm)} mm`
       : `${f(w.pct, 1)}%${w.mm !== null ? ` (${f(w.mm)} mm)` : ''}`;
-    out.push(`Larghezza linea, ${label.toLowerCase()}: ${t}`);
+    const key = `w.${label}`; // le chiavi di `widths` sono id stabili (italiano), l'etichetta viene dal dizionario
+    out.push(t('pr.width', { label: hasKey(key) ? t(key) : label.toLowerCase(), v }));
   }
   return out;
 }

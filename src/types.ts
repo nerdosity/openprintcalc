@@ -15,12 +15,16 @@ export interface PowerW {
   /** nome storico di avg_high_temp */
   avg_abs_enclosed_or_high_temp?: Wrapped | null;
   peak?: Wrapped | null;
+  /** stampanti SLA: potenza media in stampa */
+  printing?: Wrapped | null;
 }
 
 export interface Consumable {
   name: string;
   cost_eur?: Wrapped | null;
   life_h?: Wrapped | null;
+  /** SLA: vita in numero di stampe (es. pellicola FEP) */
+  life_prints?: Wrapped | null;
   /** escluso dal calcolo dell'usura */
   optional?: boolean;
   /** voce generica aggiunta per le stampanti PrusaSlicer */
@@ -45,6 +49,8 @@ export interface Printer {
   lifetime_h?: Wrapped | null;
   consumables?: readonly Consumable[];
   prusaslicer_models?: readonly string[];
+  /** nomi alternativi (es. printer_model di Bambu/Orca) per il riconoscimento da file */
+  aliases?: readonly string[];
   notes?: string;
   sources?: readonly string[];
   /** percorsi dei campi stimati, es. "power_w.idle", "consumables[0].cost_eur" */
@@ -120,8 +126,69 @@ export interface Profiles {
 export type FieldValue = number | '';
 export type AutoSrc = 'catalog' | 'gcode' | 'default';
 
+/** Schede delle Impostazioni oltre a Generale: ognuna ha un interruttore `enabled` (fasi successive). */
+export type SettingsTab = 'general' | 'energy' | 'amortization' | 'sale' | 'advanced';
+export type FutureTab = Exclude<SettingsTab, 'general'>;
+
+export interface Settings {
+  general: {
+    /** 'auto' = lingua del browser */
+    lang: 'auto' | 'it' | 'en';
+    /** simbolo mostrato al posto di € */
+    currency: string;
+    businessName: string;
+    notes: string;
+    /** giorni di validita' del preventivo nel link cliente */
+    validityDays: number;
+  };
+  energy: EnergySettings;
+  amortization: AmortSettings;
+  sale: SaleSettings;
+  advanced: AdvancedSettings;
+}
+
+/** Lavaggio IPA della modalita' resina: ml per stampa e prezzo al litro. */
+export type AdvancedSettings = { enabled: boolean; ipaMl: number; ipaEurL: number };
+
+export type DayKind = 'weekday' | 'sat' | 'sun';
+export type EnergyMode = 'tri' | 'bi' | 'custom';
+/** Fascia personalizzata: ore intere 0-24, da > a = a cavallo di mezzanotte; i festivi contano come domenica. */
+export type CustomBand = { name: string; day: DayKind; from: number; to: number; price: number };
+export type EnergySettings = {
+  enabled: boolean; mode: EnergyMode; f1: number; f2: number; f3: number; f23: number; bands: CustomBand[];
+};
+export type AmortSettings = {
+  enabled: boolean; price: number; residual: number; years: number; hoursPerYear: number; maintenance: number;
+};
+export type Platform = 'none' | 'etsy' | 'shopify' | 'paypal' | 'stripe' | 'custom';
+export type SaleSettings = {
+  enabled: boolean; vatPct: number; platform: Platform; feePct: number; feeFixed: number;
+  packaging: number; shipping: number; postMin: number;
+};
+
+/** Costo macchina e vita utile ricavati dalla scheda Ammortamento (null = dati insufficienti). */
+export interface AmortInputs { machineCost: number | null; lifeH: number | null }
+
+export interface SaleResult { base: number; fees: number; shipping: number; vat: number; customer: number }
+
+/** Dati opzionali delle schede attive passati a compute(). */
+export interface ComputeExtras {
+  /** ore totali della serie di pezzi per fascia (diviso i pezzi = per pezzo) */
+  bandHours?: Record<string, number>;
+  bandPrice?: Record<string, number>;
+  /** post-produzione, minuti per pezzo (entra nella manodopera) */
+  postMin?: number;
+}
+
+export type Tech = 'fdm' | 'sla';
+
 export interface State {
+  settings: Settings;
+  /** tecnologia: filamento (FDM) o resina (SLA) */
+  tech: Tech;
   printerId: string;
+  slaPrinterId: string;
+  resinId: string;
   filamentId: string;
   /** valori dei campi del form, per chiave del campo */
   values: Record<string, FieldValue>;
@@ -132,10 +199,16 @@ export interface State {
   /** campi il cui valore automatico e' una stima */
   autoEst: Record<string, boolean>;
   fileName: string;
+  /** nome del lavoro (opzionale), precompilato dal nome del file G-code */
+  jobName: string;
   /** parametri di stampa dal G-code (solo informativi) */
   fileParams: PrintParams | null;
   /** filament_type dal G-code, usato se il filamento non e' in catalogo */
   fileMaterial: string;
+  /** cambi filamento dal file (tooltip dello scarto), 0 se ignoti */
+  fileToolChanges: number;
+  /** avvio stampa (datetime-local) con la scheda Energia attiva; vuoto = adesso. Non persistito. */
+  startAt: string;
 }
 
 /* ---------- calcoli ---------- */
@@ -168,13 +241,22 @@ export interface WattEstimate {
   base: number;
 }
 
+/** Campi di compute() condivisi con il testo del preventivo (grams per FDM, ml per SLA). */
+export type QuoteInput = Partial<Record<'grams' | 'ml' | 'hours' | 'failPct' | 'markupPct', FieldValue | null>>;
+
+export type SlaKey =
+  | 'pieces' | 'failPct' | 'hours' | 'watt' | 'ml' | 'eurL' | 'ipaMl' | 'ipaEurL' | 'energyRate'
+  | 'machineCost' | 'lifeH' | 'wearPrint' | 'wearH' | 'laborMin' | 'laborRate' | 'markupPct';
+
+export type SlaInput = Partial<Record<SlaKey, FieldValue | null>>;
+
 export type ComputeKey =
   | 'pieces' | 'failPct' | 'hours' | 'watt' | 'grams' | 'eurKg' | 'energyRate'
-  | 'machineCost' | 'lifeH' | 'wear' | 'laborMin' | 'laborRate' | 'markupPct';
+  | 'machineCost' | 'lifeH' | 'wear' | 'laborMin' | 'laborRate' | 'markupPct' | 'wasteG';
 
 export type ComputeInput = Partial<Record<ComputeKey, FieldValue | null>>;
 
-export type CostLine = 'material' | 'energy' | 'amort' | 'wear' | 'labor';
+export type CostLine = 'material' | 'waste' | 'energy' | 'amort' | 'wear' | 'labor' | 'wash';
 
 export interface ComputeResult {
   pieces: number;
@@ -185,12 +267,20 @@ export interface ComputeResult {
   margin: number;
   price: number;
   total: number;
+  /** ore totali per fascia, solo con la scheda Energia attiva */
+  bands?: Record<string, number>;
 }
 
 export interface QuoteContext {
+  business?: string;
+  notes?: string;
   printer?: string;
   filament?: string;
   params?: readonly string[];
+  sale?: SaleResult;
+  vatPct?: number;
+  /** modalita' resina: il materiale e' in ml di resina */
+  resin?: boolean;
 }
 
 /* ---------- G-code ---------- */
@@ -225,11 +315,45 @@ export interface GcodeData {
   params: PrintParams | null;
 }
 
+export interface BgcodeExtra {
+  perExtruderGrams: number[];
+  wasteGrams: number | null;
+  toolChanges: number | null;
+}
+
 export interface BgcodeResult {
   data: GcodeData;
   warnings: string[];
+  extra: BgcodeExtra;
 }
 
 /* ---------- INI ---------- */
 
 export type IniSections = Record<string, KV>;
+
+/* ---------- data/resins.json ---------- */
+
+export interface Resin {
+  id: string;
+  name: string;
+  vendor: string;
+  type: string;
+  density_g_cm3: number | null;
+  /** codici modello PrusaSlicer compatibili */
+  printers: string[];
+}
+
+export interface ResinsFile {
+  generated: string;
+  sources: string[];
+  resins: Resin[];
+}
+
+/** Prezzo curato a mano: `match` e' una regex applicata a "vendor name". */
+export interface ResinPrice {
+  match: string;
+  price_eur_l: number;
+  source: string;
+  /** prezzo stimato da una regola, non rilevato: la UI mostra "auto ≈" */
+  estimated?: boolean;
+}

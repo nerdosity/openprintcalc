@@ -1,0 +1,13 @@
+{
+  "name": "OpenPrintCalc",
+  "short_name": "OpenPrintCalc",
+  "description": "Calcolatore di costi e preventivi per stampa 3D.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0d1013",
+  "theme_color": "#0d1013",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

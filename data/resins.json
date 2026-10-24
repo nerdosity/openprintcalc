@@ -1,0 +1,1640 @@
+{
+  "generated": "2026-10-24T16:03:43.423Z",
+  "sources": [
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-prusa-sla/main/PrusaResearchSLA/1.0.10.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-sla/main/AnycubicSLA/1.0.0.ini"
+  ],
+  "resins": [
+    {
+      "id": "3dm-abs",
+      "name": "3DM-ABS",
+      "vendor": "3DM",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "3dm-vulcan-gold",
+      "name": "3DM-Vulcan Gold",
+      "vendor": "3DM",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "3dm-tough-clear",
+      "name": "3DM-TOUGH Clear",
+      "vendor": "3DM",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "3dm-hr-red-wine",
+      "name": "3DM-HR Red Wine",
+      "vendor": "3DM",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "bluecast-phrozen-wax",
+      "name": "BlueCast Phrozen Wax",
+      "vendor": "BlueCast",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "bluecast-castable-wax",
+      "name": "BlueCast Castable Wax",
+      "vendor": "BlueCast",
+      "type": "Casting",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "bluecast-ecogray",
+      "name": "BlueCast EcoGray",
+      "vendor": "BlueCast",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "bluecast-kera-master-dental",
+      "name": "BlueCast Kera Master Dental",
+      "vendor": "BlueCast",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "bluecast-model-dental-gray",
+      "name": "BlueCast Model Dental Gray",
+      "vendor": "BlueCast",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "bluecast-x10",
+      "name": "BlueCast X10",
+      "vendor": "BlueCast",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "bluecast-x-one",
+      "name": "BlueCast X-One",
+      "vendor": "BlueCast",
+      "type": "Casting",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "druckwege-type-d-high-temp",
+      "name": "DruckWege Type D High Temp",
+      "vendor": "DruckWege",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "esun-bio-photopolymer-resin-white",
+      "name": "Esun Bio-Photopolymer Resin White",
+      "vendor": "Esun",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "funtodo-castable-blend-red",
+      "name": "FunToDo Castable Blend Red",
+      "vendor": "FunToDo",
+      "type": "Casting",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "funtodo-snow-white",
+      "name": "FunToDo Snow White",
+      "vendor": "FunToDo",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "harz-labs-basic-resin-red",
+      "name": "Harz Labs Basic Resin Red",
+      "vendor": "Harz Labs",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "harz-labs-model-resin-cherry",
+      "name": "Harz Labs Model Resin Cherry",
+      "vendor": "Harz Labs",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "harz-labs-model-resin-black",
+      "name": "Harz Labs Model Resin Black",
+      "vendor": "Harz Labs",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "harz-labs-dental-cast-red",
+      "name": "Harz Labs Dental Cast Red",
+      "vendor": "Harz Labs",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "esun-standard-resin-black",
+      "name": "Esun Standard Resin Black",
+      "vendor": "Esun",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "photocentric-ash-grey",
+      "name": "Photocentric Ash Grey",
+      "vendor": "Photocentric",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "resinworks-3d-violet",
+      "name": "Resinworks 3D Violet",
+      "vendor": "Resinworks 3D",
+      "type": "casting",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "resinworks-3d-green",
+      "name": "Resinworks 3D Green",
+      "vendor": "Resinworks 3D",
+      "type": "Casting",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "monocure-3d-black-rapid-resin",
+      "name": "Monocure 3D Black Rapid Resin",
+      "vendor": "Monocure",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "monocure-3d-blue-rapid-resin",
+      "name": "Monocure 3D Blue Rapid Resin",
+      "vendor": "Monocure",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-solid-grey",
+      "name": "Prusament Resin Model Solid Grey",
+      "vendor": "Prusa Polymers",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-alabaster-white",
+      "name": "Prusament Resin Model Alabaster White",
+      "vendor": "Prusa Polymers",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-neutral-beige",
+      "name": "Prusament Resin Model Neutral Beige",
+      "vendor": "Prusa Polymers",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-ultra-violet",
+      "name": "Prusament Resin Model Ultra Violet",
+      "vendor": "Prusa Polymers",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-biobased60-herbal-green",
+      "name": "Prusament Resin BioBased60 Herbal Green",
+      "vendor": "Prusa Polymers",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-biobased60-magma-red",
+      "name": "Prusament Resin BioBased60 Magma Red",
+      "vendor": "Prusa Polymers",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-biobased60-natural-yellow",
+      "name": "Prusament Resin BioBased60 Natural Yellow",
+      "vendor": "Prusa Polymers",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-biobased60-obsidian-black",
+      "name": "Prusament Resin BioBased60 Obsidian Black",
+      "vendor": "Prusa Polymers",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-biobased60-sapphire-blue",
+      "name": "Prusament Resin BioBased60 Sapphire Blue",
+      "vendor": "Prusa Polymers",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-biobased60-ivory-white",
+      "name": "Prusament Resin BioBased60 Ivory White",
+      "vendor": "Prusa Polymers",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-flex80-transparent-clear",
+      "name": "Prusament Resin Flex80 Transparent Clear",
+      "vendor": "Prusa Polymers",
+      "type": "Flexible",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-flex80-black",
+      "name": "Prusament Resin Flex80 Black",
+      "vendor": "Prusa Polymers",
+      "type": "Flexible",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-flex80-white",
+      "name": "Prusament Resin Flex80 White",
+      "vendor": "Prusa Polymers",
+      "type": "Flexible",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "ameralabs-tgm-7-led",
+      "name": "Ameralabs TGM-7 LED",
+      "vendor": "Ameralabs",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "primacreator-tough-light-grey",
+      "name": "PrimaCreator Tough Light Grey",
+      "vendor": "PrimaCreator",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "primacreator-tough-clear",
+      "name": "PrimaCreator Tough Clear",
+      "vendor": "PrimaCreator",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "primacreator-tough-white",
+      "name": "PrimaCreator Tough White",
+      "vendor": "PrimaCreator",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "primacreator-flex-clear",
+      "name": "PrimaCreator Flex Clear",
+      "vendor": "PrimaCreator",
+      "type": "Flexible",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "siraya-tech-simple-clear",
+      "name": "Siraya Tech Simple Clear",
+      "vendor": "Siraya Tech",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "siraya-tech-blu-clear-v2",
+      "name": "Siraya Tech Blu Clear V2",
+      "vendor": "Siraya Tech",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "siraya-tech-blu-blue",
+      "name": "Siraya Tech Blu Blue",
+      "vendor": "Siraya Tech",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "siraya-tech-fast-grey",
+      "name": "Siraya Tech Fast Grey",
+      "vendor": "Siraya Tech",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "siraya-tech-tenacious",
+      "name": "Siraya Tech Tenacious",
+      "vendor": "Siraya Tech",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "siraya-tech-easy",
+      "name": "Siraya Tech Easy",
+      "vendor": "Siraya Tech",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "siraya-tech-sculpt",
+      "name": "Siraya Tech Sculpt",
+      "vendor": "Siraya Tech",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "siraya-tech-fast-black",
+      "name": "Siraya Tech Fast Black",
+      "vendor": "Siraya Tech",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "nextdent-model-2-0-grey",
+      "name": "NextDent Model 2.0 Grey",
+      "vendor": "NextDent",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "nextdent-surgical-guide",
+      "name": "NextDent Surgical Guide",
+      "vendor": "NextDent",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "nextdent-cast-purple",
+      "name": "NextDent Cast Purple",
+      "vendor": "NextDent",
+      "type": "Casting",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "makerjuice-labs-standard-red",
+      "name": "MakerJuice Labs Standard Red",
+      "vendor": "MakerJuice Labs",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "3djake-high-precision-grey",
+      "name": "3DJake High Precision Grey",
+      "vendor": "3DJake",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "3djake-high-precision-blue",
+      "name": "3DJake High Precision Blue",
+      "vendor": "3DJake",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "zortrax-black",
+      "name": "Zortrax Black",
+      "vendor": "Zortrax",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "asiga-denta-model",
+      "name": "Asiga Denta Model",
+      "vendor": "Asiga",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "asiga-plasgray",
+      "name": "Asiga PlasGRAY",
+      "vendor": "Asiga",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "ameralabs-amd-3-led",
+      "name": "Ameralabs AMD 3 LED",
+      "vendor": "Ameralabs",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "bluecast-lcd-dlp-original",
+      "name": "BlueCast LCD-DLP Original",
+      "vendor": "BlueCast",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "bluecast-s",
+      "name": "BlueCast S+",
+      "vendor": "BlueCast",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "bluecast-x5",
+      "name": "BlueCast X5",
+      "vendor": "BlueCast",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "bluecast-23ls",
+      "name": "BlueCast 23LS",
+      "vendor": "BlueCast",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "monocure-3d-clear-rapid-resin",
+      "name": "Monocure 3D Clear Rapid Resin",
+      "vendor": "Monocure",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "monocure-3d-grey-rapid-resin",
+      "name": "Monocure 3D Grey Rapid Resin",
+      "vendor": "Monocure",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "monocure-3d-white-rapid-resin",
+      "name": "Monocure 3D White Rapid Resin",
+      "vendor": "Monocure",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "3dm-htr140-high-temperature",
+      "name": "3DM-HTR140 (high temperature)",
+      "vendor": "3DM",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "funtodo-industrial-blend-unpigmented",
+      "name": "FunToDo Industrial Blend Unpigmented",
+      "vendor": "FunToDo",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "3dm-black",
+      "name": "3DM-BLACK",
+      "vendor": "3DM",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "3dm-dent",
+      "name": "3DM-DENT",
+      "vendor": "3DM",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "3dm-hr-green",
+      "name": "3DM-HR Green",
+      "vendor": "3DM",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "3dm-xpro-white",
+      "name": "3DM-XPRO White",
+      "vendor": "3DM",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "funtodo-ash-grey",
+      "name": "FunToDo Ash Grey",
+      "vendor": "FunToDo",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "photocentric-hard-grey",
+      "name": "Photocentric Hard Grey",
+      "vendor": "Photocentric",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "nextdent-crown-bridge",
+      "name": "NextDent Crown Bridge",
+      "vendor": "NextDent",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1"
+      ]
+    },
+    {
+      "id": "dragon-resin-metalshine-metal-grey",
+      "name": "Dragon Resin Metalshine Metal Grey",
+      "vendor": "Dragon Resin",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "dragon-resin-metalshine-dark-brass",
+      "name": "Dragon Resin Metalshine Dark Brass",
+      "vendor": "Dragon Resin",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "dragon-resin-metalshine-brass",
+      "name": "Dragon Resin Metalshine Brass",
+      "vendor": "Dragon Resin",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1",
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-prusa-orange",
+      "name": "Prusament Resin Model+ Prusa Orange",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-rich-black",
+      "name": "Prusament Resin Model+ Rich Black",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-transparent-clear",
+      "name": "Prusament Resin Model+ Transparent Clear",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-prusa-pro-green",
+      "name": "Prusament Resin Model+ Prusa Pro Green",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-solid-grey-2",
+      "name": "Prusament Resin Model+ Solid Grey",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-alabaster-white-2",
+      "name": "Prusament Resin Model+ Alabaster White",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-neutral-beige-2",
+      "name": "Prusament Resin Model+ Neutral Beige",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-bright-cyan",
+      "name": "Prusament Resin Model+ Bright Cyan",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-bright-magenta",
+      "name": "Prusament Resin Model+ Bright Magenta",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-bright-yellow",
+      "name": "Prusament Resin Model+ Bright Yellow",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-grass-green",
+      "name": "Prusament Resin Model+ Grass Green",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-anthracite-grey",
+      "name": "Prusament Resin Model+ Anthracite Grey",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-sand-stone",
+      "name": "Prusament Resin Model+ Sand Stone",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-ultra-violet-2",
+      "name": "Prusament Resin Model+ Ultra Violet",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-terra-brown",
+      "name": "Prusament Resin Model+ Terra Brown",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-classic-red",
+      "name": "Prusament Resin Model+ Classic Red",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-brick-red",
+      "name": "Prusament Resin Model+ Brick Red",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-transparent-red",
+      "name": "Prusament Resin Model+ Transparent Red",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-transparent-amber",
+      "name": "Prusament Resin Model+ Transparent Amber",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-transparent-green",
+      "name": "Prusament Resin Model+ Transparent Green",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": 1.1,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-anthracite-grey-2",
+      "name": "Prusament Resin Model Anthracite Grey",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-classic-red-2",
+      "name": "Prusament Resin Model Classic Red",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-rich-black-2",
+      "name": "Prusament Resin Model Rich Black",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-bright-cyan-2",
+      "name": "Prusament Resin Model Bright Cyan",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-bright-magenta-2",
+      "name": "Prusament Resin Model Bright Magenta",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-bright-yellow-2",
+      "name": "Prusament Resin Model Bright Yellow",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-grass-green-2",
+      "name": "Prusament Resin Model Grass Green",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-prusa-pro-green-2",
+      "name": "Prusament Resin Model Prusa Pro Green",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-prusa-orange-2",
+      "name": "Prusament Resin Model Prusa Orange",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-transparent-amber-2",
+      "name": "Prusament Resin Model Transparent Amber",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-transparent-green-2",
+      "name": "Prusament Resin Model Transparent Green",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-transparent-red-2",
+      "name": "Prusament Resin Model Transparent Red",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-transparent-clear-2",
+      "name": "Prusament Resin Model Transparent Clear",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-sandstone",
+      "name": "Prusament Resin Model Sandstone",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-terra-brown-2",
+      "name": "Prusament Resin Model Terra Brown",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-model-brick-red-2",
+      "name": "Prusament Resin Model Brick Red",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-flex-anatomic-red",
+      "name": "Prusament Resin Flex Anatomic Red",
+      "vendor": "Prusa Polymers",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-flex-gingiva-mask",
+      "name": "Prusament Resin Flex Gingiva Mask",
+      "vendor": "Prusa Polymers",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-basic-black",
+      "name": "Prusament Resin Basic Black",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-basic-grey",
+      "name": "Prusament Resin Basic Grey",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-basic-orange",
+      "name": "Prusament Resin Basic Orange",
+      "vendor": "Prusa Polymers",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "prusament-resin-impact65-black",
+      "name": "Prusament Resin Impact65 Black",
+      "vendor": "Prusa Polymers",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "forward-am-ultracur3d-rg-35",
+      "name": "Forward AM Ultracur3D RG 35",
+      "vendor": "Forward AM",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "forward-am-ultracur3d-st-45",
+      "name": "Forward AM Ultracur3D ST 45",
+      "vendor": "Forward AM",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "forward-am-ultracur3d-st-45-m",
+      "name": "Forward AM Ultracur3D ST 45 M",
+      "vendor": "Forward AM",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "forward-am-ultracur3d-st-80",
+      "name": "Forward AM Ultracur3D ST 80",
+      "vendor": "Forward AM",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "forward-am-ultracur3d-st-80-white",
+      "name": "Forward AM Ultracur3D ST 80 White",
+      "vendor": "Forward AM",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "forward-am-ultracur3d-st-80-black",
+      "name": "Forward AM Ultracur3D ST 80 Black",
+      "vendor": "Forward AM",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "forward-am-ultracur3d-el-150-black",
+      "name": "Forward AM Ultracur3D EL 150 Black",
+      "vendor": "Forward AM",
+      "type": "Flexible",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "forward-am-ultracur3d-fl-300-black",
+      "name": "Forward AM Ultracur3D FL 300 Black",
+      "vendor": "Forward AM",
+      "type": "Flexible",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "primacreator-water-washable-transparent",
+      "name": "PrimaCreator Water Washable Transparent",
+      "vendor": "PrimaCreator",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "druckwege-type-d-dental-model",
+      "name": "DruckWege Type D Dental Model",
+      "vendor": "DruckWege",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "druckwege-type-d-standard-white",
+      "name": "DruckWege Type D Standard White",
+      "vendor": "DruckWege",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "druckwege-type-d-standard-pigmentfrei-clear",
+      "name": "DruckWege Type D Standard Pigmentfrei Clear",
+      "vendor": "DruckWege",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "3dm-abs-orange",
+      "name": "3DM-ABS Orange",
+      "vendor": "3DM",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "peopoly-deft-white",
+      "name": "Peopoly Deft White",
+      "vendor": "Peopoly",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "peopoly-neo-clear",
+      "name": "Peopoly Neo Clear",
+      "vendor": "Peopoly",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "liqcreate-clear-impact",
+      "name": "Liqcreate Clear Impact",
+      "vendor": "Liqcreate",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "liqcreate-premium-model",
+      "name": "Liqcreate Premium Model",
+      "vendor": "Liqcreate",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "liqcreate-strong-x",
+      "name": "Liqcreate Strong X",
+      "vendor": "Liqcreate",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "liqcreate-wax-castable",
+      "name": "Liqcreate Wax Castable",
+      "vendor": "Liqcreate",
+      "type": "Casting",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "3djake-blue",
+      "name": "3DJake Blue",
+      "vendor": "3DJake",
+      "type": "Model",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "altana-cubic-ink-high-performance-4-1000-vp-v0",
+      "name": "ALTANA Cubic Ink High Performance 4-1000 VP-V0",
+      "vendor": "Altana",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "altana-cubic-ink-high-performance-4-2100-vp",
+      "name": "ALTANA Cubic Ink High Performance 4-2100 VP",
+      "vendor": "Altana",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "altana-cubic-ink-high-performance-4-2800-vp-esd-black",
+      "name": "ALTANA Cubic Ink High Performance 4-2800 VP-ESD black",
+      "vendor": "Altana",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "liqcreate-bio-med-clear",
+      "name": "Liqcreate Bio-Med Clear",
+      "vendor": "Liqcreate",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "liqcreate-dental-model-pro-beige",
+      "name": "Liqcreate Dental Model Pro Beige",
+      "vendor": "Liqcreate",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "liqcreate-dental-model-pro-grey",
+      "name": "Liqcreate Dental Model Pro Grey",
+      "vendor": "Liqcreate",
+      "type": "Medical",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "liqcreate-flexible-x",
+      "name": "Liqcreate Flexible-X",
+      "vendor": "Liqcreate",
+      "type": "Flexible",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "liqcreate-tough-x",
+      "name": "Liqcreate Tough-X",
+      "vendor": "Liqcreate",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "loctite-3d-ind475",
+      "name": "LOCTITE 3D IND475",
+      "vendor": "Henkel",
+      "type": "Flexible",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "loctite-3d-pro476",
+      "name": "LOCTITE 3D PRO476",
+      "vendor": "Henkel",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "loctite-3d-3843-hdt60-high-toughness",
+      "name": "LOCTITE 3D 3843 HDT60 High Toughness",
+      "vendor": "Henkel",
+      "type": "Engineering",
+      "density_g_cm3": null,
+      "printers": [
+        "SL1S"
+      ]
+    },
+    {
+      "id": "generic-blue-resin",
+      "name": "Generic Blue Resin",
+      "vendor": "Generic",
+      "type": "Tough",
+      "density_g_cm3": null,
+      "printers": [
+        "PHOTON MONO",
+        "PHOTON MONO SE",
+        "PHOTON MONO X"
+      ]
+    },
+    {
+      "id": "anycubic-plant-based-uv-resin-grey-23",
+      "name": "Anycubic Plant-based UV Resin Grey 23",
+      "vendor": "Anycubic",
+      "type": "Plant-Based",
+      "density_g_cm3": null,
+      "printers": [
+        "PHOTON MONO X 6K"
+      ]
+    },
+    {
+      "id": "anycubic-plant-based-uv-resin-grey-28",
+      "name": "Anycubic Plant-based UV Resin Grey 28",
+      "vendor": "Anycubic",
+      "type": "Plant-Based",
+      "density_g_cm3": null,
+      "printers": [
+        "PHOTON MONO X"
+      ]
+    },
+    {
+      "id": "anycubic-plant-based-uv-resin-grey-30",
+      "name": "Anycubic Plant-based UV Resin Grey 30",
+      "vendor": "Anycubic",
+      "type": "Plant-Based",
+      "density_g_cm3": null,
+      "printers": [
+        "PHOTON MONO SE"
+      ]
+    }
+  ]
+}
