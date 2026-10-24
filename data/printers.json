@@ -1,0 +1,3384 @@
+{
+  "generated": "2026-10-24",
+  "disclaimer": "Dati raccolti da ricerche web (siti ufficiali, store, recensioni, forum). Prezzi e consumi sono indicativi: i prezzi cambiano spesso e alcune offerte trovate sono scadute. Ogni percorso elencato in 'estimated' e una stima non verificata da una misura indipendente; i valori fuori da quell'elenco provengono da una fonte citata in notes/sources ma non sono stati verificati uno per uno. Consumi: 'power_w.avg_pla' e la media durante la stampa in PLA; 'power_w.avg_high_temp' e la media con ABS/PC/PETG o camera calda (null se ignota); 'power_w.peak' e il picco di potenza (spesso lo spunto di riscaldamento o la potenza nominale). I nomi in 'prusaslicher_models' sono ipotesi da verificare nei profili reali di PrusaSlicer. Verificare prima di usare i dati per decisioni di costo.",
+  "printers": [
+    {
+      "id": "anycubic-kobra-2",
+      "brand": "Anycubic",
+      "model": "Kobra 2",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": false,
+      "bed_heater_w": 200,
+      "hotend_heater_w": 40,
+      "price_eur": 219,
+      "power_w": {
+        "idle": 8,
+        "avg_pla": 120,
+        "avg_high_temp": null,
+        "peak": 350
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 20,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 220x220x250 mm (store Anycubic indica 250x220x220 HWD). Prezzo EUR non trovato per questo modello: il Pro compare a 349 EUR di listino su de.anycubic.com (sconto Black Friday a 199 EUR), quindi 219 EUR e stima. Spec database: 350 W dichiarati (nominale). Un database lo indica come fuori produzione. Idle e PLA stimati. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://store.anycubic.com/products/kobra-2",
+        "https://www.anycubic.com/blogs/3d-printing-guides/anycubic-kobra-2-series-specs-and-features-comparison",
+        "https://printer-hub.ru/en/printers/anycubic-kobra-2"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "anycubic-kobra-2-neo",
+      "brand": "Anycubic",
+      "model": "Kobra 2 Neo",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": false,
+      "bed_heater_w": 150,
+      "hotend_heater_w": 40,
+      "price_eur": 179,
+      "power_w": {
+        "idle": 8,
+        "avg_pla": 100,
+        "avg_high_temp": null,
+        "peak": 300
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 20,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 220x220x250 mm (confermato da Anycubic e rivenditori). Prezzo EUR non trovato: 199 USD lancio, 209 USD di listino con vendita a 109 USD, CHF 147 (esaurito): 179 EUR stimato. Nessun consumo misurato, nessuna scheda con watt trovata: picco 300 W e idle/PLA stimati. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://www.3djake.ch/en-CH/anycubic-3d-printer-and-accessories/kobra-2-neo",
+        "https://store.anycubic.com/collections/today-best-seller/products/kobra-2-neo",
+        "https://www.notebookcheck.net/Anycubic-launches-Kobra-2-series-3D-printers-combining-high-speed-with-low-cost.745777.0.html"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "anycubic-kobra-2-pro",
+      "brand": "Anycubic",
+      "model": "Kobra 2 Pro",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": false,
+      "bed_heater_w": 250,
+      "hotend_heater_w": 40,
+      "price_eur": 349,
+      "power_w": {
+        "idle": 10,
+        "avg_pla": 150,
+        "avg_high_temp": null,
+        "peak": 400
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 220x220x250 mm (HWD Anycubic: altezza 250). Prezzo 349 EUR di listino su de.anycubic.com (sconto Black Friday a 199 EUR, da verificare). Picco 400 W = potenza nominale dichiarata da Anycubic (tabella comparativa, adattatore 400 W), non misurata. Idle e PLA stimati. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://de.anycubic.com/collections/fdm-drucker/products/kobra-2-pro",
+        "https://uk.anycubic.com/products/kobra-2-pro",
+        "https://www.anycubic.com/blogs/3d-printing-guides/anycubic-kobra-2-series-specs-and-features-comparison"
+      ],
+      "estimated": [
+        "power_w.idle",
+        "power_w.avg_pla",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w"
+      ]
+    },
+    {
+      "id": "anycubic-kobra-3",
+      "brand": "Anycubic",
+      "model": "Kobra 3",
+      "kit": false,
+      "bed_mm": [
+        250,
+        250
+      ],
+      "enclosed": false,
+      "bed_heater_w": 250,
+      "hotend_heater_w": 40,
+      "price_eur": 249,
+      "power_w": {
+        "idle": 20,
+        "avg_pla": 205,
+        "avg_high_temp": null,
+        "peak": 398
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Prezzo del modello base non trovato: stima a partire dal Kobra 3 V2 (268.72 EUR, Proshop). [PrusaSlicer] Nessun printer_model Kobra 3 nel bundle Anycubic 2.1.1. Misure dalla recensione IgorsLab del Kobra 3 originale (non V2), singola fonte: idle 19.9 W, standby con motori 29.6 W, PLA 230/65 C 205 W, picco 398 W con riscaldamento simultaneo. Il test includeva un ACE Pro (assorbe 300-350 W in riscaldamento); non e chiaro se il suo consumo sia incluso nel valore PLA.",
+      "sources": [
+        "https://www.productchart.com/3d_printers/similar_to_49506",
+        "https://igorslab.de/en/anycubic-kobra-3-ace-pro-3d-printer-review/6",
+        "https://www.3djake.com/anycubic-3d-printer-and-accessories/kobra-3"
+      ],
+      "estimated": [
+        "price_eur",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "anycubic-kobra-3-max",
+      "brand": "Anycubic",
+      "model": "Kobra 3 Max",
+      "kit": false,
+      "bed_mm": [
+        420,
+        420
+      ],
+      "enclosed": false,
+      "bed_heater_w": 600,
+      "hotend_heater_w": 40,
+      "price_eur": 459,
+      "power_w": {
+        "idle": 15,
+        "avg_pla": 200,
+        "avg_high_temp": null,
+        "peak": 800
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 420x420x500 mm. Prezzo 459 EUR da eu.anycubic.com (prezzo di vendita, barrato 699 EUR): promo, da verificare. Non confondere con il Kobra 3 Max V2 (letto 800 W bed): questa voce e il modello originale. Il 300 W citato e la PSU dello store US, non dello store EU: incoerente con il letto da 420 mm, quindi il picco 800 W e stimato sul riscaldamento del letto, non misurato. Idle, PLA e bed_heater_w stimati. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://eu.anycubic.com/products/anycubic-kobra-3-max",
+        "https://store.anycubic.com/products/kobra-3-max",
+        "https://3djake.ch/en-CH/anycubic-3d-printer-and-accessories/kobra-3-max?sai=28954"
+      ],
+      "estimated": [
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w"
+      ]
+    },
+    {
+      "id": "anycubic-kobra-s1",
+      "brand": "Anycubic",
+      "model": "Kobra S1",
+      "kit": false,
+      "bed_mm": [
+        250,
+        250
+      ],
+      "enclosed": true,
+      "bed_heater_w": 250,
+      "hotend_heater_w": 40,
+      "price_eur": 349,
+      "power_w": {
+        "idle": 8,
+        "avg_pla": 120,
+        "avg_high_temp": 180,
+        "peak": 350
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 250x250x250 mm, CoreXY chiuso (chamber non riscaldata: 3DNatives). Prezzo EUR non trovato: CHF 354 (3djake, esaurito), combo USD 429 (TechRadar). 349 EUR stimato per il base. Consumi NON misurati (igorslab trovato ma senza valori W nelle pagine indicizzate): tutti i watt sono stime. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://www.galaxus.at/en/s1/product/anycubic-kobra-s1-combo-250-x-250-x-250-mm-3d-printers-54253376",
+        "https://www.3djake.ch/en-CH/anycubic-3d-printer-and-accessories/kobra-s1?sai=28837",
+        "https://www.igorslab.de/en/anycubic-cobra-s1-combo-im-test/6/"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "artillery-sidewinder-x4-plus",
+      "brand": "Artillery",
+      "model": "Sidewinder X4 Plus",
+      "kit": false,
+      "bed_mm": [
+        300,
+        300
+      ],
+      "enclosed": false,
+      "bed_heater_w": 250,
+      "hotend_heater_w": 40,
+      "price_eur": 349,
+      "power_w": {
+        "idle": 6,
+        "avg_pla": 100,
+        "avg_high_temp": 110,
+        "peak": 350
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "X4 Plus"
+      ],
+      "notes": "Volume di stampa 300 x 300 x 400 mm dallo store ufficiale Artillery e da diverse recensioni. Prezzo: lo store EU ufficiale non e stato verificato (accesso bloccato in ricerca); i prezzi trovati variano da 269 USD (variante S1 in promo) a 429 USD (recensione 3DWithUs), quindi 349 EUR e una stima. Nessun dato di consumo trovato: tutti i valori di idle, PLA, alta temperatura e riscaldatore sono stime. Il valore 350 W in peak non e dichiarato: alimentatore non identificato (la scheda ricambio X4/X3 non riporta la potenza), quindi e una stima. Chassis aperto.",
+      "sources": [
+        "https://artillery3d.com/products/sidewinder-x4-plus-s1",
+        "https://3dwithus.com/artillery-sidewinder-x4-plus-review-3d-printer-testing-settings-tips",
+        "https://eu.artillery3d.com/products/power-adapter-x4-x3"
+      ],
+      "estimated": [
+        "price_eur",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ]
+    },
+    {
+      "id": "bambu-a1",
+      "brand": "Bambu Lab",
+      "model": "A1",
+      "kit": false,
+      "bed_mm": [
+        256,
+        256
+      ],
+      "enclosed": false,
+      "bed_heater_w": 260,
+      "hotend_heater_w": 40,
+      "price_eur": 349,
+      "power_w": {
+        "idle": 5,
+        "avg_pla": 95,
+        "avg_high_temp": null,
+        "peak": 150
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 15,
+          "life_h": 1500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        },
+        {
+          "name": "Cinghia asse X/Y",
+          "cost_eur": 8,
+          "life_h": 3000
+        }
+      ],
+      "prusaslicer_models": [
+        "BBL A1"
+      ],
+      "notes": "349 EUR e il prezzo del Combo (con AMS Lite) da un'offerta di terze parti scaduta, non il prezzo base. Idle 5 W e PLA 95 W dallo snippet della wiki Bambu (da confermare sulla pagina). Picco stimato. [PrusaSlicer] Nome NON verificato (vedi sopra).",
+      "sources": [
+        "https://wiki.bambulab.com/en/general/power-consumption",
+        "https://www.mydealz.de/deals/bambu-lab-4-anniversary-sale-versch-drucker-stark-reduziert-2793782"
+      ],
+      "estimated": [
+        "power_w.peak",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "bambu-a1-mini",
+      "brand": "Bambu Lab",
+      "model": "A1 mini",
+      "kit": false,
+      "bed_mm": [
+        180,
+        180
+      ],
+      "enclosed": false,
+      "bed_heater_w": 130,
+      "hotend_heater_w": 40,
+      "price_eur": 199,
+      "power_w": {
+        "idle": 7,
+        "avg_pla": 85,
+        "avg_high_temp": null,
+        "peak": 135
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 15,
+          "life_h": 1500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        },
+        {
+          "name": "Cinghia asse X/Y",
+          "cost_eur": 8,
+          "life_h": 3000
+        }
+      ],
+      "prusaslicer_models": [
+        "BBL A1 mini"
+      ],
+      "notes": "Consumo PLA 85 W e picco 135 W dal test di Igor's Lab (singola recensione). Vita utile 4000 h stimata. [PrusaSlicer] Nome NON verificato: il repo prusa3d/PrusaSlicer-settings-non-prusa-fff non contiene una cartella Bambu. Prezzo 199 EUR dallo store ufficiale EU (eu.store.bambulab.com, pagina a1-mini; il prezzo puo variare con la destinazione).",
+      "sources": [
+        "https://www.igorslab.de/en/bambu-lab-a1-mini-ams-lite-3d-printer-in-test-its-probably-not-going-to-get-much-easier-than-this/6",
+        "https://www.mydealz.de/deals/bambu-lab-4-anniversary-sale-versch-drucker-stark-reduziert-2793782",
+        "https://eu.store.bambulab.com/products/a1-mini",
+        "https://www.3dprintergear.com.au/assets/files/A1%20Mini%20TDS.pdf",
+        "https://www.harveynorman.co.nz/computers/printers-and-office/printers/bambu-lab-a1-3d-printer-silver-pf002-m-au.html"
+      ],
+      "estimated": [
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "bambu-h2d",
+      "brand": "Bambu Lab",
+      "model": "H2D",
+      "kit": false,
+      "bed_mm": [
+        325,
+        320
+      ],
+      "enclosed": true,
+      "bed_heater_w": 420,
+      "hotend_heater_w": 60,
+      "price_eur": 1699,
+      "power_w": {
+        "idle": 26,
+        "avg_pla": 197,
+        "avg_high_temp": 395,
+        "peak": 2200
+      },
+      "lifetime_h": 6000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 15,
+          "life_h": 1500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        },
+        {
+          "name": "Ventola hotend",
+          "cost_eur": 10,
+          "life_h": 8000
+        }
+      ],
+      "prusaslicer_models": [
+        "BBL H2D"
+      ],
+      "notes": "Dati dalla wiki Bambu (dynamic test): PLA 197 W, standby 25-27 W, PETG 150 W, PC 395 W (il 395 e PC, non ABS). Picco 2200 W = potenza nominale a 220 V, non misurata. Prezzo 1699 EUR = Combo da un'offerta scaduta. Lifetime 6000 h stimata. [PrusaSlicer] Nome NON verificato (vedi sopra). Ricerca prezzi: nessun prezzo EUR ufficiale trovato per H2D.",
+      "sources": [
+        "https://wiki.bambulab.com/en/general/power-consumption",
+        "https://www.mydealz.de/deals/bambu-lab-4-anniversary-sale-versch-drucker-stark-reduziert-2793782",
+        "https://www.pbtech.co.nz/product/PTRBAM0014/Bambu-Lab-H2D-Build-Size-350-x-320-x-325-mm-Dual-n"
+      ],
+      "estimated": [
+        "power_w.peak",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "bambu-h2s",
+      "brand": "Bambu Lab",
+      "model": "H2S",
+      "kit": false,
+      "bed_mm": [
+        340,
+        320
+      ],
+      "enclosed": true,
+      "bed_heater_w": 420,
+      "hotend_heater_w": 60,
+      "price_eur": 1285,
+      "power_w": {
+        "idle": 20,
+        "avg_pla": 180,
+        "avg_high_temp": 250,
+        "peak": 2050
+      },
+      "lifetime_h": 6000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 15,
+          "life_h": 1500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        },
+        {
+          "name": "Ventola hotend",
+          "cost_eur": 10,
+          "life_h": 8000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 340x320x340 mm (dato di piu rivenditori), chamber fino a 65 C, hotend fino a 350 C, bed fino a 120 C. Prezzo 1285 EUR IVA incl. da Makerpoint NL (base, senza AMS): non e lo store Bambu EU (bloccato). Picco 2050 W dichiarato da Bambu a 220 V (1170 W a 110 V), con nota che tiene la massima potenza per circa 3 minuti: valore nominale, non misurato. Nessuna misura con wattmetro trovata per H2S. idle, PLA e ABS sono stime derivate dalla wiki Bambu per H2D (standby 25-27 W, PLA 197 W, PC 395 W): l'H2S con una sola testa dovrebbe consumare meno, quindi valori stimati al ribasso. bed_heater_w e hotend_heater_w stimati dal fratello H2D. Lifetime 6000 h stimata. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://www.makerpoint.nl/en-gb/3d-printing/3d-printers/fff/bambu-lab-h2s-210000007724",
+        "https://all3dp.com/4/bambu-labs-largest-h-series-printer-the-new-h2s-beats-price-expectations-at-just-1249/",
+        "https://3dprintingindustry.com/news/bambu-lab-launches-the-new-h2s-technical-specifications-and-pricing-243603/",
+        "https://wiki.bambulab.com/en/general/power-consumption"
+      ],
+      "estimated": [
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "bambu-p1p",
+      "brand": "Bambu Lab",
+      "model": "P1P",
+      "kit": false,
+      "bed_mm": [
+        256,
+        256
+      ],
+      "enclosed": false,
+      "bed_heater_w": 260,
+      "hotend_heater_w": 40,
+      "price_eur": 399,
+      "power_w": {
+        "idle": 8,
+        "avg_pla": 70,
+        "avg_high_temp": null,
+        "peak": 850
+      },
+      "lifetime_h": 5000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 15,
+          "life_h": 1500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        },
+        {
+          "name": "Ventola hotend",
+          "cost_eur": 10,
+          "life_h": 8000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Open frame (non chiusa): le pagine P1S e P1P la distinguono. Build 256x256x256 mm. Prezzo 399 EUR da eu.store.bambulab.com (snippet di ricerca, non verificato: lo store EU blocca WebFetch con 402); il prezzo barrato da 779 nello snippet e incoerente, quindi non usato. Consumi: nessuna misura trovata per P1P. idle/PLA/picco sono stime derivate dai dati P1S del forum Bambu (media 30-70 W, spunto 850 W all'avvio, idle 9-10 W), con il telaio aperto ipotizzato a idle leggermente inferiore. avg_high_temp null: senza camera chiusa non si stampa ABS/PC in sicurezza. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://eu.store.bambulab.com/en-it/products/p1p",
+        "https://uk.store.bambulab.com/en/products/p1p",
+        "https://forum.bambulab.com/t/p1s-power-consumption/173002",
+        "https://wiki.bambulab.com/en/general/power-consumption"
+      ],
+      "estimated": [
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "bambu-p1s",
+      "brand": "Bambu Lab",
+      "model": "P1S",
+      "kit": false,
+      "bed_mm": [
+        256,
+        256
+      ],
+      "enclosed": true,
+      "bed_heater_w": 260,
+      "hotend_heater_w": 40,
+      "price_eur": 499,
+      "power_w": {
+        "idle": 9.5,
+        "avg_pla": 70,
+        "avg_high_temp": 105,
+        "peak": 850
+      },
+      "lifetime_h": 5000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 15,
+          "life_h": 1500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        },
+        {
+          "name": "Ventola hotend",
+          "cost_eur": 10,
+          "life_h": 8000
+        }
+      ],
+      "prusaslicer_models": [
+        "BBL P1S"
+      ],
+      "notes": "Prezzo stimato. Idle 9-10 W da utenti del forum Bambu. Media PLA 30-70 W e picco 850 W dal forum (log con smart plug, spunto all'avvio). Il valore 105 W per la camera calda deriva da wiki/blog riferiti a X1C: usato come stima. Lifetime 5000 h stimata. [PrusaSlicer] Nome NON verificato (vedi sopra). Prezzo 499 EUR \"a partire da\" dalla pagina P1 Series dello store EU (data non indicata); comparatore 1/10/2026 a 469.95 EUR.",
+      "sources": [
+        "https://forum.bambulab.com/t/p1s-power-consumption/173002",
+        "https://www.igorslab.de/en/bambu-lab-p1s-ams-combo-3d-printer-in-test-setting-the-bar-a-bit-higher-again/6/",
+        "https://eu.store.bambulab.com/fr/collections/p1-series"
+      ],
+      "estimated": [
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "bambu-x1c",
+      "brand": "Bambu Lab",
+      "model": "X1C",
+      "kit": false,
+      "bed_mm": [
+        256,
+        256
+      ],
+      "enclosed": true,
+      "bed_heater_w": 260,
+      "hotend_heater_w": 60,
+      "price_eur": 1049,
+      "power_w": {
+        "idle": 9,
+        "avg_pla": 105,
+        "avg_high_temp": 150,
+        "peak": 1000
+      },
+      "lifetime_h": 5000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 15,
+          "life_h": 1500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        },
+        {
+          "name": "Ventola hotend",
+          "cost_eur": 10,
+          "life_h": 8000
+        }
+      ],
+      "prusaslicer_models": [
+        "BBL X1C"
+      ],
+      "notes": "Idle 8.5-9.9 W e PLA medio 105 W dalla wiki Bambu (versione cinese, riga X1/X1C). Picco circa 1 kW durante il riscaldamento del letto a 100 C (utente del forum). ABS stimato. [PrusaSlicer] Nome NON verificato (vedi sopra). Prezzo 1049 EUR \"a partire da\" dalla pagina X1 Series dello store EU (il valore puo dipendere dalla configurazione).",
+      "sources": [
+        "https://wiki.bambulab.com/zh/general/power-consumption",
+        "https://forum.bambulab.com/t/general-energy-usage/57113",
+        "https://eu.store.bambulab.com/collections/x1-series"
+      ],
+      "estimated": [
+        "power_w.avg_high_temp",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "bambu-x1e",
+      "brand": "Bambu Lab",
+      "model": "X1E",
+      "kit": false,
+      "bed_mm": [
+        256,
+        256
+      ],
+      "enclosed": true,
+      "bed_heater_w": 260,
+      "hotend_heater_w": 60,
+      "price_eur": 2699,
+      "power_w": {
+        "idle": 9,
+        "avg_pla": 105,
+        "avg_high_temp": 150,
+        "peak": 750
+      },
+      "lifetime_h": 6000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 15,
+          "life_h": 1500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        },
+        {
+          "name": "Ventola hotend",
+          "cost_eur": 10,
+          "life_h": 8000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 256x256x256 mm, camera chiusa con chamber riscaldata fino a 60 C (spec ufficiale), hotend fino a 320 C. Prezzo non ufficiale: Bambu non vende X1E sul proprio store, solo tramite rivenditori. Snippet trovati: 2269 EUR escl. IVA (esaurito) e 2699 EUR escl. IVA: usato 2699 come stima. Picco 750 W dichiarato da 3DPros (valore massimo, non misurato). idle 9 W e PLA 105 W derivati dai dati X1C della wiki Bambu (stima per X1E, non misura). avg_high_temp 150 W stimato dal dato X1C. Nessuna misura con wattmetro trovata per X1E. Lifetime 6000 h stimata (versione enterprise). Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://3dpros.com/printers/bambu-lab-x1e",
+        "https://www.makerpoint.nl/en-gb/3d-printing/3d-printers/fff/bambu-lab-x1e-combo-210000005621",
+        "https://wiki.bambulab.com/en/general/power-consumption",
+        "https://pea3d.com/en/bambu-lab-electricity-cost-calculator-x1c-p1s-a1-energy-analysis/"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "creality-cr-10-se",
+      "brand": "Creality",
+      "model": "CR-10 SE",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": false,
+      "bed_heater_w": 250,
+      "hotend_heater_w": 40,
+      "price_eur": 329,
+      "power_w": {
+        "idle": 5,
+        "avg_pla": 90,
+        "avg_high_temp": null,
+        "peak": 350
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 5,
+          "life_h": 300
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 20,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 220x220x265 mm (Galaxus, MatterHackers); altre fonti danno 250 o 260 mm: verificare. Prodotto probabilmente fuori produzione (3DJake: non piu venduto). Prezzo EUR non trovato, MatterHackers 386 USD di listino: 329 EUR stimato. Picco 350 W = potenza nominale dichiarata (Galaxus, scheda). Consumi stimati. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://www.tomshardware.com/3d-printing/creality-cr10-se-review",
+        "https://www.galaxus.de/en/s1/product/creality-3d-printer-cr-10-se-3d-printers-37983943",
+        "https://www.3djake.ch/en-CH/creality-3d-printers-spare-parts/cr-10-se"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "creality-ender-3-v3-ke",
+      "brand": "Creality",
+      "model": "Ender 3 V3 KE",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": false,
+      "bed_heater_w": 190,
+      "hotend_heater_w": 40,
+      "price_eur": 249,
+      "power_w": {
+        "idle": 5,
+        "avg_pla": 90,
+        "avg_high_temp": null,
+        "peak": 350
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 5,
+          "life_h": 300
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 20,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Prezzo non trovato in EUR (valore stimato). Consumi stimati. Il nome del profilo va verificato. [PrusaSlicer] Nessun printer_model Ender-3 V3 nel bundle Creality 1.1.0 del repo non-prusa-fff.",
+      "sources": [
+        "https://www.ozbargain.com.au/product/creality-ender-3-v3-ke",
+        "https://www.3djake.com/creality-3d-printers-spare-parts/ender-3-v3-ke",
+        "https://www.matterhackers.com/store/l/creality3d-ender-3-v3-ke-3d-printer"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "creality-ender-3-v3-se",
+      "brand": "Creality",
+      "model": "Ender 3 V3 SE",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": false,
+      "bed_heater_w": 190,
+      "hotend_heater_w": 40,
+      "price_eur": 169,
+      "power_w": {
+        "idle": 5,
+        "avg_pla": 90,
+        "avg_high_temp": null,
+        "peak": 350
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 5,
+          "life_h": 300
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 20,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Prezzo 169 EUR da Alza.at (data non indicata). Consumi stimati dalla PSU. Vita utile 3000 h per la fascia entry-level. [PrusaSlicer] Nessun printer_model Ender-3 V3 nel bundle Creality 1.1.0 del repo non-prusa-fff. Prezzo 169 EUR confermato sulla pagina Creality ES (promo da 239); comparatore luglio 2026 a 188.23 EUR.",
+      "sources": [
+        "https://www.alza.at/EN/cheap-3d-print/18862952.htm",
+        "https://store.creality.com/es/collections/ender-series-3d-printer",
+        "https://www.3djake.com/creality-3d-printers-spare-parts/ender-3-v3-se"
+      ],
+      "estimated": [
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "creality-ender-3-v3",
+      "brand": "Creality",
+      "model": "Ender-3 V3 (CoreXZ)",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": false,
+      "bed_heater_w": 190,
+      "hotend_heater_w": 40,
+      "price_eur": 299,
+      "power_w": {
+        "idle": 5,
+        "avg_pla": 90,
+        "avg_high_temp": null,
+        "peak": 350
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 5,
+          "life_h": 300
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 20,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 220x220x250 mm, CoreXZ, 600 mm/s, aperto. Prezzo EUR non trovato per il modello base: CHF 285.59 (3djake.ch) e USD 329-389 (vari). 299 EUR e stima, da confermare. Picco 350 W: stima della PSU, non misura. Consumi stimati come gli altri Ender entry-level. Il nome PrusaSlicer non e nel bundle Creality, lasciato vuoto. Non confondere con il V3 SE e il V3 KE gia presenti nel file.",
+      "sources": [
+        "https://www.3djake.ch/en-CH/creality-3d-printers-spare-parts/ender-3-v3",
+        "https://matterhackers.com/store/l/creality3d-ender-3-v3-core-xz-3d-printer/sk/M62Q3ATL",
+        "https://shop.sainsmart.com/products/creality-ender-3-v3"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "creality-ender-3-v3-plus",
+      "brand": "Creality",
+      "model": "Ender-3 V3 Plus",
+      "kit": false,
+      "bed_mm": [
+        300,
+        300
+      ],
+      "enclosed": false,
+      "bed_heater_w": 250,
+      "hotend_heater_w": 40,
+      "price_eur": 434,
+      "power_w": {
+        "idle": 5,
+        "avg_pla": 100,
+        "avg_high_temp": null,
+        "peak": 400
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 5,
+          "life_h": 300
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 20,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 300x300x330 mm (non 400 mm in altezza: tutti i rivenditori danno 330). Prezzo 434 EUR IVA incl. da Galaxus (snippet, prezzo di listino non confermato); Azurefilm 359 EUR scontato da 529, esaurito: non ufficiale. Picco 400 W stimato, non misurato. Consumi stimati. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://galaxus.at/en/s1/product/creality-ender-3-v3-plus-3d-printers-45227448",
+        "https://azurefilm.com/?p=44687",
+        "https://www.3djake.ch/en-CH/creality-3d-printers-spare-parts/ender-3-v3-plus"
+      ],
+      "estimated": [
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "creality-ender-5-s1",
+      "brand": "Creality",
+      "model": "Ender-5 S1",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": false,
+      "bed_heater_w": 300,
+      "hotend_heater_w": 40,
+      "price_eur": 399,
+      "power_w": {
+        "idle": 6,
+        "avg_pla": 100,
+        "avg_high_temp": null,
+        "peak": 350
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 5,
+          "life_h": 300
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 20,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "ENDER5S1"
+      ],
+      "notes": "Build 220x220x280 mm, aperto, direct drive. Nessun prezzo EUR ufficiale trovato: lancio a circa 559 USD, prezzo EUR 399 stimato. Picco 350 W = PSU dichiarata (eBay.de), non misura. Nessun consumo misurato. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://3dprintbeginner.com/creality-launches-the-ender-5-s1-3d-printer/",
+        "https://www.ebay.de/itm/306562216648",
+        "https://creality3dofficial.com/products/ender-5-s1-3d-printer"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "creality-hi",
+      "brand": "Creality",
+      "model": "Hi",
+      "kit": false,
+      "bed_mm": [
+        260,
+        260
+      ],
+      "enclosed": false,
+      "bed_heater_w": 200,
+      "hotend_heater_w": 40,
+      "price_eur": 299,
+      "power_w": {
+        "idle": 8,
+        "avg_pla": 100,
+        "avg_high_temp": null,
+        "peak": 350
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 5,
+          "life_h": 300
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 20,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 260x260x300 mm (confermato da Slickdeals e da piu fonti; la query con 220 mm era errata). Multicolore tramite unita CFS opzionale (venduta a parte): il prezzo 299 EUR e stimato dal base a circa 275 USD (deal Slickdeals, scaduto), non da store EU. Il Combo costa circa 399 USD. Nessuna misura di consumo. Picco 350 W stimato. Telaio aperto: non confermato con fonte primaria, verificare. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://www.tanotis.com/collections/vendors/products/creality-hi-combo-multi-color-3d-printer",
+        "https://slickdeals.net/f/18694921-creality-hi-3d-printer-combo-10-2-x10-2-x11-8-build-volume-500-mm-s-multi-color-printing-compatible-cfs-compatible-275-08-with-code"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "creality-k1",
+      "brand": "Creality",
+      "model": "K1",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": true,
+      "bed_heater_w": 190,
+      "hotend_heater_w": 40,
+      "price_eur": 449,
+      "power_w": {
+        "idle": 8,
+        "avg_pla": 110,
+        "avg_high_temp": null,
+        "peak": 350
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 220x220x250 mm, CoreXY chiuso (la chamber non e riscaldata). Nessun prezzo EUR ufficiale trovato: il lancio era 599 USD (MatterHackers, Aniwaa), quindi 449 EUR e stima. Picco 350 W = potenza nominale dichiarata (nessuna misura). Idle e PLA stimati. Modello probabilmente fuori produzione. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://www.matterhackers.com/store/l/creality3d-k1-high-speed-3d-printer/sk/M08FZLZW",
+        "https://www.aniwaa.com/product/3d-printers/creality-k1/",
+        "https://arvutitark.ee/arvutid-ja-lisad/printerid-ja-skannerid/3-d-printerid/creality-k1-3d-printer-1371805"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "creality-k1-max",
+      "brand": "Creality",
+      "model": "K1 Max",
+      "kit": false,
+      "bed_mm": [
+        300,
+        300
+      ],
+      "enclosed": true,
+      "bed_heater_w": 500,
+      "hotend_heater_w": 60,
+      "price_eur": 699,
+      "power_w": {
+        "idle": 10,
+        "avg_pla": 150,
+        "avg_high_temp": 220,
+        "peak": 1000
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 300x300x300 mm, chiuso. Prezzo 699 EUR da un listing Check24 (anno non indicato) e Giga 669 EUR con codice Geekbuying (2024): non ufficiale, stima. Picco 1000 W = potenza nominale dichiarata (eBay.de e Creality): non misurata. Nessuna misura con wattmetro trovata. Idle, PLA e ABS stimati su potenza nominale. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://www.giga.de/artikel/creality-k1-max-im-preisverfall-blitzschnelle-3d-drucker-besonders-guenstig-erhaeltlich/",
+        "https://preisvergleich.check24.de/ul/hersteller/creality/",
+        "https://www.ebay.de/itm/167445674089",
+        "https://www.notebookcheck.com/3D-Drucker-im-Angebot-Creality-K1-Max-samt-Geschenk-dank-doppeltem-Rabatt-stark-reduziert.734670.0.html"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "creality-k1-se",
+      "brand": "Creality",
+      "model": "K1 SE",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": false,
+      "bed_heater_w": 190,
+      "hotend_heater_w": 40,
+      "price_eur": 349,
+      "power_w": {
+        "idle": 6,
+        "avg_pla": 100,
+        "avg_high_temp": null,
+        "peak": 350
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Versione open-frame (All3DP: K1 SE Open-Frame). Build 220x220x250 mm, ingombro 355x355x482 mm (una recensione). Prezzo EUR non ufficiale: range $299-359 al lancio, stima 349 EUR. store.creality.com non e stato leggibile. Picco 350 W = potenza nominale dichiarata (stima della PSU). Idle e PLA stimati. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://all3dp.com/4/creality-launches-k1-se-3d-printer/",
+        "https://3dwithus.com/creality-k1-se-review-3d-printer-testing",
+        "https://3dpros.com/printers/k1-se"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "creality-k1c",
+      "brand": "Creality",
+      "model": "K1C",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": true,
+      "bed_heater_w": 190,
+      "hotend_heater_w": 40,
+      "price_eur": 382,
+      "power_w": {
+        "idle": 10,
+        "avg_pla": 110,
+        "avg_high_temp": 150,
+        "peak": 350
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Prezzo 382 EUR (Proshop); range trovato 340-479 EUR. Consumi stimati, nessuna misura trovata. Vita utile 4000 h stimata. [PrusaSlicer] Nessun printer_model K1C nel bundle Creality 1.1.0 del repo non-prusa-fff.",
+      "sources": [
+        "https://www.testberichte.de/elektronik/3d-drucker-bis-400-euro.html",
+        "https://www.matterhackers.com/store/l/creality3d-k1c-high-speed-3d-printer/sk/MC5WAP6T",
+        "https://store.creality.com/uk/blog/creality-k1c-3d-printer"
+      ],
+      "estimated": [
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "creality-k2-plus",
+      "brand": "Creality",
+      "model": "K2 Plus",
+      "kit": false,
+      "bed_mm": [
+        350,
+        350
+      ],
+      "enclosed": true,
+      "bed_heater_w": 600,
+      "hotend_heater_w": 60,
+      "price_eur": 1049,
+      "power_w": {
+        "idle": 15,
+        "avg_pla": 150,
+        "avg_high_temp": 300,
+        "peak": 1200
+      },
+      "lifetime_h": 5000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 15,
+          "life_h": 1500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 30,
+          "life_h": 2000
+        },
+        {
+          "name": "Ventola hotend",
+          "cost_eur": 10,
+          "life_h": 8000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Build 350x350x350 mm, chiuso con chamber riscaldata (fino a circa 60 C, da fonti retail). Prezzo 1049 EUR IVA incl. da un listing eBay.de (nuovo): non da store ufficiale, galaxus.de non leggibile. Picco 1200 W = potenza nominale dichiarata (alcuni retailer e una review): nessuna misura con wattmetro trovata. Idle, PLA e ABS stimati. Il combo con CFS e venduto a parte. Nome PrusaSlicer non verificato, lasciato vuoto.",
+      "sources": [
+        "https://www.turbovs.com/review/creality-k2-plus-3144",
+        "https://www.alternate.de/Creality/K2-PLUS-3D-Drucker/html/product/100106302",
+        "https://www.ebay.de/itm/335697190742",
+        "https://galaxus.de/en/s1/product/creality-k2-plus-3d-printers-49811609"
+      ],
+      "estimated": [
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "elegoo-centauri-carbon",
+      "brand": "Elegoo",
+      "model": "Centauri Carbon",
+      "kit": false,
+      "bed_mm": [
+        256,
+        256
+      ],
+      "enclosed": true,
+      "bed_heater_w": 350,
+      "hotend_heater_w": 60,
+      "price_eur": 299,
+      "power_w": {
+        "idle": 10,
+        "avg_pla": 120,
+        "avg_high_temp": null,
+        "peak": 350
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 15,
+          "life_h": 2000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 30,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Volume di stampa 256x256x256 mm, camera chiusa. Le pagine ufficiali Elegoo EN-GB e DE del Centauri Carbon non sono risultate raggiungibili (404): il volume e dalla ricerca, non verificato su store. Prezzo EU in EUR non trovato: 299 EUR e una stima. Consumi: nessuna misura a wattmeter trovata. igorslab.de (test del Centauri Carbon) non riporta valori di potenza nel testo consultato. filament2print.com indica 100 W per l alimentatore originale, cifra incoerente con bed e hotend riscaldati: non usata, da verificare. Tutti i valori power_w e i riscaldatori sono stime.",
+      "sources": [
+        "https://www.igorslab.de/en/elegoo-centauri-carbon-3d-drucker-im-test/4/",
+        "https://filament2print.com/it/ricambi-extra-fdm/4032-alimentatore-per-elegoo-centauri-carbon.html"
+      ],
+      "estimated": [
+        "price_eur",
+        "lifetime_h",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak"
+      ]
+    },
+    {
+      "id": "elegoo-neptune-3-pro",
+      "brand": "Elegoo",
+      "model": "Neptune 3 Pro",
+      "kit": false,
+      "bed_mm": [
+        225,
+        225
+      ],
+      "enclosed": false,
+      "bed_heater_w": 250,
+      "hotend_heater_w": 40,
+      "price_eur": 199,
+      "power_w": {
+        "idle": 8,
+        "avg_pla": 100,
+        "avg_high_temp": null,
+        "peak": 350
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 8,
+          "life_h": 400
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 30,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "NEPTUNE3PRO"
+      ],
+      "notes": "Volume di stampa 225x225x280 mm (da comparazione di terzi; la scheda Elegoo riporta il piatto 235x235 mm). Stampante a telaio aperto, enclosed = false. Alimentatore 350 W dichiarato da Windows Central (spec table), non confermato da altre fonti: il picco 350 W e questo valore dichiarato, non misurato. Prezzo: le fonti riportano 230 USD (da 300) e 240-300 USD, datati; prezzo EU in EUR non trovato, 199 EUR e una stima. Modello datato, probabilmente fuori produzione. Consumi: nessuna misura a wattmeter. Idle, PLA, ugello e piastra sono stime.",
+      "sources": [
+        "https://windowscentral.com/accessories/3d-printing/elegoo-neptune-3-pro-review",
+        "https://www.3djake.com/elegoo/power-supply-7"
+      ],
+      "estimated": [
+        "price_eur",
+        "lifetime_h",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "power_w.idle",
+        "power_w.avg_pla"
+      ]
+    },
+    {
+      "id": "elegoo-neptune-4",
+      "brand": "Elegoo",
+      "model": "Neptune 4",
+      "kit": false,
+      "bed_mm": [
+        225,
+        225
+      ],
+      "enclosed": false,
+      "bed_heater_w": 200,
+      "hotend_heater_w": 40,
+      "price_eur": 209.9,
+      "power_w": {
+        "idle": 11,
+        "avg_pla": 175,
+        "avg_high_temp": null,
+        "peak": 330
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 5,
+          "life_h": 300
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 20,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Prezzo 209.90 EUR da Alza.at (data non indicata). [PrusaSlicer] Nessun printer_model Neptune 4 nel bundle Elegoo 2.1.0 (presenti NEPTUNE1-3). Misure dalla recensione IgorsLab (singola fonte): idle 11 W (23 W con motori attivi), picco 330 W con ugello 220 C e piatto 60 C in riscaldamento simultaneo, 160-190 W durante la stampa PLA (media del range = 175 W).",
+      "sources": [
+        "https://www.alza.at/EN/cheap-3d-print/18862952.htm",
+        "https://www.igorslab.de/en/elegoo-neptune-4-3d-drucker-im-test/6/",
+        "https://www.galaxus.it/en/s1/product/elegoo-neptune-4-3d-printers-41301897"
+      ],
+      "estimated": [
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "elegoo-neptune-4-max",
+      "brand": "Elegoo",
+      "model": "Neptune 4 Max",
+      "kit": false,
+      "bed_mm": [
+        420,
+        420
+      ],
+      "enclosed": false,
+      "bed_heater_w": 600,
+      "hotend_heater_w": 60,
+      "price_eur": 440,
+      "power_w": {
+        "idle": 20,
+        "avg_pla": 300,
+        "avg_high_temp": null,
+        "peak": 800
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 15,
+          "life_h": 2000
+        },
+        {
+          "name": "Piastra PEI bi-faccia",
+          "cost_eur": 45,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Volume di stampa 420x420x480 mm da elegoo.com (scheda EN-GB). Prezzo ufficiale EU in EUR non trovato: elegoo.com EN-GB mostra USD 478 (scontato da 597,50, esaurito). 440 EUR e una stima convertita, non un prezzo di store. Stampante a telaio aperto (la pagina raccomanda una camera per ABS/ASA), enclosed = false (inferito). Nessuna misura a wattmeter trovata: idle, PLA, picco, riscaldatore bed e hotend sono stime; la scheda non riporta la potenza PSU. Ugello e piastra: stime.",
+      "sources": [
+        "https://www.elegoo.com/en-gb/products/neptune-4-max-fdm-3d-printer"
+      ],
+      "estimated": [
+        "price_eur",
+        "lifetime_h",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak"
+      ]
+    },
+    {
+      "id": "elegoo-neptune-4-plus",
+      "brand": "Elegoo",
+      "model": "Neptune 4 Plus",
+      "kit": false,
+      "bed_mm": [
+        320,
+        320
+      ],
+      "enclosed": false,
+      "bed_heater_w": 500,
+      "hotend_heater_w": 60,
+      "price_eur": 339,
+      "power_w": {
+        "idle": 15,
+        "avg_pla": 200,
+        "avg_high_temp": null,
+        "peak": 500
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 15,
+          "life_h": 2000
+        },
+        {
+          "name": "Piastra PEI bi-faccia",
+          "cost_eur": 35,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Volume di stampa 320x320x385 mm da elegoo.com (scheda EN-GB). Prezzo ufficiale EU in EUR non trovato: elegoo.com EN-GB mostra USD 369 (scontato da 461,25, esaurito); 3djake.ch riporta CHF 336,25 (IVA incl.). 339 EUR e una stima convertita da questi prezzi, non un prezzo di store. Stampante a telaio aperto (la pagina raccomanda una camera per ABS/ASA), enclosed = false (inferito). Nessuna misura a wattmeter trovata: tutti i valori power_w, il riscaldatore del bed e il riscaldatore hotend sono stime. Ugello e piastra: stime.",
+      "sources": [
+        "https://www.elegoo.com/en-gb/products/neptune-4-plus-fdm-3d-printer",
+        "https://www.3djake.ch/en-CH/elegoo/neptune-4-plus",
+        "https://pea3d.com/en/elegoo-3d-printer-electricity-cost-calculator/"
+      ],
+      "estimated": [
+        "price_eur",
+        "lifetime_h",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak"
+      ]
+    },
+    {
+      "id": "elegoo-neptune-4-pro",
+      "brand": "Elegoo",
+      "model": "Neptune 4 Pro",
+      "kit": false,
+      "bed_mm": [
+        225,
+        225
+      ],
+      "enclosed": false,
+      "bed_heater_w": 250,
+      "hotend_heater_w": 60,
+      "price_eur": 276.9,
+      "power_w": {
+        "idle": 10,
+        "avg_pla": 150,
+        "avg_high_temp": null,
+        "peak": 350
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 15,
+          "life_h": 2000
+        },
+        {
+          "name": "Piastra PEI bi-faccia",
+          "cost_eur": 30,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Volume di stampa 225x225x265 mm da elegoo.com (scheda EN-GB). Il bed riscaldato e segmentato: 150 W + 100 W dichiarati da Elegoo (la zona piccola viene usata sotto 120x120 mm). Prezzo ufficiale EU in EUR non trovato: elegoo.com EN-GB mostra solo USD 260 (scontato da 325, esaurito); il retailer multitronic.fi riporta 276,90 EUR (formattazione non chiara), usato come stima. Stampante a telaio aperto: la pagina raccomanda una camera per ABS/ASA, quindi enclosed = false (inferito). Consumi: nessuna misura a wattmeter trovata. Idle 10 W, PLA 150 W, picco 350 W e riscaldatore hotend sono stime; il picco non e una potenza PSU verificata. Il range 300-350 W di pea3d.com e generico e non e stato usato. Ugello e piastra: stime.",
+      "sources": [
+        "https://www.elegoo.com/en-gb/products/elegoo-neptune-4-pro-fdm-3d-printer",
+        "https://www.3djake.ch/en-CH/elegoo/neptune-4-pro",
+        "https://www.multitronic.fi/en/products/4631255",
+        "https://pea3d.com/en/elegoo-3d-printer-electricity-cost-calculator/"
+      ],
+      "estimated": [
+        "price_eur",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "hotend_heater_w",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak"
+      ]
+    },
+    {
+      "id": "flashforge-ad5x",
+      "brand": "Flashforge",
+      "model": "AD5X",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": true,
+      "bed_heater_w": 250,
+      "hotend_heater_w": 60,
+      "price_eur": 499,
+      "power_w": {
+        "idle": 10,
+        "avg_pla": 120,
+        "avg_high_temp": 200,
+        "peak": 350
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 (hardened, consigliato per materiali abrasivi)",
+          "cost_eur": 10,
+          "life_h": 500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        },
+        {
+          "name": "Tubo PTFE IFS (sostituzione)",
+          "cost_eur": 10,
+          "life_h": 2000,
+          "optional": true
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Versione multicolore con sistema IFS a 4 bobine. Volume di stampa 220 x 220 x 220 mm (fonti concordanti). Prezzo: nessun prezzo EUR ufficiale verificato. I prezzi trovati sono in USD (449 USD di listino, 349 USD su un tracker) e in INR. Il valore 499 EUR e una stima equivalente al listino USD. Potenza: nessuna misura trovata per la AD5X, quindi tutti i valori di consumo sono stime; il valore 350 W nel campo peak e un'ipotesi di potenza nominale dell'alimentatore, non dichiarata nelle fonti trovate. Il consumo reale puo essere sensibilmente maggiore quando e attivo il modulo IFS e il suo riscaldamento, non misurato. Chassis chiuso: non verificato esplicitamente. Consumabili e durate stimati.",
+      "sources": [
+        "https://www.protoolreviews.com/flashforge-ad5x-3d-printer-review/",
+        "https://3dprintersdepot.com/products/flashforge-ad5x-3d-printer-multicolor-3d-printer-for-high-speed-full-color-printing",
+        "https://www.productchart.com/3d_printers/51067",
+        "https://3dwithus.com/?p=34541"
+      ],
+      "estimated": [
+        "price_eur",
+        "enclosed",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h"
+      ]
+    },
+    {
+      "id": "flashforge-adventurer-5m",
+      "brand": "Flashforge",
+      "model": "Adventurer 5M",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": true,
+      "bed_heater_w": 250,
+      "hotend_heater_w": 60,
+      "price_eur": 299,
+      "power_w": {
+        "idle": 8,
+        "avg_pla": 110,
+        "avg_high_temp": 180,
+        "peak": 350
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 (hardened, consigliato per materiali abrasivi)",
+          "cost_eur": 10,
+          "life_h": 500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Volume di stampa 220 x 220 x 220 mm dallo store ufficiale EU Flashforge (confermato anche da rivenditori). Prezzo: lo store EU mostra 299 EUR in promozione (prezzo di listino 399 EUR); la data della promo non e indicata, quindi il valore puo non essere attuale. Potenza: il valore 350 W nel campo peak e la potenza nominale dell'alimentatore dichiarata da un rivenditore (Bruneau), non una misura. La sola misura trovata e di IgorsLab: picco di 320 W con ugello e piatto che riscaldano insieme. Idle, consumo medio PLA e ad alta temperatura sono stime, non misurate. Ugello e piastra: prezzi e durate stimati, non verificati sullo store. Chassis chiuso: non verificato in modo esplicito, indicato come stima.",
+      "sources": [
+        "https://eu.flashforge.com/products/adventurer-5m",
+        "https://www.igorslab.de/en/flashforge-adventurer-5m-3d-drucker-im-test/6/",
+        "https://www.bruneau.lu/en/product/flashforge-adventurer-5m-fff-technology-fused-filament-fabrication-wifi/8557416",
+        "https://filament2print.com/gb/filament-fdm/2386-flashforge-adventurer-5m-fdm-3d-printer.html"
+      ],
+      "estimated": [
+        "enclosed",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ]
+    },
+    {
+      "id": "flashforge-adventurer-5m-pro",
+      "brand": "Flashforge",
+      "model": "Adventurer 5M Pro",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": true,
+      "bed_heater_w": 250,
+      "hotend_heater_w": 60,
+      "price_eur": 489,
+      "power_w": {
+        "idle": 8,
+        "avg_pla": 110,
+        "avg_high_temp": 180,
+        "peak": 350
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 (hardened, consigliato per materiali abrasivi)",
+          "cost_eur": 10,
+          "life_h": 500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Versione chiusa con camera e filtro HEPA della 5M. Volume di stampa 220 x 220 x 220 mm (le fonti concordano; una scheda riporta 220 x 220 x 250 mm, da considerare errata). Prezzo: nessun prezzo dallo store EU ufficiale trovato. Il valore 489 EUR deriva da una recensione europea citata in ricerca ed e una stima. I prezzi USD trovati vanno da 339 a 469 USD (rivenditori e sconti), non confrontabili direttamente. Potenza: nessuna misura trovata per il Pro. Il valore 350 W nel campo peak e la potenza nominale dell'alimentatore dichiarata in una scheda tecnica di rivenditore (CDW), non una misura. Idle, consumo PLA e ad alta temperatura sono stime, stessa base della 5M. Consumabili: prezzi e durate stimati.",
+      "sources": [
+        "https://www.3printr.com/flashforge-adventurer-5m-pro-review-getting-started-with-3d-printing-at-600mm-s-3773566/",
+        "https://www.antonmansson.com/3d-printer-reviews-fdm/flashforge-adventurer-5m-pro-review",
+        "https://www.cdw.com/product/flashforge-adventurer-5m-pro-3d-printer/8445947",
+        "https://top3dshop.com/product/flashforge-adventurer-5m-pro-3d-printer"
+      ],
+      "estimated": [
+        "price_eur",
+        "enclosed",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ]
+    },
+    {
+      "id": "prusa-core-one",
+      "brand": "Prusa",
+      "model": "Core One",
+      "kit": false,
+      "bed_mm": [
+        250,
+        220
+      ],
+      "enclosed": true,
+      "bed_heater_w": 220,
+      "hotend_heater_w": 60,
+      "price_eur": 1349,
+      "power_w": {
+        "idle": 15,
+        "avg_pla": 90,
+        "avg_high_temp": 110,
+        "peak": 400
+      },
+      "lifetime_h": 5000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 12,
+          "life_h": 400
+        },
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 38.5,
+          "life_h": 2000,
+          "optional": true
+        },
+        {
+          "name": "Piastra PEI (CORE One L)",
+          "cost_eur": 57.9,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "COREONE"
+      ],
+      "notes": "1349 EUR e il prezzo di lancio 2025 (IVA inclusa), non il listino attuale. Nessuna misura di consumo trovata: stime. Il nome del profilo PrusaSlicer va verificato. Prezzo piastra da Botland (CORE One L, non necessariamente la piastra della Core One standard). [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13 (name \"Prusa CORE One\"). Ricerca prezzi: prezzo ufficiale EUR attuale non confermato; 1349 EUR resta il lancio. Kit 1049 EUR (IVA incl.) riportato da Manufactur3D. Consumo dichiarato Prusa nella scheda tecnica.",
+      "sources": [
+        "https://manufactur3dmag.com/prusa-core-one-high-speed-corexy-3d-printer/",
+        "https://botland.store/brand/232-prusa?page=5",
+        "https://www.prusa3d.com/product/prusa-core-one/",
+        "https://3dprintingindustry.com/news/prusa-core-one-technical-specifications-and-pricing-234570/",
+        "https://www.printedsolid.com/products/original-prusa-core-one"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].life_h",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "prusa-core-one-l",
+      "brand": "Prusa",
+      "model": "CORE One L",
+      "kit": false,
+      "bed_mm": [
+        300,
+        300
+      ],
+      "enclosed": true,
+      "bed_heater_w": 300,
+      "hotend_heater_w": 40,
+      "price_eur": 1852,
+      "power_w": {
+        "idle": 15,
+        "avg_pla": 120,
+        "avg_high_temp": 180,
+        "peak": 600
+      },
+      "lifetime_h": 5000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 12,
+          "life_h": 400
+        },
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 38,
+          "life_h": 2000,
+          "optional": true
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 40,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "COREONEL"
+      ],
+      "notes": "Prezzo ufficiale EU NON trovato (store Prusa non raggiungibile): 1852 EUR e il prezzo IVA incl. di un rivenditore (Eolas Prints, consegna 7-8 settimane), quindi e una stima; altri rivenditori indicano 1699 EUR (esaurito) e circa 1864 EUR. Volume di stampa 300x300x330 mm: confermato da piu listini. enclosed true: presentata come stampante chiusa con camera riscaldata attiva fino a 60 C (dato da un listino). L'affermazione 'fully enclosed' e stata letta sulla CORE One, non esplicitamente sulla L. Consumi: nessuna misura e nessun dato di alimentatore trovato. Tutti i valori di potenza (idle 15, PLA 120, ABS 180, picco 600) sono stime, non misure; il picco 600 W non e il wattaggio nominale dell'alimentatore (non trovato). Riscaldatori, durata e consumabili sono stime; il consumabile hardened e opzionale. Il nome COREONEL in PrusaSlicer e un'ipotesi da verificare.",
+      "sources": [
+        "https://eolasprints.com/en-mt/products/prusa-core-one-l",
+        "https://www.123-3d.nl/Prusa-CORE-One-L-3D-printer-IDF18465-i13963.html",
+        "https://www.ypc.co.uk/product/original-prusa-core-one-ready-to-use-assembled-and-tested-fully-enclosed-corexy-3d-printer-25x22x27cm-print-area-high-flow-nozzle-smooth-print-sheet-and-1kg-prusament-pla-spool-include/"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "prusa-mini",
+      "brand": "Prusa",
+      "model": "MINI (original)",
+      "kit": false,
+      "bed_mm": [
+        180,
+        180
+      ],
+      "enclosed": false,
+      "bed_heater_w": 130,
+      "hotend_heater_w": 40,
+      "price_eur": 379,
+      "power_w": {
+        "idle": 3,
+        "avg_pla": 75,
+        "avg_high_temp": null,
+        "peak": 90
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 9,
+          "life_h": 400
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 35,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "MINI"
+      ],
+      "notes": "Modello originale della MINI, sostituito dalla MINI+ e non piu in vendita come nuovo. Il prezzo 379 EUR e il prezzo di lancio (IVA incl.) riportato in ricerca, non un prezzo attuale: quindi e una stima. Volume di stampa 180x180x180 mm confermato da piu fonti (linea MINI). Consumi: idle 3 W (fact-check ab3d.at, metodo non dichiarato) e PLA 75 W (media del range 60-90 W osservato con wattmeter plug-in nel thread forum 'Power Draw Mini+'): sono misure della famiglia MINI, non specifiche della MINI originale. Il picco 90 W e il wattaggio nominale dell'alimentatore originale, NON verificato: non trovato nelle ricerche, quindi e una stima. Riscaldatori bed/hotend, durata e consumabili sono stime derivate dalla voce MINI+. Nessuna misura a caldo (avg_high_temp null). Prezzo ufficiale EU non trovato.",
+      "sources": [
+        "https://www.ab3d.at/en/fact-check-do-3d-printers-consume-a-lot-of-electricity/",
+        "https://forum.prusa3d.com/forum/general-discussion-announcements-and-releases/power-draw-mini/",
+        "https://eolasprints.com/products/original-prusa-mini-semi-assembled",
+        "https://www.aniwaa.com/product/3d-printers/prusa-research-original-prusa-mini/"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "prusa-mini-plus",
+      "brand": "Prusa",
+      "model": "MINI+",
+      "kit": false,
+      "bed_mm": [
+        180,
+        180
+      ],
+      "enclosed": false,
+      "bed_heater_w": 130,
+      "hotend_heater_w": 40,
+      "price_eur": 449,
+      "power_w": {
+        "idle": 3,
+        "avg_pla": 75,
+        "avg_high_temp": null,
+        "peak": 148
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 9,
+          "life_h": 400
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 35,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "MINI"
+      ],
+      "notes": "Vita utile 3000 h: stampante entry-level con meccanica semplice, ammortamento prudente. Prezzo stimato. [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13 (MINI, name \"Original Prusa MINI && MINI+\"). Ricerca prezzi: retailer 459-479 EUR (IVA incl.) per la MINI+ assemblata; prezzo ufficiale non trovato, 449 mantenuto come stima. Consumi misurati su MINI (non MINI+, dati non specifici del modello plus): idle 3 W dal fact-check ab3d.at (metodo non dichiarato); PLA 75 W = media del range 60-90 W osservato con wattmetro plug-in nel thread forum \"Power Draw Mini+\"; picco 148 W in riscaldamento da una recensione YouTube riportata nel forum (la PSU da 150 W e il massimo teorico, non una misura).",
+      "sources": [
+        "https://www.prusa3d.com/",
+        "https://www.ab3d.at/en/fact-check-do-3d-printers-consume-a-lot-of-electricity/",
+        "https://forum.prusa3d.com/forum/general-discussion-announcements-and-releases/power-draw-mini/"
+      ],
+      "estimated": [
+        "price_eur",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "prusa-mk35",
+      "brand": "Prusa",
+      "model": "MK3.5",
+      "kit": true,
+      "bed_mm": [
+        250,
+        210
+      ],
+      "enclosed": false,
+      "bed_heater_w": 120,
+      "hotend_heater_w": 40,
+      "price_eur": 279,
+      "power_w": {
+        "idle": 5,
+        "avg_pla": 65,
+        "avg_high_temp": null,
+        "peak": 240
+      },
+      "lifetime_h": 5000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 9,
+          "life_h": 400
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "MK3.5"
+      ],
+      "notes": "Il MK3.5 non e venduto come stampante completa: e un kit di upgrade per chi possiede una MK3S/MK3S+ (Prusa lo chiama ora MK3.5S upgrade kit). Il prezzo 279 EUR IVA incl. e quello del kit di upgrade (pagina Prusa in ricerca, data non chiara, possibile promozione), non di una stampante completa: per questo e in estimated. Volume di stampa 250x210 mm: dato della famiglia MK3S/MK3.5, NON verificato sulla scheda ufficiale MK3.5 (pagina non raggiungibile): in estimated. Consumi: nessun wattmeter specifico per MK3.5 trovato. avg_pla 65 W e idle 5 W sono stime dalla famiglia MK3 (utente forum: circa 65 W in PLA con picchi ~100 W; ~45-55 W con piatto spento). Il picco 240 W e il wattaggio nominale dell'alimentatore della MK3S (stima non verificata, il PSU MK3.5 dovrebbe essere lo stesso). Riscaldatori, durata e consumabili sono stime; prezzi consumabili non verificati. Prezzo del kit di aggiornamento da MK3S+.",
+      "sources": [
+        "https://www.prusa3d.com/en/product/original-prusa-i3-mk3-s-to-mk3-5-upgrade-kit",
+        "https://www.3printr.com/prusa-introduces-mk3-5-upgrade-for-faster-3d-printing-4668912/",
+        "https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-prusa-i3-kit-archive/electricity-usage"
+      ],
+      "estimated": [
+        "price_eur",
+        "bed_mm",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "prusa-mk39",
+      "brand": "Prusa",
+      "model": "MK3.9",
+      "kit": true,
+      "bed_mm": [
+        250,
+        210
+      ],
+      "enclosed": false,
+      "bed_heater_w": 120,
+      "hotend_heater_w": 40,
+      "price_eur": 549,
+      "power_w": {
+        "idle": 10,
+        "avg_pla": 100,
+        "avg_high_temp": null,
+        "peak": 240
+      },
+      "lifetime_h": 5000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 12,
+          "life_h": 400
+        },
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 37.9,
+          "life_h": 2000,
+          "optional": true
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 40,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "MK3.9"
+      ],
+      "notes": "Il prezzo 549 EUR IVA incl. (450 EUR netto) e quello ufficiale Prusa, verificato sulla pagina tedesca, ma riferito al kit di upgrade MK3S/MK3S+ -> MK3.9S: non e il prezzo di una stampante completa, che non e stato trovato. Per questo price_eur e in estimated. Volume di stampa 250x210x220 mm dichiarato da Prusa (verificato). Il kit riusa telaio, alimentatore e motori della MK3S+; la scheda non dichiara il wattaggio dell'alimentatore. enclosed false: stampante a telaio aperto, dato non esplicitamente dichiarato nella scheda. Consumi: unica misura trovata e un singolo utente con presa smart su una stampa PLA: picchi sopra 200 W in riscaldamento del piatto, circa 100 W in stampa. Quindi avg_pla 100 W e stimato da un solo campione. idle 10 W e stimato. Il picco 240 W e il wattaggio nominale dell'alimentatore MK4 (Prusa dichiara il MK3.9 compatibile con l'alimentatore MK4S), non verificato per il MK3.9. Riscaldatori, durata e consumabili sono derivati dalla voce MK4, non verificati per MK3.9. avg_high_temp null (nessun dato). Prezzo del kit di aggiornamento da MK3S+.",
+      "sources": [
+        "https://www.prusa3d.com/de/produkt/original-prusa-i3-mk3-s-to-mk3-9s-upgrade-kit/",
+        "https://forum.prusa3d.com/forum/english-forum-original-prusa-i3-mk4-general-discussion-announcements-and-releases/power-consumption-2"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "prusa-mk3s-plus",
+      "brand": "Prusa",
+      "model": "MK3S+",
+      "kit": false,
+      "bed_mm": [
+        250,
+        210
+      ],
+      "enclosed": false,
+      "bed_heater_w": 210,
+      "hotend_heater_w": 40,
+      "price_eur": null,
+      "power_w": {
+        "idle": 8,
+        "avg_pla": 85,
+        "avg_high_temp": 110,
+        "peak": 150
+      },
+      "lifetime_h": 5000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 9,
+          "life_h": 400
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 35,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "MK3S"
+      ],
+      "notes": "Modello precedente: prezzo non trovato (null, da completare o rimuovere se fuori produzione). Consumi stimati. Vita utile 5000 h, meccanica matura. [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13 (MK3S, name \"MK3S && MK3S+\"). PLA 85 W confermato da un commento con wattmetro a parete (Kill-a-Watt-like): circa 80-90 W a regime su PLA. Misura aneddotica, non da laboratorio.",
+      "sources": [
+        "https://www.prusa3d.com/",
+        "https://news.ycombinator.com/item?id=26417962"
+      ],
+      "estimated": [
+        "power_w.idle",
+        "power_w.avg_high_temp",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "prusa-mk3s-kit",
+      "brand": "Prusa",
+      "model": "MK3S+ (kit)",
+      "kit": true,
+      "bed_mm": [
+        250,
+        210
+      ],
+      "enclosed": false,
+      "bed_heater_w": 120,
+      "hotend_heater_w": 40,
+      "price_eur": 649,
+      "power_w": {
+        "idle": 5,
+        "avg_pla": 65,
+        "avg_high_temp": null,
+        "peak": 240
+      },
+      "lifetime_h": 5000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 9,
+          "life_h": 400
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 35,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "MK3S"
+      ],
+      "notes": "Kit di montaggio MK3S+ (da assemblare). Prezzo ufficiale EU del kit NON trovato: 649 EUR e una stima non verificata (le ricerche hanno trovato solo listini di rivenditori a prezzi molto diversi, in EUR, USD e AUD, e ricambi usati). Volume di stampa 250x210 mm: dato della famiglia MK3S, non verificato sulla scheda ufficiale in questa ricerca (da controllare). Consumi: nessuna misura con wattmeter specifica per MK3S trovata. Il thread forum 'electricity usage' (famiglia MK3) contiene solo stime, non misure: avg_pla 65 W e idle 5 W sono stime, il picco 240 W e il wattaggio nominale dell'alimentatore MK3S, non verificato. Il kit richiede la verifica del tipo di alimentatore e del connettore del piatto. Riscaldatori, durata e consumabili sono stime; prezzi consumabili non verificati.",
+      "sources": [
+        "https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-prusa-i3-kit-archive/electricity-usage",
+        "https://www.prusa3d.com/de/produkt/original-prusa-i3-mk3-s-to-mk3-9s-upgrade-kit/"
+      ],
+      "estimated": [
+        "price_eur",
+        "bed_mm",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "prusa-mk4",
+      "brand": "Prusa",
+      "model": "MK4",
+      "kit": false,
+      "bed_mm": [
+        250,
+        210
+      ],
+      "enclosed": false,
+      "bed_heater_w": 210,
+      "hotend_heater_w": 40,
+      "price_eur": 949,
+      "power_w": {
+        "idle": 13,
+        "avg_pla": 80,
+        "avg_high_temp": 120,
+        "peak": 240
+      },
+      "lifetime_h": 5000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 12,
+          "life_h": 400
+        },
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 37.9,
+          "life_h": 2000,
+          "optional": true
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 40,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "MK4"
+      ],
+      "notes": "Idle 13 W misurato da un utente del forum Prusa su MK4 (1 campione/s per 1 h). 80 W PLA e 120 W ABS sono dichiarati da Prusa (temperatura ambiente 26 C, non verificati indipendentemente). Picco stimato dalla PSU da 240 W. Prezzo assemblato stimato. Ugello hardened da Botland (EUR). [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13. Ugello hardened (nickel plated) 37.90 EUR da Botland (prezzo ufficiale Prusa in USD 33.90).",
+      "sources": [
+        "https://forum.prusa3d.com/forum/english-forum-original-prusa-i3-mk4-general-discussion-announcements-and-releases/power-consumption-2",
+        "https://jp.ifixit.com/Device/Prusa_MK4S",
+        "https://botland.store/brand/232-prusa?page=5",
+        "https://botland.store/1843-nozzles-prusa"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.peak",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "prusa-mk4s",
+      "brand": "Prusa",
+      "model": "MK4S",
+      "kit": false,
+      "bed_mm": [
+        250,
+        210
+      ],
+      "enclosed": false,
+      "bed_heater_w": 210,
+      "hotend_heater_w": 40,
+      "price_eur": 999,
+      "power_w": {
+        "idle": 15,
+        "avg_pla": 80,
+        "avg_high_temp": 120,
+        "peak": 240
+      },
+      "lifetime_h": 5000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 12,
+          "life_h": 400
+        },
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 37.9,
+          "life_h": 2000,
+          "optional": true
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 40,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "MK4S"
+      ],
+      "notes": "Idle stimato dal MK4. Consumi 80/120 W dichiarati da Prusa. Vita utile 5000 h per una stampante premium con meccanica robusta. [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13. Prezzo 999 EUR assemblata da prusa3d.com (pagina MK4S, VAT incl.); kit 719 EUR nella stessa pagina. Il 799 EUR della promo estiva era scaduto. Idle 15 W (display acceso) misurato su MK4S con MMU3 (xargas.eu). La stessa fonte riporta 160 W medi in stampa con PETG e 240 W in riscaldamento, ma con MMU3 e profilo PETG: non usati per i campi PLA/alta temperatura.",
+      "sources": [
+        "https://all3dp.com/de/4/prusa-startet-sommer-blitzangebot-20-rabatt-auf-den-mk4s-guenstigerer-versand-fuer-den-core-one/",
+        "https://jp.ifixit.com/Device/Prusa_MK4S",
+        "https://botland.store/brand/232-prusa?page=5",
+        "https://www.prusa3d.com/category/original-prusa-mk4s/",
+        "https://botland.store/1843-nozzles-prusa",
+        "https://xargas.eu/3dprint/2025-12-30-PrusaMK4SMMU3PowerConsumption.html",
+        "https://library.georgetown.edu/equipment/prusa-mk4s",
+        "https://www.3djake.com/prusa/mk4s"
+      ],
+      "estimated": [
+        "power_w.peak",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "prusa-xl-1t",
+      "brand": "Prusa",
+      "model": "XL (1 testa)",
+      "kit": false,
+      "bed_mm": [
+        360,
+        360
+      ],
+      "enclosed": false,
+      "bed_heater_w": 520,
+      "hotend_heater_w": 40,
+      "price_eur": 2199,
+      "power_w": {
+        "idle": 30,
+        "avg_pla": 180,
+        "avg_high_temp": null,
+        "peak": 550
+      },
+      "lifetime_h": 6000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 12,
+          "life_h": 400
+        },
+        {
+          "name": "Piastra PEI XL",
+          "cost_eur": 85,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "XLP1T"
+      ],
+      "notes": "I consumi di riferimento vengono da un post del forum per l'XL 5T (standby 80 W, riscaldamento 550 W, stampa 235 W): per l'XL 1T sono stime. Piastra PEI XL da Botland. Prezzo non verificato. [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13 (name \"Prusa XL+\", single tool). Il vecchio profilo legacy \"XL\" non e stato usato.",
+      "sources": [
+        "https://forum.prusa3d.com/forum/prusaslicer/power-usage-costs-calculation/",
+        "https://botland.store/brand/232-prusa?page=5"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "prusa-xl-5t",
+      "brand": "Prusa",
+      "model": "XL (5 teste)",
+      "kit": false,
+      "bed_mm": [
+        360,
+        360
+      ],
+      "enclosed": false,
+      "bed_heater_w": 520,
+      "hotend_heater_w": 40,
+      "price_eur": 3299,
+      "power_w": {
+        "idle": 80,
+        "avg_pla": 235,
+        "avg_high_temp": null,
+        "peak": 550
+      },
+      "lifetime_h": 6000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass (per testa)",
+          "cost_eur": 12,
+          "life_h": 400
+        },
+        {
+          "name": "Piastra PEI XL",
+          "cost_eur": 85,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "XLP5T"
+      ],
+      "notes": "Valori da un post del forum che riporta dati del produttore (standby 80 W, riscaldamento 550 W, stampa 235 W): non misure indipendenti. Prezzo stimato. Con 5 teste il consumo varia molto in base alle tile riscaldate. [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13 (name \"Prusa XL+ 5T\"). Il legacy \"XL5\" non e stato usato.",
+      "sources": [
+        "https://forum.prusa3d.com/forum/prusaslicer/power-usage-costs-calculation/",
+        "https://www.filamino.com/blog/3d-printer-electricity-cost"
+      ],
+      "estimated": [
+        "price_eur",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "prusa-xl-2t",
+      "brand": "Prusa",
+      "model": "XL 2 toolheads",
+      "kit": false,
+      "bed_mm": [
+        360,
+        360
+      ],
+      "enclosed": false,
+      "bed_heater_w": 500,
+      "hotend_heater_w": 40,
+      "price_eur": 3277,
+      "power_w": {
+        "idle": 15,
+        "avg_pla": 235,
+        "avg_high_temp": null,
+        "peak": 550
+      },
+      "lifetime_h": 5000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 brass",
+          "cost_eur": 12,
+          "life_h": 400
+        },
+        {
+          "name": "Piastra PEI XL",
+          "cost_eur": 40,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "XLP2T"
+      ],
+      "notes": "Prezzo ufficiale EU della XL 2T NON trovato: 3277 EUR e una stima ricavata sommando due prezzi di rivenditori: XL singolo assemblato 2699 EUR (Eolas Prints) + kit di upgrade da 1 a 2 toolhead 577,95 EUR (West3D). Non e un prezzo Prusa. Volume di stampa 360x360x360 mm: confermato da piu listini (dato verificato sul volume, non sulla scheda Prusa). enclosed false: la XL e a telaio aperto (dato di famiglia, non esplicitamente verificato). Consumi: nessun wattmeter specifico per XL 2T trovato. Dati forum sulla XL 5T (non misure Prusa): consumo medio in stampa 235 W, usato come avg_pla stimato per la 2T; riscaldamento 550 W, usato come peak stimato. ATTENZIONE: il 550 W e un dato di riscaldamento, non il wattaggio nominale dell'alimentatore, quindi peak non rispetta la regola PSU nominale: da correggere se si trova il dato PSU. Una misura con 2 tile su 16 attivi riporta 182 W (solo riferimento). idle 15 W e bed_heater_w 500 W sono stime (una fonte indica 490-650 W di riscaldamento a pieno piatto). hotend 40 W stimato. Durata e consumabili sono stime, non verificate per il modello XL. Picco = fase di riscaldamento.",
+      "sources": [
+        "https://west3d.com/en-de/products/original-prusa-xl-toolhead-upgrade-kit",
+        "https://eolasprints.com/products/original-prusa-xl-fully-assembled",
+        "https://forum.prusa3d.com/forum/original-prusa-xl-tool-changer-hardware-firmware-and-software-help/power-psu-question/",
+        "https://filamino.com/blog/3d-printer-electricity-cost"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "qidi-plus-4",
+      "brand": "Qidi",
+      "model": "Plus 4",
+      "kit": false,
+      "bed_mm": [
+        305,
+        305
+      ],
+      "enclosed": true,
+      "bed_heater_w": 450,
+      "hotend_heater_w": 80,
+      "price_eur": 749,
+      "power_w": {
+        "idle": 31.9,
+        "avg_pla": 245,
+        "avg_high_temp": null,
+        "peak": 850
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 20,
+          "life_h": 2000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 45,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Volume di stampa 305x305x280 mm dalla tabella comparativa Qidi. Camera chiusa con riscaldamento attivo: 400 W dichiarati (limitati al 40 per cento secondo igorsLAB). Consumi misurati da igorsLAB (test Plus4, a wattmeter): idle 31,9 W; stampa PLA (ugello 220 C, bed 65 C) 245 W come singola lettura, non come media dell intero job; riscaldamento simultaneo di ugello e bed 570 W di picco; riscaldamento camera con bed a 80 C 523 W di picco, circa 450 W dopo qualche minuto. Il valore power_w.peak = 850 W e la potenza nominale dell alimentatore da schede retailer (non verificata da fonte ufficiale), non un valore misurato. Dichiarati (non misurati): hotend 80 W, rated 450 W + 400 W camera (ca.qidi3d.com TechSpecs). avg_high_temp e null perche la fonte non riporta una media con PETG o ABS. Il prezzo 749 EUR di igorsLAB e quello di lancio, non uno store EU attuale: quindi stimato. Riscaldatore del bed stimato.",
+      "sources": [
+        "https://www.igorslab.de/qidi-tech-plus4-3d-printer-test/7/",
+        "https://ca.qidi3d.com/pages/qidi-plus-4-techspecs",
+        "https://qidi3d.com/blogs/news/qidi-3d-printer-comparison"
+      ],
+      "estimated": [
+        "price_eur",
+        "lifetime_h",
+        "bed_heater_w",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ]
+    },
+    {
+      "id": "qidi-q1-pro",
+      "brand": "Qidi",
+      "model": "Q1 Pro",
+      "kit": false,
+      "bed_mm": [
+        245,
+        245
+      ],
+      "enclosed": true,
+      "bed_heater_w": 300,
+      "hotend_heater_w": 60,
+      "price_eur": 379,
+      "power_w": {
+        "idle": 15,
+        "avg_pla": 150,
+        "avg_high_temp": 250,
+        "peak": 800
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 20,
+          "life_h": 2000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 40,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "Q1 Pro"
+      ],
+      "notes": "Volume di stampa 245x245x240 mm e camera riscaldata fino a 60 C da una pagina promo Qidi di terze parti, non da scheda ufficiale verificata. Il Q1 Pro non compare nella lineup attuale del blog comparativo Qidi, quindi potrebbe essere fuori produzione: verificare. Nessun prezzo EU in EUR trovato (il dato USD 399 e promozionale e datato): 379 EUR e una stima. Consumi: nessuna misura a wattmeter trovata. Tutti i valori power_w, i riscaldatori e il picco 800 W (non verificato come potenza PSU) sono stime.",
+      "sources": [
+        "https://qidi3d.com/blogs/news/qidi-3d-printer-comparison"
+      ],
+      "estimated": [
+        "price_eur",
+        "lifetime_h",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak"
+      ]
+    },
+    {
+      "id": "qidi-x-max-3",
+      "brand": "Qidi",
+      "model": "X-Max 3",
+      "kit": false,
+      "bed_mm": [
+        325,
+        325
+      ],
+      "enclosed": true,
+      "bed_heater_w": 500,
+      "hotend_heater_w": 60,
+      "price_eur": 649,
+      "power_w": {
+        "idle": 25,
+        "avg_pla": 250,
+        "avg_high_temp": 400,
+        "peak": 1200
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 20,
+          "life_h": 2000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 45,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "X-MAX 3"
+      ],
+      "notes": "Volume di stampa 325x325x315 mm e camera riscaldata fino a 65 C da una pagina Qidi di terze parti, non da scheda ufficiale verificata. Prezzo EU in EUR non trovato: il dato USD 699 e promozionale, 649 EUR e una stima. Consumi: nessuna misura a wattmeter trovata. Tutti i valori power_w, i riscaldatori e il picco 1200 W (non verificato) sono stime. Stampante a telaio chiuso.",
+      "sources": [
+        "https://qidi3d.com/blogs/news/qidi-3d-printer-comparison"
+      ],
+      "estimated": [
+        "price_eur",
+        "lifetime_h",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak"
+      ]
+    },
+    {
+      "id": "qidi-x-plus-3",
+      "brand": "Qidi",
+      "model": "X-Plus 3",
+      "kit": false,
+      "bed_mm": [
+        280,
+        280
+      ],
+      "enclosed": true,
+      "bed_heater_w": 350,
+      "hotend_heater_w": 60,
+      "price_eur": 459,
+      "power_w": {
+        "idle": 20,
+        "avg_pla": 200,
+        "avg_high_temp": 350,
+        "peak": 1000
+      },
+      "lifetime_h": 3000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 20,
+          "life_h": 2000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 40,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "X-Plus 3"
+      ],
+      "notes": "Volume di stampa 280x280x270 mm e camera riscaldata fino a 65 C da una pagina promo Qidi di terze parti, non da scheda ufficiale verificata. Prezzo EU in EUR non trovato: il dato USD 499 e promozionale e datato, 459 EUR e una stima. Consumi: nessuna misura a wattmeter trovata. Tutti i valori power_w, i riscaldatori e il picco 1000 W (non verificato come potenza PSU) sono stime. Stampante a telaio chiuso.",
+      "sources": [
+        "https://qidi3d.com/blogs/news/qidi-3d-printer-comparison"
+      ],
+      "estimated": [
+        "price_eur",
+        "lifetime_h",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak"
+      ]
+    },
+    {
+      "id": "ratrig-vcore-4",
+      "brand": "Rat Rig",
+      "model": "V-Core 4",
+      "kit": true,
+      "bed_mm": [
+        300,
+        300
+      ],
+      "enclosed": false,
+      "bed_heater_w": 360,
+      "hotend_heater_w": 60,
+      "price_eur": 797,
+      "power_w": {
+        "idle": 10,
+        "avg_pla": 120,
+        "avg_high_temp": 180,
+        "peak": 500
+      },
+      "lifetime_h": 8000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        },
+        {
+          "name": "Cinghia GT2 (sostituzione)",
+          "cost_eur": 8,
+          "life_h": 4000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Kit DIY, venduto come kit (pre-assemblato non disponibile dalle fonti). Volume 300 x 300 x 300 mm da ratrig.com (varianti 400 e 500 mm). Prezzo: il ratrig.com mostra 796.82 EUR in promo, ma senza indicazione della taglia; il valore e una stima per il 300 mm. Un rivenditore tedesco riporta il kit 400 mm a 1799 EUR (IVA inclusa), che non e il 300 mm. Enclosure, elettronica e Raspberry Pi non inclusi nel prezzo base. Consumo: nessuna misura trovata; tutti i valori sono stime tipiche, dipendono dalla build. Il valore 500 W in peak e una stima di alimentatore.",
+      "sources": [
+        "https://ratrig.com/products/rat-rig-v-core-4",
+        "https://3ddruckboss.de/en/products/rat-rig-v-core-4-0-full-kit-400mm-cs-el-en-fr-pl-sk-sl-sv-4",
+        "https://www.fabreeko.com/collections/ratrig/products/ratrig-v-core-4-kit"
+      ],
+      "estimated": [
+        "price_eur",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h"
+      ]
+    },
+    {
+      "id": "sovol-sv06",
+      "brand": "Sovol",
+      "model": "SV06",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": false,
+      "bed_heater_w": 200,
+      "hotend_heater_w": 40,
+      "price_eur": 259,
+      "power_w": {
+        "idle": 5,
+        "avg_pla": 60,
+        "avg_high_temp": 90,
+        "peak": 350
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 (hardened, per SV06/SV07)",
+          "cost_eur": 18,
+          "life_h": 500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "SV06"
+      ],
+      "notes": "Volume di stampa 220 x 220 x 250 mm (fonte: confronto SV06/SV07, da verificare sullo store EU). Prezzo: nessun prezzo EUR ufficiale trovato; 259 EUR e una stima. Nessuna misura di consumo trovata: idle, PLA, alta temperatura e riscaldatore letto sono stime. Il valore 350 W in peak e un'ipotesi di potenza nominale dell'alimentatore, non verificata. Ugello hardened: il prezzo USD 19.99 e riportato per la famiglia SV06 Plus/SV07 sullo store Sovol, convertito in stima. Piastra e durate stimate.",
+      "sources": [
+        "https://3djake.ch/en-CH/sovol",
+        "https://www.sovol3d.com/collections/early-summer-sale-6plus",
+        "https://clevercreations.org/sovol-sv07-3d-printer-review-specs/"
+      ],
+      "estimated": [
+        "price_eur",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ]
+    },
+    {
+      "id": "sovol-sv06-plus",
+      "brand": "Sovol",
+      "model": "SV06 Plus",
+      "kit": false,
+      "bed_mm": [
+        300,
+        300
+      ],
+      "enclosed": false,
+      "bed_heater_w": 500,
+      "hotend_heater_w": 40,
+      "price_eur": 299,
+      "power_w": {
+        "idle": 6,
+        "avg_pla": 90,
+        "avg_high_temp": 120,
+        "peak": 600
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 (hardened, per SV06 Plus)",
+          "cost_eur": 18,
+          "life_h": 500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [
+        "SV06 PLUS"
+      ],
+      "notes": "Volume di stampa 300 x 300 x 340 mm (fonte: 3djake, confermata da confronto). Prezzo: nessun prezzo EUR ufficiale trovato. Un rivenditore svizzero la elenca a CHF 285.82 (IVA inclusa), usato come riferimento per la stima di 299 EUR. Il lancio era a 299 USD per i primi 300 pezzi (promo). Potenza bed 500 W: dichiarata nelle fonti come potenza totale del piatto riscaldato, non misurata. Nessuna misura di consumo trovata: idle, PLA e alta temperatura sono stime. Il valore 600 W in peak e una stima di potenza di alimentatore adeguata ai 500 W del piatto piu hotend: l'alimentatore esatto non e stato trovato.",
+      "sources": [
+        "https://www.3djake.ch/en-CH/sovol/sv06-plus",
+        "https://all3dp.com/4/sovol-is-sneaking-out-a-plus-sized-sv06-very-soon/",
+        "https://3dpros.com/printers/sovol-sv06-plus"
+      ],
+      "estimated": [
+        "price_eur",
+        "hotend_heater_w",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ]
+    },
+    {
+      "id": "sovol-sv07",
+      "brand": "Sovol",
+      "model": "SV07",
+      "kit": false,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "enclosed": false,
+      "bed_heater_w": 300,
+      "hotend_heater_w": 40,
+      "price_eur": 369,
+      "power_w": {
+        "idle": 6,
+        "avg_pla": 80,
+        "avg_high_temp": 110,
+        "peak": 350
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 (hardened, per SV07)",
+          "cost_eur": 18,
+          "life_h": 500
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "ATTENZIONE: le fonti trovate sono in conflitto sul volume. Una scheda (clevercreations) riporta 220 x 220 x 250 mm, ma la stessa fonte colloca la SV07 Plus a 300 x 300 x 350 mm e la SV07 come modello piu piccolo: incoerente con quanto noto per la SV07 (formato 350 mm). Il valore 350 x 350 mm e NON verificato e va controllato sulla scheda ufficiale Sovol. Prezzo: nessun prezzo EUR ufficiale trovato; 369 EUR e una stima. Potenza: il PSU da 350 W (24 V) e dichiarato in una scheda tecnica di terzi, usato come peak dichiarato. Nessuna misura di consumo trovata; idle, PLA, alta temperatura e riscaldatore letto sono stime.",
+      "sources": [
+        "https://clevercreations.org/sovol-sv07-3d-printer-review-specs/",
+        "https://www.3djake.ch/en-CH/sovol/sv07",
+        "https://www.3printr.com/sovol-sv07-fast-3d-printer-with-large-build-volume-5364561/"
+      ],
+      "estimated": [
+        "bed_mm",
+        "price_eur",
+        "bed_heater_w",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h"
+      ]
+    },
+    {
+      "id": "sovol-sv08",
+      "brand": "Sovol",
+      "model": "SV08",
+      "kit": false,
+      "bed_mm": [
+        350,
+        350
+      ],
+      "enclosed": false,
+      "bed_heater_w": 490,
+      "hotend_heater_w": 40,
+      "price_eur": 499,
+      "power_w": {
+        "idle": 8,
+        "avg_pla": 100,
+        "avg_high_temp": null,
+        "peak": 400
+      },
+      "lifetime_h": 4000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Nessun dato trovato: prezzo, consumi e profilo PrusaSlicer sono tutti stimati. Da verificare. [PrusaSlicer] Nessun printer_model SV08 nel bundle Sovol 2.1.0 (presenti SV01-SV06). Ricerca prezzi: nessun prezzo EUR trovato su store ufficiali in questa passata.",
+      "sources": [
+        "https://3djake.com/sovol/sv08"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "voron-2-4",
+      "brand": "Voron",
+      "model": "2.4 (kit)",
+      "kit": true,
+      "bed_mm": [
+        300,
+        300
+      ],
+      "enclosed": true,
+      "bed_heater_w": 360,
+      "hotend_heater_w": 40,
+      "price_eur": 1000,
+      "power_w": {
+        "idle": 15,
+        "avg_pla": 150,
+        "avg_high_temp": 250,
+        "peak": 600
+      },
+      "lifetime_h": 8000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        },
+        {
+          "name": "Cinghia GT2",
+          "cost_eur": 10,
+          "life_h": 4000
+        }
+      ],
+      "prusaslicer_models": [
+        "Voron_v2_250",
+        "Voron_v2_300",
+        "Voron_v2_350"
+      ],
+      "notes": "Prezzo indicativo di un kit, molto variabile in base a configurazione e volume di stampa (non verificato). Prezzo non assemblato. Consumi stimati, dipendono da volume e riscaldamento della camera. Vita utile 8000 h: struttura robusta, ammortamento lungo. [PrusaSlicer] Profili Voron V2 (250/300/350) dal bundle Voron 3.0.0; il volume del kit 2.4 non e specificato, quindi sono tutte e tre le opzioni.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Voron_2.4",
+        "https://www.3djake.ch/it-CH/ldo-motors/kit-voron-24-300"
+      ],
+      "estimated": [
+        "price_eur",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h",
+        "bed_heater_w",
+        "hotend_heater_w"
+      ]
+    },
+    {
+      "id": "voron-trident",
+      "brand": "Voron",
+      "model": "Trident (kit)",
+      "kit": true,
+      "bed_mm": [
+        300,
+        300
+      ],
+      "enclosed": true,
+      "bed_heater_w": 360,
+      "hotend_heater_w": 60,
+      "price_eur": 1071,
+      "power_w": {
+        "idle": 15,
+        "avg_pla": 150,
+        "avg_high_temp": 250,
+        "peak": 600
+      },
+      "lifetime_h": 8000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        },
+        {
+          "name": "Cinghia GT2 (sostituzione)",
+          "cost_eur": 8,
+          "life_h": 4000
+        }
+      ],
+      "prusaslicer_models": [
+        "VT_300"
+      ],
+      "notes": "Kit DIY: il volume dipende dalla variante (250, 300 o 350 mm), qui 300 x 300 mm come riferimento. Consumo dipende dalla build, valori tipici e stimati, non misurati. Prezzo: LDO Voron Trident Rev D da West3D (rivenditore EU, pagina collezione kit) a 1070.95 EUR; configurazione e data non chiare, quindi valore indicativo. Il kit non include parti stampate ne stampante assemblata. Il valore 600 W in peak e una stima di alimentatore tipico, non dichiarata. Nessuna misura di consumo trovata.",
+      "sources": [
+        "https://west3d.com/en-de/collections/kits/ldo",
+        "https://west3d.com/en-de/collections/voron?page=10",
+        "https://vorondesign.com/voron_0"
+      ],
+      "estimated": [
+        "bed_mm",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h"
+      ]
+    },
+    {
+      "id": "voron-02",
+      "brand": "Voron",
+      "model": "Voron 0.2 (kit)",
+      "kit": true,
+      "bed_mm": [
+        120,
+        120
+      ],
+      "enclosed": true,
+      "bed_heater_w": 150,
+      "hotend_heater_w": 40,
+      "price_eur": 540,
+      "power_w": {
+        "idle": 8,
+        "avg_pla": 80,
+        "avg_high_temp": 120,
+        "peak": 350
+      },
+      "lifetime_h": 8000,
+      "consumables": [
+        {
+          "name": "Ugello 0.4 hardened steel",
+          "cost_eur": 12,
+          "life_h": 1000
+        },
+        {
+          "name": "Piastra PEI",
+          "cost_eur": 25,
+          "life_h": 2000
+        },
+        {
+          "name": "Cinghia GT2 (sostituzione)",
+          "cost_eur": 8,
+          "life_h": 4000
+        }
+      ],
+      "prusaslicer_models": [],
+      "notes": "Kit DIY: il consumo dipende dalla build (volume, scelta di riscaldatore, PSU, toolhead); i valori sono tipici e stimati, non misurati. Volume standard 120 x 120 x 120 mm (varianti maggiori esistono). Prezzo: il kit completo piu citato e il LDO Voron V0.2-S1 da West3D (AUD 893, listino AUD 944, pagina del rivenditore australiano, data non chiara); converto in circa 540 EUR come stima. Nessun prezzo EUR di kit completo trovato. Il prezzo non include parti stampate ne Raspberry Pi. Il valore 350 W in peak e una stima di alimentatore tipico, non dichiarata nelle fonti. Voron e open source; i profili PrusaSlicer non sono Prusa e non sono inclusi qui.",
+      "sources": [
+        "https://west3d.com/en-au/products/ldo-voron-v0-2-s1-complete-kit-voron-v0-2",
+        "https://vorondesign.com/voron_0"
+      ],
+      "estimated": [
+        "price_eur",
+        "bed_heater_w",
+        "hotend_heater_w",
+        "power_w.idle",
+        "power_w.avg_pla",
+        "power_w.avg_high_temp",
+        "power_w.peak",
+        "lifetime_h",
+        "consumables[0].cost_eur",
+        "consumables[0].life_h",
+        "consumables[1].cost_eur",
+        "consumables[1].life_h",
+        "consumables[2].cost_eur",
+        "consumables[2].life_h"
+      ]
+    }
+  ]
+}

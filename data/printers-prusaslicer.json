@@ -1,0 +1,5831 @@
+{
+  "generated": "2026-10-24T12:00:40.056Z",
+  "sources": [
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-prusa-fff/main/PrusaResearch/2.5.13.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Anker/2.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Anycubic/2.1.1.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Artillery/1.1.1.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/BIBO/1.1.1.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/BIQU/1.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Caribou/0.7.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/CocoaPress/3.0.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Creality/1.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/E2D/1.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Elegoo/2.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/FLSun/1.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Geeetech/1.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/HartSmartProducts/1.3.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/INAT/1.1.1.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Infinity3D/2.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Jubilee/2.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/LNL3D/1.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/LulzBot/1.0.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/MakerGear/1.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/PapapiuLab/1.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Positron3D/1.0.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Print4Taste/1.1.2.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/QIDITechnology/2.3.1.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/RatRig/2.2.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Rigid3D/2.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Snapmaker/2.0.3.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Sovol/2.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/TriLAB/2.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Trimaker/2.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Ultimaker/2.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Voron/3.0.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/Zonestar/2.1.0.ini",
+    "https://raw.githubusercontent.com/prusa3d/PrusaSlicer-settings-non-prusa-fff/main/gCreate/2.1.0.ini"
+  ],
+  "printers": [
+    {
+      "id": "ps-ankermake-m5",
+      "vendor": "AnkerMake",
+      "model": "M5",
+      "name": "AnkerMake M5",
+      "family": "AnkerMake",
+      "bed_mm": null,
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "M5"
+      ]
+    },
+    {
+      "id": "ps-ankermake-m5c",
+      "vendor": "AnkerMake",
+      "model": "M5C",
+      "name": "AnkerMake M5C",
+      "family": "AnkerMake",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "M5C"
+      ]
+    },
+    {
+      "id": "ps-anycubic-4maxpro20",
+      "vendor": "Anycubic",
+      "model": "4MAXPRO20",
+      "name": "Anycubic 4Max Pro 2.0",
+      "family": "4Max",
+      "bed_mm": [
+        270,
+        210
+      ],
+      "max_z_mm": 190,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "4MAXPRO20"
+      ]
+    },
+    {
+      "id": "ps-anycubic-i3mega",
+      "vendor": "Anycubic",
+      "model": "I3MEGA",
+      "name": "Anycubic i3 Mega",
+      "family": "MEGA",
+      "bed_mm": [
+        210,
+        210
+      ],
+      "max_z_mm": 205,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "I3MEGA"
+      ]
+    },
+    {
+      "id": "ps-anycubic-i3megas",
+      "vendor": "Anycubic",
+      "model": "I3MEGAS",
+      "name": "Anycubic i3 Mega S",
+      "family": "MEGA",
+      "bed_mm": [
+        210,
+        210
+      ],
+      "max_z_mm": 205,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "I3MEGAS"
+      ]
+    },
+    {
+      "id": "ps-anycubic-aklp",
+      "vendor": "Anycubic",
+      "model": "AKLP",
+      "name": "Anycubic Kossel Linear Plus",
+      "family": "KOSSEL",
+      "bed_mm": [
+        230,
+        230
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "AKLP"
+      ]
+    },
+    {
+      "id": "ps-anycubic-ak",
+      "vendor": "Anycubic",
+      "model": "AK",
+      "name": "Anycubic Kossel Pulley (Linear)",
+      "family": "KOSSEL",
+      "bed_mm": [
+        180,
+        180
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "AK"
+      ]
+    },
+    {
+      "id": "ps-anycubic-mega0",
+      "vendor": "Anycubic",
+      "model": "MEGA0",
+      "name": "Anycubic Mega Zero",
+      "family": "MEGA",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "MEGA0"
+      ]
+    },
+    {
+      "id": "ps-anycubic-predator",
+      "vendor": "Anycubic",
+      "model": "PREDATOR",
+      "name": "Anycubic Predator",
+      "family": "PREDATOR",
+      "bed_mm": [
+        379,
+        379
+      ],
+      "max_z_mm": 445,
+      "nozzles_mm": [
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "PREDATOR"
+      ]
+    },
+    {
+      "id": "ps-artillery-genius",
+      "vendor": "Artillery",
+      "model": "Genius",
+      "name": "Artillery Genius",
+      "family": null,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Genius"
+      ]
+    },
+    {
+      "id": "ps-artillery-hornet",
+      "vendor": "Artillery",
+      "model": "Hornet",
+      "name": "Artillery Hornet",
+      "family": null,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Hornet"
+      ]
+    },
+    {
+      "id": "ps-artillery-x1",
+      "vendor": "Artillery",
+      "model": "X1",
+      "name": "Artillery Sidewinder X1",
+      "family": null,
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "X1"
+      ]
+    },
+    {
+      "id": "ps-artillery-x3-plus",
+      "vendor": "Artillery",
+      "model": "X3 Plus",
+      "name": "Artillery Sidewinder X3 Plus",
+      "family": null,
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "X3 Plus"
+      ]
+    },
+    {
+      "id": "ps-artillery-x3-pro",
+      "vendor": "Artillery",
+      "model": "X3 Pro",
+      "name": "Artillery Sidewinder X3 Pro",
+      "family": null,
+      "bed_mm": [
+        240,
+        240
+      ],
+      "max_z_mm": 260,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "X3 Pro"
+      ]
+    },
+    {
+      "id": "ps-artillery-x4-max",
+      "vendor": "Artillery",
+      "model": "X4 Max",
+      "name": "Artillery Sidewinder X4 Max",
+      "family": null,
+      "bed_mm": [
+        500,
+        500
+      ],
+      "max_z_mm": 500,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "X4 Max"
+      ]
+    },
+    {
+      "id": "ps-artillery-x4-plus",
+      "vendor": "Artillery",
+      "model": "X4 Plus",
+      "name": "Artillery Sidewinder X4 Plus",
+      "family": null,
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "X4 Plus"
+      ]
+    },
+    {
+      "id": "ps-artillery-x4-pro",
+      "vendor": "Artillery",
+      "model": "X4 Pro",
+      "name": "Artillery Sidewinder X4 Pro",
+      "family": null,
+      "bed_mm": [
+        240,
+        240
+      ],
+      "max_z_mm": 260,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "X4 Pro"
+      ]
+    },
+    {
+      "id": "ps-bibo-bibo2",
+      "vendor": "BIBO",
+      "model": "BIBO2",
+      "name": "BIBO2 Touch",
+      "family": "BIBO2",
+      "bed_mm": [
+        214,
+        186
+      ],
+      "max_z_mm": 160,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "BIBO2"
+      ]
+    },
+    {
+      "id": "ps-biqu-biqubx",
+      "vendor": "BIQU",
+      "model": "BIQUBX",
+      "name": "BIQU BX",
+      "family": null,
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "BIQUBX"
+      ]
+    },
+    {
+      "id": "ps-caribou-caribou-mk3s-220",
+      "vendor": "Caribou",
+      "model": "Caribou_MK3S_220",
+      "name": "Caribou MK3S+ 220",
+      "family": "MK3S+",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 217,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Caribou_MK3S_220"
+      ]
+    },
+    {
+      "id": "ps-caribou-caribou-mk3s-220-klipper",
+      "vendor": "Caribou",
+      "model": "Caribou_MK3S_220_Klipper",
+      "name": "Caribou MK3S+ 220 Klipper",
+      "family": "MK3S+ Klipper",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 217,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Caribou_MK3S_220_Klipper"
+      ]
+    },
+    {
+      "id": "ps-caribou-caribou-mk3s-320",
+      "vendor": "Caribou",
+      "model": "Caribou_MK3S_320",
+      "name": "Caribou MK3S+ 320",
+      "family": "MK3S+",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 317,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Caribou_MK3S_320"
+      ]
+    },
+    {
+      "id": "ps-caribou-caribou-mk3s-320-klipper",
+      "vendor": "Caribou",
+      "model": "Caribou_MK3S_320_Klipper",
+      "name": "Caribou MK3S+ 320 Klipper",
+      "family": "MK3S+ Klipper",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 317,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Caribou_MK3S_320_Klipper"
+      ]
+    },
+    {
+      "id": "ps-caribou-caribou-mk3s-420",
+      "vendor": "Caribou",
+      "model": "Caribou_MK3S_420",
+      "name": "Caribou MK3S+ 420",
+      "family": "MK3S+",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 417,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Caribou_MK3S_420"
+      ]
+    },
+    {
+      "id": "ps-caribou-caribou-mk3s-420-klipper",
+      "vendor": "Caribou",
+      "model": "Caribou_MK3S_420_Klipper",
+      "name": "Caribou MK3S+ 420 Klipper",
+      "family": "MK3S+ Klipper",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 417,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Caribou_MK3S_420_Klipper"
+      ]
+    },
+    {
+      "id": "ps-caribou-caribou-duet-220",
+      "vendor": "Caribou",
+      "model": "Caribou_Duet_220",
+      "name": "CaribouDuet 220",
+      "family": "Duet",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 217,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Caribou_Duet_220"
+      ]
+    },
+    {
+      "id": "ps-caribou-caribou-duet-320",
+      "vendor": "Caribou",
+      "model": "Caribou_Duet_320",
+      "name": "CaribouDuet 320",
+      "family": "Duet",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 317,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Caribou_Duet_320"
+      ]
+    },
+    {
+      "id": "ps-caribou-caribou-duet-420",
+      "vendor": "Caribou",
+      "model": "Caribou_Duet_420",
+      "name": "CaribouDuet 420",
+      "family": "Duet",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 417,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Caribou_Duet_420"
+      ]
+    },
+    {
+      "id": "ps-caribou-caribou-idex-duplicate",
+      "vendor": "Caribou",
+      "model": "Caribou_IDEX_Duplicate",
+      "name": "CaribouIDEX Duplicate",
+      "family": "IDEX",
+      "bed_mm": [
+        125,
+        210
+      ],
+      "max_z_mm": 217,
+      "nozzles_mm": [
+        0.25,
+        0.35,
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Caribou_IDEX_Duplicate"
+      ]
+    },
+    {
+      "id": "ps-caribou-caribou-idex-mirror",
+      "vendor": "Caribou",
+      "model": "Caribou_IDEX_Mirror",
+      "name": "CaribouIDEX Mirror",
+      "family": "IDEX",
+      "bed_mm": [
+        90,
+        210
+      ],
+      "max_z_mm": 217,
+      "nozzles_mm": [
+        0.25,
+        0.35,
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Caribou_IDEX_Mirror"
+      ]
+    },
+    {
+      "id": "ps-caribou-caribou-idex-standard",
+      "vendor": "Caribou",
+      "model": "Caribou_IDEX_Standard",
+      "name": "CaribouIDEX Standard",
+      "family": "IDEX",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 217,
+      "nozzles_mm": [
+        0.25,
+        0.35,
+        0.4,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "Caribou_IDEX_Standard"
+      ]
+    },
+    {
+      "id": "ps-caribou-caribou-m",
+      "vendor": "Caribou",
+      "model": "Caribou_M",
+      "name": "CaribouM",
+      "family": "M",
+      "bed_mm": [
+        180,
+        180
+      ],
+      "max_z_mm": 180,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "Caribou_M"
+      ]
+    },
+    {
+      "id": "ps-cocoa-press-cocoa-press",
+      "vendor": "Cocoa Press",
+      "model": "Cocoa_Press",
+      "name": "Cocoa Press",
+      "family": null,
+      "bed_mm": [
+        140,
+        150
+      ],
+      "max_z_mm": 150,
+      "nozzles_mm": [
+        0.8,
+        1.6
+      ],
+      "prusaslicer_models": [
+        "Cocoa_Press"
+      ]
+    },
+    {
+      "id": "ps-cocoa-press-cocoa-press2",
+      "vendor": "Cocoa Press",
+      "model": "Cocoa_Press2",
+      "name": "Cocoa Press 2",
+      "family": null,
+      "bed_mm": [
+        135,
+        135
+      ],
+      "max_z_mm": 150,
+      "nozzles_mm": [
+        0.8,
+        1.6
+      ],
+      "prusaslicer_models": [
+        "Cocoa_Press2"
+      ]
+    },
+    {
+      "id": "ps-creality-cr10",
+      "vendor": "Creality",
+      "model": "CR10",
+      "name": "Creality CR-10",
+      "family": "CR",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR10"
+      ]
+    },
+    {
+      "id": "ps-creality-cr10max",
+      "vendor": "Creality",
+      "model": "CR10MAX",
+      "name": "Creality CR-10 Max",
+      "family": "CR",
+      "bed_mm": [
+        440,
+        440
+      ],
+      "max_z_mm": 470,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR10MAX"
+      ]
+    },
+    {
+      "id": "ps-creality-cr10mini",
+      "vendor": "Creality",
+      "model": "CR10MINI",
+      "name": "Creality CR-10 Mini",
+      "family": "CR",
+      "bed_mm": [
+        300,
+        220
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR10MINI"
+      ]
+    },
+    {
+      "id": "ps-creality-cr10s",
+      "vendor": "Creality",
+      "model": "CR10S",
+      "name": "Creality CR-10 S",
+      "family": "CR",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR10S"
+      ]
+    },
+    {
+      "id": "ps-creality-cr10spro",
+      "vendor": "Creality",
+      "model": "CR10SPRO",
+      "name": "Creality CR-10 S Pro",
+      "family": "CR",
+      "bed_mm": [
+        290,
+        290
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR10SPRO"
+      ]
+    },
+    {
+      "id": "ps-creality-cr10sprov2",
+      "vendor": "Creality",
+      "model": "CR10SPROV2",
+      "name": "Creality CR-10 S Pro V2",
+      "family": "CR",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR10SPROV2"
+      ]
+    },
+    {
+      "id": "ps-creality-cr10s4",
+      "vendor": "Creality",
+      "model": "CR10S4",
+      "name": "Creality CR-10 S4",
+      "family": "CR",
+      "bed_mm": [
+        390,
+        390
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR10S4"
+      ]
+    },
+    {
+      "id": "ps-creality-cr10s5",
+      "vendor": "Creality",
+      "model": "CR10S5",
+      "name": "Creality CR-10 S5",
+      "family": "CR",
+      "bed_mm": [
+        500,
+        500
+      ],
+      "max_z_mm": 500,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR10S5"
+      ]
+    },
+    {
+      "id": "ps-creality-cr10smart",
+      "vendor": "Creality",
+      "model": "CR10SMART",
+      "name": "Creality CR-10 SMART",
+      "family": "CR",
+      "bed_mm": [
+        290,
+        290
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR10SMART"
+      ]
+    },
+    {
+      "id": "ps-creality-cr10smartpro",
+      "vendor": "Creality",
+      "model": "CR10SMARTPRO",
+      "name": "Creality CR-10 SMART Pro",
+      "family": "CR",
+      "bed_mm": [
+        290,
+        290
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR10SMARTPRO"
+      ]
+    },
+    {
+      "id": "ps-creality-cr10v2",
+      "vendor": "Creality",
+      "model": "CR10V2",
+      "name": "Creality CR-10 V2",
+      "family": "CR",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR10V2"
+      ]
+    },
+    {
+      "id": "ps-creality-cr10v3",
+      "vendor": "Creality",
+      "model": "CR10V3",
+      "name": "Creality CR-10 V3",
+      "family": "CR",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR10V3"
+      ]
+    },
+    {
+      "id": "ps-creality-cr20",
+      "vendor": "Creality",
+      "model": "CR20",
+      "name": "Creality CR-20",
+      "family": "CR",
+      "bed_mm": null,
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR20"
+      ]
+    },
+    {
+      "id": "ps-creality-cr20pro",
+      "vendor": "Creality",
+      "model": "CR20PRO",
+      "name": "Creality CR-20 Pro",
+      "family": "CR",
+      "bed_mm": null,
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR20PRO"
+      ]
+    },
+    {
+      "id": "ps-creality-cr200b",
+      "vendor": "Creality",
+      "model": "CR200B",
+      "name": "Creality CR-200B",
+      "family": "CR",
+      "bed_mm": [
+        190,
+        190
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR200B"
+      ]
+    },
+    {
+      "id": "ps-creality-cr5pro",
+      "vendor": "Creality",
+      "model": "CR5PRO",
+      "name": "Creality CR-5 Pro",
+      "family": "CR",
+      "bed_mm": [
+        290,
+        215
+      ],
+      "max_z_mm": 380,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR5PRO"
+      ]
+    },
+    {
+      "id": "ps-creality-cr5proh",
+      "vendor": "Creality",
+      "model": "CR5PROH",
+      "name": "Creality CR-5 Pro H",
+      "family": "CR",
+      "bed_mm": [
+        290,
+        215
+      ],
+      "max_z_mm": 380,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR5PROH"
+      ]
+    },
+    {
+      "id": "ps-creality-cr6max",
+      "vendor": "Creality",
+      "model": "CR6MAX",
+      "name": "Creality CR-6 Max",
+      "family": "CR",
+      "bed_mm": [
+        390,
+        390
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR6MAX"
+      ]
+    },
+    {
+      "id": "ps-creality-cr6se",
+      "vendor": "Creality",
+      "model": "CR6SE",
+      "name": "Creality CR-6 SE",
+      "family": "CR",
+      "bed_mm": [
+        225,
+        235
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR6SE"
+      ]
+    },
+    {
+      "id": "ps-creality-cr8",
+      "vendor": "Creality",
+      "model": "CR8",
+      "name": "Creality CR-8",
+      "family": "CR",
+      "bed_mm": [
+        210,
+        210
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "CR8"
+      ]
+    },
+    {
+      "id": "ps-creality-ender2",
+      "vendor": "Creality",
+      "model": "ENDER2",
+      "name": "Creality Ender-2",
+      "family": "ENDER",
+      "bed_mm": [
+        150,
+        150
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER2"
+      ]
+    },
+    {
+      "id": "ps-creality-ender2pro",
+      "vendor": "Creality",
+      "model": "ENDER2PRO",
+      "name": "Creality Ender-2 Pro",
+      "family": "ENDER",
+      "bed_mm": [
+        157.5,
+        157.5
+      ],
+      "max_z_mm": 180,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER2PRO"
+      ]
+    },
+    {
+      "id": "ps-creality-ender3",
+      "vendor": "Creality",
+      "model": "ENDER3",
+      "name": "Creality Ender-3",
+      "family": "ENDER",
+      "bed_mm": [
+        225,
+        225
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER3"
+      ]
+    },
+    {
+      "id": "ps-creality-ender3bltouch",
+      "vendor": "Creality",
+      "model": "ENDER3BLTOUCH",
+      "name": "Creality Ender-3 BLTouch",
+      "family": "ENDER",
+      "bed_mm": [
+        225,
+        225
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER3BLTOUCH"
+      ]
+    },
+    {
+      "id": "ps-creality-ender3max",
+      "vendor": "Creality",
+      "model": "ENDER3MAX",
+      "name": "Creality Ender-3 Max",
+      "family": "ENDER",
+      "bed_mm": [
+        290,
+        290
+      ],
+      "max_z_mm": 340,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER3MAX"
+      ]
+    },
+    {
+      "id": "ps-creality-ender3maxneo",
+      "vendor": "Creality",
+      "model": "ENDER3MAXNEO",
+      "name": "Creality Ender-3 Max Neo",
+      "family": "ENDER",
+      "bed_mm": [
+        290,
+        290
+      ],
+      "max_z_mm": 320,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER3MAXNEO"
+      ]
+    },
+    {
+      "id": "ps-creality-ender3neo",
+      "vendor": "Creality",
+      "model": "ENDER3NEO",
+      "name": "Creality Ender-3 Neo",
+      "family": "ENDER",
+      "bed_mm": [
+        225,
+        225
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER3NEO"
+      ]
+    },
+    {
+      "id": "ps-creality-ender3pro",
+      "vendor": "Creality",
+      "model": "ENDER3PRO",
+      "name": "Creality Ender-3 Pro",
+      "family": "ENDER",
+      "bed_mm": [
+        225,
+        225
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER3PRO"
+      ]
+    },
+    {
+      "id": "ps-creality-ender3s1",
+      "vendor": "Creality",
+      "model": "ENDER3S1",
+      "name": "Creality Ender-3 S1",
+      "family": "ENDER",
+      "bed_mm": [
+        210,
+        220
+      ],
+      "max_z_mm": 270,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER3S1"
+      ]
+    },
+    {
+      "id": "ps-creality-ender3s1plus",
+      "vendor": "Creality",
+      "model": "ENDER3S1PLUS",
+      "name": "Creality Ender-3 S1 Plus",
+      "family": "ENDER",
+      "bed_mm": [
+        290,
+        290
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER3S1PLUS"
+      ]
+    },
+    {
+      "id": "ps-creality-ender3s1pro",
+      "vendor": "Creality",
+      "model": "ENDER3S1PRO",
+      "name": "Creality Ender-3 S1 Pro",
+      "family": "ENDER",
+      "bed_mm": [
+        210,
+        220
+      ],
+      "max_z_mm": 270,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER3S1PRO"
+      ]
+    },
+    {
+      "id": "ps-creality-ender3v2",
+      "vendor": "Creality",
+      "model": "ENDER3V2",
+      "name": "Creality Ender-3 V2",
+      "family": "ENDER",
+      "bed_mm": [
+        210,
+        220
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER3V2"
+      ]
+    },
+    {
+      "id": "ps-creality-ender3v2neo",
+      "vendor": "Creality",
+      "model": "ENDER3V2NEO",
+      "name": "Creality Ender-3 V2 Neo",
+      "family": "ENDER",
+      "bed_mm": [
+        210,
+        220
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER3V2NEO"
+      ]
+    },
+    {
+      "id": "ps-creality-ender4",
+      "vendor": "Creality",
+      "model": "ENDER4",
+      "name": "Creality Ender-4",
+      "family": "ENDER",
+      "bed_mm": [
+        210,
+        220
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER4"
+      ]
+    },
+    {
+      "id": "ps-creality-ender5",
+      "vendor": "Creality",
+      "model": "ENDER5",
+      "name": "Creality Ender-5",
+      "family": "ENDER",
+      "bed_mm": [
+        210,
+        220
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER5"
+      ]
+    },
+    {
+      "id": "ps-creality-ender5plus",
+      "vendor": "Creality",
+      "model": "ENDER5PLUS",
+      "name": "Creality Ender-5 Plus",
+      "family": "ENDER",
+      "bed_mm": [
+        350,
+        350
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER5PLUS"
+      ]
+    },
+    {
+      "id": "ps-creality-ender5pro",
+      "vendor": "Creality",
+      "model": "ENDER5PRO",
+      "name": "Creality Ender-5 Pro",
+      "family": "ENDER",
+      "bed_mm": [
+        210,
+        220
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER5PRO"
+      ]
+    },
+    {
+      "id": "ps-creality-ender5s1",
+      "vendor": "Creality",
+      "model": "ENDER5S1",
+      "name": "Creality Ender-5 S1",
+      "family": "ENDER",
+      "bed_mm": [
+        210,
+        220
+      ],
+      "max_z_mm": 280,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER5S1"
+      ]
+    },
+    {
+      "id": "ps-creality-ender6",
+      "vendor": "Creality",
+      "model": "ENDER6",
+      "name": "Creality Ender-6",
+      "family": "ENDER",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER6"
+      ]
+    },
+    {
+      "id": "ps-creality-ender7",
+      "vendor": "Creality",
+      "model": "ENDER7",
+      "name": "Creality Ender-7",
+      "family": "ENDER",
+      "bed_mm": [
+        240,
+        240
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "ENDER7"
+      ]
+    },
+    {
+      "id": "ps-creality-sermoond1",
+      "vendor": "Creality",
+      "model": "SERMOOND1",
+      "name": "Creality Sermoon-D1",
+      "family": "SERMOON",
+      "bed_mm": [
+        270,
+        250
+      ],
+      "max_z_mm": 310,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "SERMOOND1"
+      ]
+    },
+    {
+      "id": "ps-creality-sermoonv1",
+      "vendor": "Creality",
+      "model": "SERMOONV1",
+      "name": "Creality Sermoon-V1",
+      "family": "SERMOON",
+      "bed_mm": [
+        165,
+        165
+      ],
+      "max_z_mm": 165,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "SERMOONV1"
+      ]
+    },
+    {
+      "id": "ps-creality-sermoonv1pro",
+      "vendor": "Creality",
+      "model": "SERMOONV1PRO",
+      "name": "Creality Sermoon-V1 Pro",
+      "family": "SERMOON",
+      "bed_mm": [
+        165,
+        165
+      ],
+      "max_z_mm": 165,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "SERMOONV1PRO"
+      ]
+    },
+    {
+      "id": "ps-e2d-i310",
+      "vendor": "E2D",
+      "model": "i310",
+      "name": "E2D i310",
+      "family": "i3",
+      "bed_mm": [
+        200,
+        200
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.3,
+        0.4
+      ],
+      "prusaslicer_models": [
+        "i310"
+      ]
+    },
+    {
+      "id": "ps-e2d-i311",
+      "vendor": "E2D",
+      "model": "i311",
+      "name": "E2D i311",
+      "family": "i3",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.3,
+        0.4
+      ],
+      "prusaslicer_models": [
+        "i311"
+      ]
+    },
+    {
+      "id": "ps-elegoo-neptune1",
+      "vendor": "Elegoo",
+      "model": "NEPTUNE1",
+      "name": "Elegoo Neptune-1",
+      "family": "NEPTUNE",
+      "bed_mm": [
+        210,
+        210
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "NEPTUNE1"
+      ]
+    },
+    {
+      "id": "ps-elegoo-neptune2",
+      "vendor": "Elegoo",
+      "model": "NEPTUNE2",
+      "name": "Elegoo Neptune-2",
+      "family": "NEPTUNE",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "NEPTUNE2"
+      ]
+    },
+    {
+      "id": "ps-elegoo-neptune2d",
+      "vendor": "Elegoo",
+      "model": "NEPTUNE2D",
+      "name": "Elegoo Neptune-2D",
+      "family": "NEPTUNE",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "NEPTUNE2D"
+      ]
+    },
+    {
+      "id": "ps-elegoo-neptune2s",
+      "vendor": "Elegoo",
+      "model": "NEPTUNE2S",
+      "name": "Elegoo Neptune-2S",
+      "family": "NEPTUNE",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "NEPTUNE2S"
+      ]
+    },
+    {
+      "id": "ps-elegoo-neptune3",
+      "vendor": "Elegoo",
+      "model": "NEPTUNE3",
+      "name": "Elegoo Neptune-3",
+      "family": "NEPTUNE",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 280,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "NEPTUNE3"
+      ]
+    },
+    {
+      "id": "ps-elegoo-neptune3max",
+      "vendor": "Elegoo",
+      "model": "NEPTUNE3MAX",
+      "name": "Elegoo Neptune-3 Max",
+      "family": "NEPTUNE",
+      "bed_mm": [
+        420,
+        420
+      ],
+      "max_z_mm": 500,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "NEPTUNE3MAX"
+      ]
+    },
+    {
+      "id": "ps-elegoo-neptune3plus",
+      "vendor": "Elegoo",
+      "model": "NEPTUNE3PLUS",
+      "name": "Elegoo Neptune-3 Plus",
+      "family": "NEPTUNE",
+      "bed_mm": [
+        320,
+        320
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "NEPTUNE3PLUS"
+      ]
+    },
+    {
+      "id": "ps-elegoo-neptune3pro",
+      "vendor": "Elegoo",
+      "model": "NEPTUNE3PRO",
+      "name": "Elegoo Neptune-3 Pro",
+      "family": "NEPTUNE",
+      "bed_mm": [
+        225,
+        225
+      ],
+      "max_z_mm": 280,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "NEPTUNE3PRO"
+      ]
+    },
+    {
+      "id": "ps-elegoo-neptunex",
+      "vendor": "Elegoo",
+      "model": "NEPTUNEX",
+      "name": "Elegoo Neptune-X",
+      "family": "NEPTUNE",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "NEPTUNEX"
+      ]
+    },
+    {
+      "id": "ps-flsun-q5",
+      "vendor": "FLSun",
+      "model": "Q5",
+      "name": "FLSun Q5",
+      "family": null,
+      "bed_mm": [
+        200,
+        200
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.4,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "Q5"
+      ]
+    },
+    {
+      "id": "ps-flsun-qqsp",
+      "vendor": "FLSun",
+      "model": "QQSP",
+      "name": "FLSun QQS Pro",
+      "family": null,
+      "bed_mm": [
+        260,
+        260
+      ],
+      "max_z_mm": 360,
+      "nozzles_mm": [
+        0.4,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "QQSP"
+      ]
+    },
+    {
+      "id": "ps-gcreate-gmax15p",
+      "vendor": "gCreate",
+      "model": "GMAX15P",
+      "name": "gMax 1.5XT Plus",
+      "family": "GMAX",
+      "bed_mm": [
+        410,
+        410
+      ],
+      "max_z_mm": 533,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.8,
+        1
+      ],
+      "prusaslicer_models": [
+        "GMAX15P"
+      ]
+    },
+    {
+      "id": "ps-gcreate-gmax2",
+      "vendor": "gCreate",
+      "model": "GMAX2",
+      "name": "gMax 2",
+      "family": "GMAX",
+      "bed_mm": [
+        457,
+        457
+      ],
+      "max_z_mm": 610,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.8,
+        1
+      ],
+      "prusaslicer_models": [
+        "GMAX2"
+      ]
+    },
+    {
+      "id": "ps-gcreate-gmax2dual2in1",
+      "vendor": "gCreate",
+      "model": "GMAX2DUAL2IN1",
+      "name": "gMax 2 Dual 2in1",
+      "family": "GMAX",
+      "bed_mm": [
+        457,
+        457
+      ],
+      "max_z_mm": 610,
+      "nozzles_mm": [
+        0.5
+      ],
+      "prusaslicer_models": [
+        "GMAX2DUAL2IN1"
+      ]
+    },
+    {
+      "id": "ps-gcreate-gmax2dual",
+      "vendor": "gCreate",
+      "model": "GMAX2DUAL",
+      "name": "gMax 2 Dual Chimera",
+      "family": "GMAX",
+      "bed_mm": [
+        457,
+        457
+      ],
+      "max_z_mm": 610,
+      "nozzles_mm": [
+        0.5
+      ],
+      "prusaslicer_models": [
+        "GMAX2DUAL"
+      ]
+    },
+    {
+      "id": "ps-gcreate-gmax2pro",
+      "vendor": "gCreate",
+      "model": "GMAX2PRO",
+      "name": "gMax 2 Pro",
+      "family": "GMAX",
+      "bed_mm": [
+        457,
+        457
+      ],
+      "max_z_mm": 610,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.5,
+        0.8,
+        1
+      ],
+      "prusaslicer_models": [
+        "GMAX2PRO"
+      ]
+    },
+    {
+      "id": "ps-geeetech-a10m",
+      "vendor": "Geeetech",
+      "model": "A10M",
+      "name": "Geeetech A10 M",
+      "family": "A10",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 260,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "A10M"
+      ]
+    },
+    {
+      "id": "ps-geeetech-a10pro",
+      "vendor": "Geeetech",
+      "model": "A10Pro",
+      "name": "Geeetech A10 Pro",
+      "family": "A10",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 260,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "A10Pro"
+      ]
+    },
+    {
+      "id": "ps-geeetech-a10t",
+      "vendor": "Geeetech",
+      "model": "A10T",
+      "name": "Geeetech A10 T",
+      "family": "A10",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 260,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "A10T"
+      ]
+    },
+    {
+      "id": "ps-geeetech-a20",
+      "vendor": "Geeetech",
+      "model": "A20",
+      "name": "Geeetech A20",
+      "family": "A20",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "A20"
+      ]
+    },
+    {
+      "id": "ps-geeetech-a20m",
+      "vendor": "Geeetech",
+      "model": "A20M",
+      "name": "Geeetech A20 M",
+      "family": "A20",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "A20M"
+      ]
+    },
+    {
+      "id": "ps-geeetech-a20t",
+      "vendor": "Geeetech",
+      "model": "A20T",
+      "name": "Geeetech A20 T",
+      "family": "A20",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "A20T"
+      ]
+    },
+    {
+      "id": "ps-geeetech-a30m",
+      "vendor": "Geeetech",
+      "model": "A30M",
+      "name": "Geeetech A30 M",
+      "family": "A30",
+      "bed_mm": [
+        320,
+        320
+      ],
+      "max_z_mm": 420,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "A30M"
+      ]
+    },
+    {
+      "id": "ps-geeetech-a30pro",
+      "vendor": "Geeetech",
+      "model": "A30Pro",
+      "name": "Geeetech A30 Pro",
+      "family": "A30",
+      "bed_mm": [
+        320,
+        320
+      ],
+      "max_z_mm": 420,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "A30Pro"
+      ]
+    },
+    {
+      "id": "ps-geeetech-a30t",
+      "vendor": "Geeetech",
+      "model": "A30T",
+      "name": "Geeetech A30 T",
+      "family": "A30",
+      "bed_mm": [
+        320,
+        320
+      ],
+      "max_z_mm": 420,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "A30T"
+      ]
+    },
+    {
+      "id": "ps-geeetech-e180",
+      "vendor": "Geeetech",
+      "model": "E180",
+      "name": "Geeetech E180",
+      "family": "E180",
+      "bed_mm": [
+        125,
+        130
+      ],
+      "max_z_mm": 126,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "E180"
+      ]
+    },
+    {
+      "id": "ps-geeetech-giantarmd200",
+      "vendor": "Geeetech",
+      "model": "GiantArmD200",
+      "name": "Geeetech GiantArmD200",
+      "family": "D200",
+      "bed_mm": [
+        300,
+        180
+      ],
+      "max_z_mm": 180,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "GiantArmD200"
+      ]
+    },
+    {
+      "id": "ps-geeetech-i3prob",
+      "vendor": "Geeetech",
+      "model": "I3ProB",
+      "name": "Geeetech I3 ProB",
+      "family": "I3",
+      "bed_mm": [
+        200,
+        200
+      ],
+      "max_z_mm": 180,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "I3ProB"
+      ]
+    },
+    {
+      "id": "ps-geeetech-i3proc",
+      "vendor": "Geeetech",
+      "model": "I3ProC",
+      "name": "Geeetech I3 ProC",
+      "family": "I3",
+      "bed_mm": [
+        200,
+        200
+      ],
+      "max_z_mm": 180,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "I3ProC"
+      ]
+    },
+    {
+      "id": "ps-geeetech-i3prow",
+      "vendor": "Geeetech",
+      "model": "I3ProW",
+      "name": "Geeetech I3 ProW",
+      "family": "I3",
+      "bed_mm": [
+        200,
+        200
+      ],
+      "max_z_mm": 180,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "I3ProW"
+      ]
+    },
+    {
+      "id": "ps-geeetech-m1",
+      "vendor": "Geeetech",
+      "model": "M1",
+      "name": "Geeetech M1",
+      "family": "M1",
+      "bed_mm": [
+        105,
+        105
+      ],
+      "max_z_mm": 95,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "M1"
+      ]
+    },
+    {
+      "id": "ps-geeetech-mecreator",
+      "vendor": "Geeetech",
+      "model": "MeCreator",
+      "name": "Geeetech Me Creator",
+      "family": "Me",
+      "bed_mm": [
+        150,
+        150
+      ],
+      "max_z_mm": 125,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MeCreator"
+      ]
+    },
+    {
+      "id": "ps-geeetech-mecreator2",
+      "vendor": "Geeetech",
+      "model": "MeCreator2",
+      "name": "Geeetech Me Creator2",
+      "family": "Me",
+      "bed_mm": [
+        160,
+        160
+      ],
+      "max_z_mm": 160,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MeCreator2"
+      ]
+    },
+    {
+      "id": "ps-geeetech-meducer",
+      "vendor": "Geeetech",
+      "model": "MeDucer",
+      "name": "Geeetech Me Ducer",
+      "family": "Me",
+      "bed_mm": [
+        180,
+        150
+      ],
+      "max_z_mm": 150,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MeDucer"
+      ]
+    },
+    {
+      "id": "ps-geeetech-mizar",
+      "vendor": "Geeetech",
+      "model": "Mizar",
+      "name": "Geeetech Mizar",
+      "family": "Mizar",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 260,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Mizar"
+      ]
+    },
+    {
+      "id": "ps-geeetech-mizarm",
+      "vendor": "Geeetech",
+      "model": "MizarM",
+      "name": "Geeetech Mizar M",
+      "family": "Mizar",
+      "bed_mm": [
+        255,
+        255
+      ],
+      "max_z_mm": 260,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "MizarM"
+      ]
+    },
+    {
+      "id": "ps-geeetech-mizarmax",
+      "vendor": "Geeetech",
+      "model": "MizarMax",
+      "name": "Geeetech Mizar Max",
+      "family": "Mizar",
+      "bed_mm": [
+        320,
+        320
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MizarMax"
+      ]
+    },
+    {
+      "id": "ps-geeetech-mizarpro",
+      "vendor": "Geeetech",
+      "model": "MizarPro",
+      "name": "Geeetech Mizar Pro",
+      "family": "Mizar",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 260,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MizarPro"
+      ]
+    },
+    {
+      "id": "ps-geeetech-mizars",
+      "vendor": "Geeetech",
+      "model": "MizarS",
+      "name": "Geeetech Mizar S",
+      "family": "Mizar",
+      "bed_mm": [
+        255,
+        255
+      ],
+      "max_z_mm": 260,
+      "nozzles_mm": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MizarS"
+      ]
+    },
+    {
+      "id": "ps-geeetech-thunder",
+      "vendor": "Geeetech",
+      "model": "Thunder",
+      "name": "Geeetech Thunder",
+      "family": "Thunder",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 260,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Thunder"
+      ]
+    },
+    {
+      "id": "ps-geeetech-thunderpro",
+      "vendor": "Geeetech",
+      "model": "ThunderPro",
+      "name": "Geeetech Thunder Pro",
+      "family": "Thunder",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 260,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "ThunderPro"
+      ]
+    },
+    {
+      "id": "ps-hartsmart-products-hsp1-i",
+      "vendor": "HartSmart Products",
+      "model": "HSP1-I",
+      "name": "HSP1-I",
+      "family": "HSP1",
+      "bed_mm": [
+        650,
+        640
+      ],
+      "max_z_mm": 1000,
+      "nozzles_mm": [
+        0.4,
+        0.6,
+        0.8,
+        1
+      ],
+      "prusaslicer_models": [
+        "HSP1-I"
+      ]
+    },
+    {
+      "id": "ps-hartsmart-products-hsp1-i-duplicator-mode",
+      "vendor": "HartSmart Products",
+      "model": "HSP1-I Duplicator Mode",
+      "name": "HSP1-I Duplicator Mode",
+      "family": "HSP1",
+      "bed_mm": [
+        320,
+        640
+      ],
+      "max_z_mm": 1000,
+      "nozzles_mm": [
+        0.4,
+        0.6,
+        0.8,
+        1
+      ],
+      "prusaslicer_models": [
+        "HSP1-I Duplicator Mode"
+      ]
+    },
+    {
+      "id": "ps-inat-proton-x-rail",
+      "vendor": "INAT",
+      "model": "PROTON_X_RAIL",
+      "name": "INAT Proton X Rail",
+      "family": "Proton",
+      "bed_mm": [
+        304,
+        304
+      ],
+      "max_z_mm": 650,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "PROTON_X_RAIL"
+      ]
+    },
+    {
+      "id": "ps-inat-proton-x-rod",
+      "vendor": "INAT",
+      "model": "PROTON_X_ROD",
+      "name": "INAT Proton X Rod",
+      "family": "Proton",
+      "bed_mm": [
+        304,
+        304
+      ],
+      "max_z_mm": 650,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "PROTON_X_ROD"
+      ]
+    },
+    {
+      "id": "ps-inat-proton-xe750",
+      "vendor": "INAT",
+      "model": "PROTON_XE750",
+      "name": "INAT Proton XE-750",
+      "family": "Proton",
+      "bed_mm": [
+        600,
+        500
+      ],
+      "max_z_mm": 750,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "PROTON_XE750"
+      ]
+    },
+    {
+      "id": "ps-infinity3d-dev-200",
+      "vendor": "Infinity3D",
+      "model": "DEV-200",
+      "name": "Infinity3D DEV-200",
+      "family": null,
+      "bed_mm": [
+        200,
+        200
+      ],
+      "max_z_mm": 235,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "DEV-200"
+      ]
+    },
+    {
+      "id": "ps-infinity3d-dev-350",
+      "vendor": "Infinity3D",
+      "model": "DEV-350",
+      "name": "Infinity3D DEV-350",
+      "family": null,
+      "bed_mm": [
+        350,
+        350
+      ],
+      "max_z_mm": 350,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "DEV-350"
+      ]
+    },
+    {
+      "id": "ps-jubilee-jubilee",
+      "vendor": "Jubilee",
+      "model": "Jubilee",
+      "name": "Jubilee",
+      "family": null,
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Jubilee"
+      ]
+    },
+    {
+      "id": "ps-lnl3d-lnl3d-d3",
+      "vendor": "LNL3D",
+      "model": "LNL3D_D3",
+      "name": "LNL3D D3",
+      "family": "LNL3D Small Printer",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 350,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "LNL3D_D3"
+      ]
+    },
+    {
+      "id": "ps-lnl3d-lnl3d-d3-v2",
+      "vendor": "LNL3D",
+      "model": "LNL3D_D3_V2",
+      "name": "LNL3D D3 V2",
+      "family": "LNL3D Small Printer",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 350,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "LNL3D_D3_V2"
+      ]
+    },
+    {
+      "id": "ps-lnl3d-lnl3d-d3-vulcan",
+      "vendor": "LNL3D",
+      "model": "LNL3D_D3_VULCAN",
+      "name": "LNL3D D3 Vulcan",
+      "family": "LNL3D Small Printer",
+      "bed_mm": [
+        295,
+        300
+      ],
+      "max_z_mm": 320,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "LNL3D_D3_VULCAN"
+      ]
+    },
+    {
+      "id": "ps-lnl3d-lnl3d-d5",
+      "vendor": "LNL3D",
+      "model": "LNL3D_D5",
+      "name": "LNL3D D5",
+      "family": "LNL3D Big Printer",
+      "bed_mm": [
+        500,
+        500
+      ],
+      "max_z_mm": 600,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "LNL3D_D5"
+      ]
+    },
+    {
+      "id": "ps-lnl3d-lnl3d-d6",
+      "vendor": "LNL3D",
+      "model": "LNL3D_D6",
+      "name": "LNL3D D6",
+      "family": "LNL3D Big Printer",
+      "bed_mm": [
+        600,
+        600
+      ],
+      "max_z_mm": 600,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "LNL3D_D6"
+      ]
+    },
+    {
+      "id": "ps-lulzbot-mini-aero",
+      "vendor": "LulzBot",
+      "model": "MINI_AERO",
+      "name": "Mini Aero",
+      "family": null,
+      "bed_mm": [
+        154,
+        154
+      ],
+      "max_z_mm": 158,
+      "nozzles_mm": [
+        0.5
+      ],
+      "prusaslicer_models": [
+        "MINI_AERO"
+      ]
+    },
+    {
+      "id": "ps-lulzbot-taz6-aero",
+      "vendor": "LulzBot",
+      "model": "TAZ6_AERO",
+      "name": "Taz6 Aero",
+      "family": null,
+      "bed_mm": [
+        280,
+        280
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.5
+      ],
+      "prusaslicer_models": [
+        "TAZ6_AERO"
+      ]
+    },
+    {
+      "id": "ps-makergear-makergear-m3-id-0",
+      "vendor": "MakerGear",
+      "model": "MAKERGEAR_M3_ID_0",
+      "name": "M3 - Independent Dual Rev.0",
+      "family": "MakerGear M3-ID Rev.0",
+      "bed_mm": null,
+      "max_z_mm": null,
+      "nozzles_mm": [
+        0.25,
+        0.35,
+        0.5,
+        0.75
+      ],
+      "prusaslicer_models": [
+        "MAKERGEAR_M3_ID_0"
+      ]
+    },
+    {
+      "id": "ps-makergear-makergear-m3-id-0-duplication",
+      "vendor": "MakerGear",
+      "model": "MAKERGEAR_M3_ID_0_DUPLICATION",
+      "name": "M3 - Independent Dual Rev.0 (Duplication Mode)",
+      "family": "MakerGear M3-ID Rev.0",
+      "bed_mm": [
+        200,
+        255
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.25,
+        0.35,
+        0.5,
+        0.75
+      ],
+      "prusaslicer_models": [
+        "MAKERGEAR_M3_ID_0_DUPLICATION"
+      ]
+    },
+    {
+      "id": "ps-makergear-makergear-m3-id-1",
+      "vendor": "MakerGear",
+      "model": "MAKERGEAR_M3_ID_1",
+      "name": "M3 - Independent Dual Rev.1",
+      "family": "MakerGear M3-ID Rev.1",
+      "bed_mm": [
+        200,
+        251
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.25,
+        0.35,
+        0.5,
+        0.75
+      ],
+      "prusaslicer_models": [
+        "MAKERGEAR_M3_ID_1"
+      ]
+    },
+    {
+      "id": "ps-makergear-makergear-m3-id-1-duplication",
+      "vendor": "MakerGear",
+      "model": "MAKERGEAR_M3_ID_1_DUPLICATION",
+      "name": "M3 - Independent Dual Rev.1 (Duplication Mode)",
+      "family": "MakerGear M3-ID Rev.1",
+      "bed_mm": [
+        100,
+        251
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.25,
+        0.35,
+        0.5,
+        0.75
+      ],
+      "prusaslicer_models": [
+        "MAKERGEAR_M3_ID_1_DUPLICATION"
+      ]
+    },
+    {
+      "id": "ps-makergear-makergear-m3-se",
+      "vendor": "MakerGear",
+      "model": "MAKERGEAR_M3_SE",
+      "name": "M3 - Single Extruder",
+      "family": "MakerGear M3-SE",
+      "bed_mm": [
+        200,
+        251
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.25,
+        0.35,
+        0.5,
+        0.75
+      ],
+      "prusaslicer_models": [
+        "MAKERGEAR_M3_SE"
+      ]
+    },
+    {
+      "id": "ps-makergear-makergear-m2-dual",
+      "vendor": "MakerGear",
+      "model": "MAKERGEAR_M2_DUAL",
+      "name": "MakerGear M2 Dual",
+      "family": "MakerGear M2",
+      "bed_mm": [
+        200,
+        251
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.25,
+        0.35,
+        0.5,
+        0.75
+      ],
+      "prusaslicer_models": [
+        "MAKERGEAR_M2_DUAL"
+      ]
+    },
+    {
+      "id": "ps-makergear-makergear-m2",
+      "vendor": "MakerGear",
+      "model": "MAKERGEAR_M2",
+      "name": "MakerGear M2(V4 Hotend)",
+      "family": "MakerGear M2",
+      "bed_mm": [
+        200,
+        251
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.25,
+        0.35,
+        0.5,
+        0.75
+      ],
+      "prusaslicer_models": [
+        "MAKERGEAR_M2"
+      ]
+    },
+    {
+      "id": "ps-makergear-makergear-micro",
+      "vendor": "MakerGear",
+      "model": "MAKERGEAR_MICRO",
+      "name": "Micro",
+      "family": "MakerGear Micro",
+      "bed_mm": [
+        81,
+        81
+      ],
+      "max_z_mm": 100,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "MAKERGEAR_MICRO"
+      ]
+    },
+    {
+      "id": "ps-makergear-makergear-u1",
+      "vendor": "MakerGear",
+      "model": "MAKERGEAR_U1",
+      "name": "Ultra One",
+      "family": "MakerGear Ultra One",
+      "bed_mm": [
+        406,
+        355
+      ],
+      "max_z_mm": 350,
+      "nozzles_mm": [
+        0.25,
+        0.35,
+        0.5,
+        0.75
+      ],
+      "prusaslicer_models": [
+        "MAKERGEAR_U1"
+      ]
+    },
+    {
+      "id": "ps-makergear-makergear-u1-duplication",
+      "vendor": "MakerGear",
+      "model": "MAKERGEAR_U1_DUPLICATION",
+      "name": "Ultra One (Duplication Mode)",
+      "family": "MakerGear Ultra One",
+      "bed_mm": [
+        203,
+        355
+      ],
+      "max_z_mm": 350,
+      "nozzles_mm": [
+        0.25,
+        0.35,
+        0.5,
+        0.75
+      ],
+      "prusaslicer_models": [
+        "MAKERGEAR_U1_DUPLICATION"
+      ]
+    },
+    {
+      "id": "ps-papapiu-papapiu-n1s",
+      "vendor": "Papapiu",
+      "model": "Papapiu_N1S",
+      "name": "Papapiu N1S",
+      "family": null,
+      "bed_mm": [
+        299,
+        300
+      ],
+      "max_z_mm": 360,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Papapiu_N1S"
+      ]
+    },
+    {
+      "id": "ps-positron3d-vs-mk52",
+      "vendor": "Positron3D",
+      "model": "VS_MK52",
+      "name": "Prusawire",
+      "family": "Prusawire",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 180,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "VS_MK52"
+      ]
+    },
+    {
+      "id": "ps-print4taste-mc2-0",
+      "vendor": "Print4Taste",
+      "model": "MC2.0",
+      "name": "mycusini 2.0",
+      "family": "mycusini",
+      "bed_mm": [
+        100,
+        110
+      ],
+      "max_z_mm": 45,
+      "nozzles_mm": [
+        1
+      ],
+      "prusaslicer_models": [
+        "MC2.0"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk2-5",
+      "vendor": "Prusa Research",
+      "model": "MK2.5",
+      "name": "Original Prusa i3 MK2.5",
+      "family": "MK2.5",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK2.5"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk2-5mmu2",
+      "vendor": "Prusa Research",
+      "model": "MK2.5MMU2",
+      "name": "Original Prusa i3 MK2.5 MMU2",
+      "family": "MK2.5",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK2.5MMU2"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk2-5s",
+      "vendor": "Prusa Research",
+      "model": "MK2.5S",
+      "name": "Original Prusa i3 MK2.5S",
+      "family": "MK2.5",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK2.5S"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk2-5smmu2s",
+      "vendor": "Prusa Research",
+      "model": "MK2.5SMMU2S",
+      "name": "Original Prusa i3 MK2.5S MMU2S",
+      "family": "MK2.5",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK2.5SMMU2S"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk2s",
+      "vendor": "Prusa Research",
+      "model": "MK2S",
+      "name": "Original Prusa i3 MK2S",
+      "family": "MK2",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "MK2S"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk2smm",
+      "vendor": "Prusa Research",
+      "model": "MK2SMM",
+      "name": "Original Prusa i3 MK2S MMU1",
+      "family": "MK2",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.4,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "MK2SMM"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk3",
+      "vendor": "Prusa Research",
+      "model": "MK3",
+      "name": "Original Prusa i3 MK3",
+      "family": "MK3",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK3"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk3mmu2",
+      "vendor": "Prusa Research",
+      "model": "MK3MMU2",
+      "name": "Original Prusa i3 MK3 MMU2",
+      "family": "MK3",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK3MMU2"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk3s",
+      "vendor": "Prusa Research",
+      "model": "MK3S",
+      "name": "Original Prusa i3 MK3S && MK3S+",
+      "family": "MK3",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK3S"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk3smmu2s",
+      "vendor": "Prusa Research",
+      "model": "MK3SMMU2S",
+      "name": "Original Prusa i3 MK3S && MK3S+ MMU2S",
+      "family": "MK3",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK3SMMU2S"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk3smmu3",
+      "vendor": "Prusa Research",
+      "model": "MK3SMMU3",
+      "name": "Original Prusa i3 MK3S && MK3S+ MMU3",
+      "family": "MK3",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK3SMMU3"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mini",
+      "vendor": "Prusa Research",
+      "model": "MINI",
+      "name": "Original Prusa MINI && MINI+",
+      "family": "Legacy profiles",
+      "bed_mm": [
+        180,
+        180
+      ],
+      "max_z_mm": 180,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MINI"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-miniis",
+      "vendor": "Prusa Research",
+      "model": "MINIIS",
+      "name": "Original Prusa MINI && MINI+ Input Shaper",
+      "family": "MINI",
+      "bed_mm": [
+        180,
+        180
+      ],
+      "max_z_mm": 180,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MINIIS"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk3-5",
+      "vendor": "Prusa Research",
+      "model": "MK3.5",
+      "name": "Original Prusa MK3.5 && MK3.5S",
+      "family": "MK3.5",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK3.5"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk3-5mmu3",
+      "vendor": "Prusa Research",
+      "model": "MK3.5MMU3",
+      "name": "Original Prusa MK3.5 && MK3.5S MMU3",
+      "family": "MK3.5",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "MK3.5MMU3"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk3-9",
+      "vendor": "Prusa Research",
+      "model": "MK3.9",
+      "name": "Original Prusa MK3.9 Input Shaper",
+      "family": "MK3.9",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 220,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK3.9"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk3-9mmu3",
+      "vendor": "Prusa Research",
+      "model": "MK3.9MMU3",
+      "name": "Original Prusa MK3.9 MMU3",
+      "family": "MK3.9",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 220,
+      "nozzles_mm": [
+        0.4,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "MK3.9MMU3"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk3-9s",
+      "vendor": "Prusa Research",
+      "model": "MK3.9S",
+      "name": "Original Prusa MK3.9S",
+      "family": "MK3.9",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 220,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK3.9S"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk3-9smmu3",
+      "vendor": "Prusa Research",
+      "model": "MK3.9SMMU3",
+      "name": "Original Prusa MK3.9S MMU3",
+      "family": "MK3.9",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 220,
+      "nozzles_mm": [
+        0.4,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "MK3.9SMMU3"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk4",
+      "vendor": "Prusa Research",
+      "model": "MK4",
+      "name": "Original Prusa MK4",
+      "family": "Legacy profiles",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 220,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK4"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk4is",
+      "vendor": "Prusa Research",
+      "model": "MK4IS",
+      "name": "Original Prusa MK4 Input Shaper",
+      "family": "MK4",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 220,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK4IS"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk4ismmu3",
+      "vendor": "Prusa Research",
+      "model": "MK4ISMMU3",
+      "name": "Original Prusa MK4 MMU3",
+      "family": "MK4",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 220,
+      "nozzles_mm": [
+        0.4,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "MK4ISMMU3"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk4s",
+      "vendor": "Prusa Research",
+      "model": "MK4S",
+      "name": "Original Prusa MK4S",
+      "family": "MK4",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 220,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "MK4S"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-mk4smmu3",
+      "vendor": "Prusa Research",
+      "model": "MK4SMMU3",
+      "name": "Original Prusa MK4S MMU3",
+      "family": "MK4",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 220,
+      "nozzles_mm": [
+        0.4,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "MK4SMMU3"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-xl",
+      "vendor": "Prusa Research",
+      "model": "XL",
+      "name": "Original Prusa XL",
+      "family": "Legacy profiles",
+      "bed_mm": [
+        360,
+        360
+      ],
+      "max_z_mm": 360,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "XL"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-xl2",
+      "vendor": "Prusa Research",
+      "model": "XL2",
+      "name": "Original Prusa XL - 2T",
+      "family": "Legacy profiles",
+      "bed_mm": [
+        360,
+        360
+      ],
+      "max_z_mm": 360,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "XL2"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-xl2is",
+      "vendor": "Prusa Research",
+      "model": "XL2IS",
+      "name": "Original Prusa XL - 2T Input Shaper",
+      "family": "XL Multi-Tool",
+      "bed_mm": [
+        360,
+        360
+      ],
+      "max_z_mm": 360,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "XL2IS"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-xl5",
+      "vendor": "Prusa Research",
+      "model": "XL5",
+      "name": "Original Prusa XL - 5T",
+      "family": "Legacy profiles",
+      "bed_mm": [
+        360,
+        360
+      ],
+      "max_z_mm": 360,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "XL5"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-xl5is",
+      "vendor": "Prusa Research",
+      "model": "XL5IS",
+      "name": "Original Prusa XL - 5T Input Shaper",
+      "family": "XL Multi-Tool",
+      "bed_mm": [
+        360,
+        360
+      ],
+      "max_z_mm": 360,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "XL5IS"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-xlis",
+      "vendor": "Prusa Research",
+      "model": "XLIS",
+      "name": "Original Prusa XL Input Shaper",
+      "family": "XL Single-Tool",
+      "bed_mm": [
+        360,
+        360
+      ],
+      "max_z_mm": 360,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "XLIS"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-coreone",
+      "vendor": "Prusa Research",
+      "model": "COREONE",
+      "name": "Prusa CORE One && One+ && One+ (Gen 2)",
+      "family": "CORE",
+      "bed_mm": [
+        250,
+        220
+      ],
+      "max_z_mm": 270,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "COREONE"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-coreonemmu3",
+      "vendor": "Prusa Research",
+      "model": "COREONEMMU3",
+      "name": "Prusa CORE One && One+ && One+ (Gen 2) MMU3",
+      "family": "CORE",
+      "bed_mm": [
+        250,
+        220
+      ],
+      "max_z_mm": 270,
+      "nozzles_mm": [
+        0.4,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "COREONEMMU3"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-coreone-indx4t",
+      "vendor": "Prusa Research",
+      "model": "COREONE_INDX4T",
+      "name": "Prusa CORE One INDX - 4T",
+      "family": "CORE INDX",
+      "bed_mm": [
+        248,
+        205
+      ],
+      "max_z_mm": 270,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "COREONE_INDX4T"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-coreone-indx8t",
+      "vendor": "Prusa Research",
+      "model": "COREONE_INDX8T",
+      "name": "Prusa CORE One INDX - 8T",
+      "family": "CORE INDX",
+      "bed_mm": [
+        248,
+        205
+      ],
+      "max_z_mm": 270,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "COREONE_INDX8T"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-coreonel",
+      "vendor": "Prusa Research",
+      "model": "COREONEL",
+      "name": "Prusa CORE One L / L+",
+      "family": "CORE",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 330,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "COREONEL"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-coreonelmmu3",
+      "vendor": "Prusa Research",
+      "model": "COREONELMMU3",
+      "name": "Prusa CORE One L / L+ MMU3",
+      "family": "CORE",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 330,
+      "nozzles_mm": [
+        0.4,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "COREONELMMU3"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-coreoneoak",
+      "vendor": "Prusa Research",
+      "model": "COREONEOAK",
+      "name": "Prusa Signature Oak",
+      "family": "CORE",
+      "bed_mm": [
+        250,
+        220
+      ],
+      "max_z_mm": 270,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "COREONEOAK"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-xlp1t",
+      "vendor": "Prusa Research",
+      "model": "XLP1T",
+      "name": "Prusa XL+",
+      "family": "XL Single-Tool",
+      "bed_mm": [
+        360,
+        360
+      ],
+      "max_z_mm": 360,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "XLP1T"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-xlp2t",
+      "vendor": "Prusa Research",
+      "model": "XLP2T",
+      "name": "Prusa XL+ 2T",
+      "family": "XL Multi-Tool",
+      "bed_mm": [
+        360,
+        360
+      ],
+      "max_z_mm": 360,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "XLP2T"
+      ]
+    },
+    {
+      "id": "ps-prusa-research-xlp5t",
+      "vendor": "Prusa Research",
+      "model": "XLP5T",
+      "name": "Prusa XL+ 5T",
+      "family": "XL Multi-Tool",
+      "bed_mm": [
+        360,
+        360
+      ],
+      "max_z_mm": 360,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "XLP5T"
+      ]
+    },
+    {
+      "id": "ps-qiditechnology-q1-pro",
+      "vendor": "QIDITechnology",
+      "model": "Q1 Pro",
+      "name": "Q1 Pro",
+      "family": "Q",
+      "bed_mm": [
+        245,
+        245
+      ],
+      "max_z_mm": 240,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Q1 Pro"
+      ]
+    },
+    {
+      "id": "ps-qiditechnology-x-max-3",
+      "vendor": "QIDITechnology",
+      "model": "X-MAX 3",
+      "name": "X-MAX 3",
+      "family": "X 3",
+      "bed_mm": [
+        325,
+        325
+      ],
+      "max_z_mm": 315,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "X-MAX 3"
+      ]
+    },
+    {
+      "id": "ps-qiditechnology-x-plus-3",
+      "vendor": "QIDITechnology",
+      "model": "X-Plus 3",
+      "name": "X-Plus 3",
+      "family": "X 3",
+      "bed_mm": [
+        280,
+        280
+      ],
+      "max_z_mm": 270,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "X-Plus 3"
+      ]
+    },
+    {
+      "id": "ps-qiditechnology-x-plus-4",
+      "vendor": "QIDITechnology",
+      "model": "X-Plus 4",
+      "name": "X-Plus 4",
+      "family": "X 4",
+      "bed_mm": [
+        305,
+        305
+      ],
+      "max_z_mm": 280,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "X-Plus 4"
+      ]
+    },
+    {
+      "id": "ps-qiditechnology-x-plus-4-box",
+      "vendor": "QIDITechnology",
+      "model": "X-Plus 4 + BOX",
+      "name": "X-Plus 4 + BOX",
+      "family": "X 4",
+      "bed_mm": [
+        305,
+        305
+      ],
+      "max_z_mm": 280,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "X-Plus 4 + BOX"
+      ]
+    },
+    {
+      "id": "ps-qiditechnology-x-smart-3",
+      "vendor": "QIDITechnology",
+      "model": "X-smart 3",
+      "name": "X-smart 3",
+      "family": "X 3",
+      "bed_mm": [
+        175,
+        180
+      ],
+      "max_z_mm": 170,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "X-smart 3"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc3-300",
+      "vendor": "RatRig",
+      "model": "VC3_300",
+      "name": "RatRig V-Core-3.1 300mm",
+      "family": "V-Core-3",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC3_300"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vminion",
+      "vendor": "RatRig",
+      "model": "VMINION",
+      "name": "RatRig V-Minion",
+      "family": "V-Minion",
+      "bed_mm": [
+        180,
+        180
+      ],
+      "max_z_mm": 180,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VMINION"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-300-xy",
+      "vendor": "RatRig",
+      "model": "VC4_300_XY",
+      "name": "V-Core 4.0 300x300 CoreXY",
+      "family": "V-Core 4.0 300x300",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_300_XY"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-300-hy",
+      "vendor": "RatRig",
+      "model": "VC4_300_HY",
+      "name": "V-Core 4.0 300x300 Hybrid",
+      "family": "V-Core 4.0 300x300",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_300_HY"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-300-idex",
+      "vendor": "RatRig",
+      "model": "VC4_300_IDEX",
+      "name": "V-Core 4.0 300x300 IDEX",
+      "family": "V-Core 4.0 300x300",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_300_IDEX"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-300-idex-copy",
+      "vendor": "RatRig",
+      "model": "VC4_300_IDEX_Copy",
+      "name": "V-Core 4.0 300x300 IDEX Copy",
+      "family": "V-Core 4.0 300x300",
+      "bed_mm": [
+        150,
+        300
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_300_IDEX_Copy"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-300-idex-mirror",
+      "vendor": "RatRig",
+      "model": "VC4_300_IDEX_Mirror",
+      "name": "V-Core 4.0 300x300 IDEX Mirror",
+      "family": "V-Core 4.0 300x300",
+      "bed_mm": [
+        122.5,
+        300
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_300_IDEX_Mirror"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-400-xy",
+      "vendor": "RatRig",
+      "model": "VC4_400_XY",
+      "name": "V-Core 4.0 400x400 CoreXY",
+      "family": "V-Core 4.0 400x400",
+      "bed_mm": [
+        400,
+        400
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_400_XY"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-400-hy",
+      "vendor": "RatRig",
+      "model": "VC4_400_HY",
+      "name": "V-Core 4.0 400x400 Hybrid",
+      "family": "V-Core 4.0 400x400",
+      "bed_mm": [
+        400,
+        400
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_400_HY"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-400-idex",
+      "vendor": "RatRig",
+      "model": "VC4_400_IDEX",
+      "name": "V-Core 4.0 400x400 IDEX",
+      "family": "V-Core 4.0 400x400",
+      "bed_mm": [
+        400,
+        400
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_400_IDEX"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-400-idex-copy",
+      "vendor": "RatRig",
+      "model": "VC4_400_IDEX_Copy",
+      "name": "V-Core 4.0 400x400 IDEX Copy",
+      "family": "V-Core 4.0 400x400",
+      "bed_mm": [
+        200,
+        400
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_400_IDEX_Copy"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-400-idex-mirror",
+      "vendor": "RatRig",
+      "model": "VC4_400_IDEX_Mirror",
+      "name": "V-Core 4.0 400x400 IDEX Mirror",
+      "family": "V-Core 4.0 400x400",
+      "bed_mm": [
+        172.5,
+        400
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_400_IDEX_Mirror"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-500-xy",
+      "vendor": "RatRig",
+      "model": "VC4_500_XY",
+      "name": "V-Core 4.0 500x500 CoreXY",
+      "family": "V-Core 4.0 500x500",
+      "bed_mm": [
+        500,
+        500
+      ],
+      "max_z_mm": 500,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_500_XY"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-500-hy",
+      "vendor": "RatRig",
+      "model": "VC4_500_HY",
+      "name": "V-Core 4.0 500x500 Hybrid",
+      "family": "V-Core 4.0 500x500",
+      "bed_mm": [
+        500,
+        500
+      ],
+      "max_z_mm": 500,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_500_HY"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-500-idex",
+      "vendor": "RatRig",
+      "model": "VC4_500_IDEX",
+      "name": "V-Core 4.0 500x500 IDEX",
+      "family": "V-Core 4.0 500x500",
+      "bed_mm": [
+        500,
+        500
+      ],
+      "max_z_mm": 500,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_500_IDEX"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-500-idex-copy",
+      "vendor": "RatRig",
+      "model": "VC4_500_IDEX_Copy",
+      "name": "V-Core 4.0 500x500 IDEX Copy",
+      "family": "V-Core 4.0 500x500",
+      "bed_mm": [
+        250,
+        500
+      ],
+      "max_z_mm": 500,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_500_IDEX_Copy"
+      ]
+    },
+    {
+      "id": "ps-ratrig-vc4-500-idex-mirror",
+      "vendor": "RatRig",
+      "model": "VC4_500_IDEX_Mirror",
+      "name": "V-Core 4.0 500x500 IDEX Mirror",
+      "family": "V-Core 4.0 500x500",
+      "bed_mm": [
+        222.5,
+        500
+      ],
+      "max_z_mm": 500,
+      "nozzles_mm": [
+        0.4,
+        0.5,
+        0.6
+      ],
+      "prusaslicer_models": [
+        "VC4_500_IDEX_Mirror"
+      ]
+    },
+    {
+      "id": "ps-rigid3d-mucit",
+      "vendor": "Rigid3D",
+      "model": "Mucit",
+      "name": "Rigid3D Mucit",
+      "family": "Mucit",
+      "bed_mm": [
+        150,
+        150
+      ],
+      "max_z_mm": 150,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Mucit"
+      ]
+    },
+    {
+      "id": "ps-rigid3d-mucit2",
+      "vendor": "Rigid3D",
+      "model": "Mucit2",
+      "name": "Rigid3D Mucit2",
+      "family": "Mucit",
+      "bed_mm": [
+        150,
+        150
+      ],
+      "max_z_mm": 150,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Mucit2"
+      ]
+    },
+    {
+      "id": "ps-rigid3d-zero2",
+      "vendor": "Rigid3D",
+      "model": "Zero2",
+      "name": "Rigid3D Zero2",
+      "family": "Zero",
+      "bed_mm": [
+        200,
+        200
+      ],
+      "max_z_mm": 190,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Zero2"
+      ]
+    },
+    {
+      "id": "ps-rigid3d-zero3",
+      "vendor": "Rigid3D",
+      "model": "Zero3",
+      "name": "Rigid3D Zero3",
+      "family": "Zero",
+      "bed_mm": [
+        200,
+        200
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Zero3"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a250",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A250",
+      "name": "Snapmaker A250",
+      "family": "Snapmaker",
+      "bed_mm": [
+        230,
+        250
+      ],
+      "max_z_mm": 230,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A250"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a250-bkit",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A250 BKit",
+      "name": "Snapmaker A250 BKit",
+      "family": "Snapmaker",
+      "bed_mm": [
+        230,
+        250
+      ],
+      "max_z_mm": 224,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A250 BKit"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a250-dual",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A250 Dual",
+      "name": "Snapmaker A250 Dual",
+      "family": "Snapmaker",
+      "bed_mm": [
+        230,
+        250
+      ],
+      "max_z_mm": 190,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A250 Dual"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a250-dual-bkit",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A250 Dual BKit",
+      "name": "Snapmaker A250 Dual BKit",
+      "family": "Snapmaker",
+      "bed_mm": [
+        230,
+        250
+      ],
+      "max_z_mm": 184,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A250 Dual BKit"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a250-dual-qs-b-kit",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A250 Dual QS+B Kit",
+      "name": "Snapmaker A250 Dual QS+B Kit",
+      "family": "Snapmaker",
+      "bed_mm": [
+        230,
+        250
+      ],
+      "max_z_mm": 169,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A250 Dual QS+B Kit"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a250-dual-qskit",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A250 Dual QSKit",
+      "name": "Snapmaker A250 Dual QSKit",
+      "family": "Snapmaker",
+      "bed_mm": [
+        230,
+        250
+      ],
+      "max_z_mm": 175,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A250 Dual QSKit"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a250-qs-b-kit",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A250 QS+B Kit",
+      "name": "Snapmaker A250 QS+B Kit",
+      "family": "Snapmaker",
+      "bed_mm": [
+        230,
+        250
+      ],
+      "max_z_mm": 209,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A250 QS+B Kit"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a250-qskit",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A250 QSKit",
+      "name": "Snapmaker A250 QSKit",
+      "family": "Snapmaker",
+      "bed_mm": [
+        230,
+        250
+      ],
+      "max_z_mm": 215,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A250 QSKit"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a350",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A350",
+      "name": "Snapmaker A350",
+      "family": "Snapmaker",
+      "bed_mm": [
+        320,
+        350
+      ],
+      "max_z_mm": 325,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A350"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a350-bkit",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A350 BKit",
+      "name": "Snapmaker A350 BKit",
+      "family": "Snapmaker",
+      "bed_mm": [
+        320,
+        350
+      ],
+      "max_z_mm": 319,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A350 BKit"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a350-dual",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A350 Dual",
+      "name": "Snapmaker A350 Dual",
+      "family": "Snapmaker",
+      "bed_mm": [
+        320,
+        350
+      ],
+      "max_z_mm": 285,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A350 Dual"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a350-dual-bkit",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A350 Dual BKit",
+      "name": "Snapmaker A350 Dual BKit",
+      "family": "Snapmaker",
+      "bed_mm": [
+        320,
+        350
+      ],
+      "max_z_mm": 279,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A350 Dual BKit"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a350-dual-qs-b-kit",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A350 Dual QS+B Kit",
+      "name": "Snapmaker A350 Dual QS+B Kit",
+      "family": "Snapmaker",
+      "bed_mm": [
+        320,
+        350
+      ],
+      "max_z_mm": 264,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A350 Dual QS+B Kit"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a350-dual-qskit",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A350 Dual QSKit",
+      "name": "Snapmaker A350 Dual QSKit",
+      "family": "Snapmaker",
+      "bed_mm": [
+        320,
+        350
+      ],
+      "max_z_mm": 270,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A350 Dual QSKit"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a350-qs-b-kit",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A350 QS+B Kit",
+      "name": "Snapmaker A350 QS+B Kit",
+      "family": "Snapmaker",
+      "bed_mm": [
+        320,
+        350
+      ],
+      "max_z_mm": 304,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A350 QS+B Kit"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-a350-qskit",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker A350 QSKit",
+      "name": "Snapmaker A350 QSKit",
+      "family": "Snapmaker",
+      "bed_mm": [
+        320,
+        350
+      ],
+      "max_z_mm": 310,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker A350 QSKit"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-artisan",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker Artisan",
+      "name": "Snapmaker Artisan",
+      "family": "Snapmaker",
+      "bed_mm": [
+        400,
+        400
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker Artisan"
+      ]
+    },
+    {
+      "id": "ps-snapmaker-snapmaker-j1",
+      "vendor": "Snapmaker",
+      "model": "Snapmaker J1",
+      "name": "Snapmaker J1",
+      "family": "Snapmaker",
+      "bed_mm": [
+        324,
+        200
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Snapmaker J1"
+      ]
+    },
+    {
+      "id": "ps-sovol-sv01",
+      "vendor": "Sovol",
+      "model": "SV01",
+      "name": "SV01 / SV01 BLTOUCH",
+      "family": "SV",
+      "bed_mm": [
+        280,
+        240
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "SV01"
+      ]
+    },
+    {
+      "id": "ps-sovol-sv01-pro",
+      "vendor": "Sovol",
+      "model": "SV01 PRO",
+      "name": "SV01 PRO",
+      "family": "SV",
+      "bed_mm": [
+        280,
+        240
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "SV01 PRO"
+      ]
+    },
+    {
+      "id": "ps-sovol-sv02",
+      "vendor": "Sovol",
+      "model": "SV02",
+      "name": "SV02 / SV02 BLTOUCH",
+      "family": "SV",
+      "bed_mm": [
+        280,
+        240
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "SV02"
+      ]
+    },
+    {
+      "id": "ps-sovol-sv03",
+      "vendor": "Sovol",
+      "model": "SV03",
+      "name": "SV03 / SV03 BLTOUCH",
+      "family": "SV",
+      "bed_mm": [
+        350,
+        350
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "SV03"
+      ]
+    },
+    {
+      "id": "ps-sovol-sv04",
+      "vendor": "Sovol",
+      "model": "SV04",
+      "name": "SV04",
+      "family": "SV",
+      "bed_mm": [
+        302,
+        302
+      ],
+      "max_z_mm": 402,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "SV04"
+      ]
+    },
+    {
+      "id": "ps-sovol-sv05",
+      "vendor": "Sovol",
+      "model": "SV05",
+      "name": "SV05",
+      "family": "SV",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "SV05"
+      ]
+    },
+    {
+      "id": "ps-sovol-sv06",
+      "vendor": "Sovol",
+      "model": "SV06",
+      "name": "SV06",
+      "family": "SV",
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 250,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "SV06"
+      ]
+    },
+    {
+      "id": "ps-sovol-sv06-plus",
+      "vendor": "Sovol",
+      "model": "SV06 PLUS",
+      "name": "SV06 PLUS",
+      "family": "SV",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 340,
+      "nozzles_mm": [
+        0.3,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "SV06 PLUS"
+      ]
+    },
+    {
+      "id": "ps-trilab-aqd",
+      "vendor": "TriLAB",
+      "model": "AQD",
+      "name": "AzteQ Dynamic",
+      "family": "AzteQ",
+      "bed_mm": [
+        300.2,
+        300.2
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "AQD"
+      ]
+    },
+    {
+      "id": "ps-trilab-aqi",
+      "vendor": "TriLAB",
+      "model": "AQI",
+      "name": "AzteQ Industrial",
+      "family": "AzteQ",
+      "bed_mm": [
+        300.2,
+        300.2
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "AQI"
+      ]
+    },
+    {
+      "id": "ps-trilab-dq2",
+      "vendor": "TriLAB",
+      "model": "DQ2",
+      "name": "DeltiQ 2",
+      "family": "DeltiQ 2",
+      "bed_mm": [
+        250.2,
+        250.2
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "DQ2"
+      ]
+    },
+    {
+      "id": "ps-trilab-dq2-fp",
+      "vendor": "TriLAB",
+      "model": "DQ2+FP",
+      "name": "DeltiQ 2 + FlexPrint",
+      "family": "DeltiQ 2",
+      "bed_mm": [
+        250.2,
+        250.2
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "DQ2+FP"
+      ]
+    },
+    {
+      "id": "ps-trilab-dq2-fp2",
+      "vendor": "TriLAB",
+      "model": "DQ2+FP2",
+      "name": "DeltiQ 2 + FlexPrint 2",
+      "family": "DeltiQ 2",
+      "bed_mm": [
+        250.2,
+        250.2
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "DQ2+FP2"
+      ]
+    },
+    {
+      "id": "ps-trilab-dq2p",
+      "vendor": "TriLAB",
+      "model": "DQ2P",
+      "name": "DeltiQ 2 Plus",
+      "family": "DeltiQ 2",
+      "bed_mm": [
+        250.2,
+        250.2
+      ],
+      "max_z_mm": 500,
+      "nozzles_mm": [
+        0.25,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "DQ2P"
+      ]
+    },
+    {
+      "id": "ps-trilab-dq2p-fp",
+      "vendor": "TriLAB",
+      "model": "DQ2P+FP",
+      "name": "DeltiQ 2 Plus + FlexPrint",
+      "family": "DeltiQ 2",
+      "bed_mm": [
+        250.2,
+        250.2
+      ],
+      "max_z_mm": 500,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "DQ2P+FP"
+      ]
+    },
+    {
+      "id": "ps-trilab-dq2p-fp2",
+      "vendor": "TriLAB",
+      "model": "DQ2P+FP2",
+      "name": "DeltiQ 2 Plus + FlexPrint 2",
+      "family": "DeltiQ 2",
+      "bed_mm": [
+        250.2,
+        250.2
+      ],
+      "max_z_mm": 500,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "DQ2P+FP2"
+      ]
+    },
+    {
+      "id": "ps-trilab-dql",
+      "vendor": "TriLAB",
+      "model": "DQL",
+      "name": "DeltiQ L",
+      "family": "DeltiQ",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 300,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "DQL"
+      ]
+    },
+    {
+      "id": "ps-trilab-dqm",
+      "vendor": "TriLAB",
+      "model": "DQM",
+      "name": "DeltiQ M",
+      "family": "DeltiQ",
+      "bed_mm": [
+        180,
+        180
+      ],
+      "max_z_mm": 230,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "DQM"
+      ]
+    },
+    {
+      "id": "ps-trilab-dqxl",
+      "vendor": "TriLAB",
+      "model": "DQXL",
+      "name": "DeltiQ XL",
+      "family": "DeltiQ",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 500,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "DQXL"
+      ]
+    },
+    {
+      "id": "ps-trimaker-trimaker-cosmos-ii",
+      "vendor": "Trimaker",
+      "model": "Trimaker Cosmos II",
+      "name": "Trimaker Cosmos II",
+      "family": "Cosmos",
+      "bed_mm": [
+        200,
+        200
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Trimaker Cosmos II"
+      ]
+    },
+    {
+      "id": "ps-trimaker-trimaker-nebula",
+      "vendor": "Trimaker",
+      "model": "Trimaker Nebula",
+      "name": "Trimaker Nebula",
+      "family": "Nebula",
+      "bed_mm": [
+        230,
+        230
+      ],
+      "max_z_mm": 260,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Trimaker Nebula"
+      ]
+    },
+    {
+      "id": "ps-trimaker-trimaker-nebula-cloud",
+      "vendor": "Trimaker",
+      "model": "Trimaker Nebula Cloud",
+      "name": "Trimaker Nebula Cloud",
+      "family": "Nebula",
+      "bed_mm": [
+        230,
+        230
+      ],
+      "max_z_mm": 260,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Trimaker Nebula Cloud"
+      ]
+    },
+    {
+      "id": "ps-ultimaker-ultimaker2",
+      "vendor": "Ultimaker",
+      "model": "ULTIMAKER2",
+      "name": "Ultimaker 2",
+      "family": null,
+      "bed_mm": [
+        224,
+        225
+      ],
+      "max_z_mm": 212,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "ULTIMAKER2"
+      ]
+    },
+    {
+      "id": "ps-ultimaker-ultimakersline",
+      "vendor": "Ultimaker",
+      "model": "ULTIMAKERSline",
+      "name": "Ultimaker S-line",
+      "family": null,
+      "bed_mm": [
+        230,
+        190
+      ],
+      "max_z_mm": 200,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "ULTIMAKERSline"
+      ]
+    },
+    {
+      "id": "ps-voron-vs-mk52",
+      "vendor": "Voron",
+      "model": "VS_MK52",
+      "name": "VORON Switchwire",
+      "family": "VORON Switchwire",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 240,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "VS_MK52"
+      ]
+    },
+    {
+      "id": "ps-voron-voron-sw-afterburner",
+      "vendor": "Voron",
+      "model": "Voron_SW_afterburner",
+      "name": "VORON Switchwire (Afterburner)",
+      "family": "Historical Profiles",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 240,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8,
+        1,
+        1.2
+      ],
+      "prusaslicer_models": [
+        "Voron_SW_afterburner"
+      ]
+    },
+    {
+      "id": "ps-voron-voron-sw",
+      "vendor": "Voron",
+      "model": "Voron_SW",
+      "name": "VORON Switchwire (Mobius)",
+      "family": "Historical Profiles",
+      "bed_mm": [
+        250,
+        210
+      ],
+      "max_z_mm": 240,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8,
+        1,
+        1.2
+      ],
+      "prusaslicer_models": [
+        "Voron_SW"
+      ]
+    },
+    {
+      "id": "ps-voron-vt-250",
+      "vendor": "Voron",
+      "model": "VT_250",
+      "name": "VORON Trident 250mm",
+      "family": "VORON Trident",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "VT_250"
+      ]
+    },
+    {
+      "id": "ps-voron-vt-300",
+      "vendor": "Voron",
+      "model": "VT_300",
+      "name": "VORON Trident 300mm",
+      "family": "VORON Trident",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "VT_300"
+      ]
+    },
+    {
+      "id": "ps-voron-vt-350",
+      "vendor": "Voron",
+      "model": "VT_350",
+      "name": "VORON Trident 350mm",
+      "family": "VORON Trident",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "VT_350"
+      ]
+    },
+    {
+      "id": "ps-voron-v0-120",
+      "vendor": "Voron",
+      "model": "V0_120",
+      "name": "VORON Zero",
+      "family": "VORON Zero",
+      "bed_mm": [
+        120,
+        120
+      ],
+      "max_z_mm": 120,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "V0_120"
+      ]
+    },
+    {
+      "id": "ps-voron-voron-v0-120",
+      "vendor": "Voron",
+      "model": "Voron_v0_120",
+      "name": "VORON Zero (MiniAB)",
+      "family": "Historical Profiles",
+      "bed_mm": [
+        120,
+        120
+      ],
+      "max_z_mm": 120,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8,
+        1,
+        1.2
+      ],
+      "prusaslicer_models": [
+        "Voron_v0_120"
+      ]
+    },
+    {
+      "id": "ps-voron-voron-v1-250-afterburner",
+      "vendor": "Voron",
+      "model": "Voron_v1_250_afterburner",
+      "name": "VORON1 250mm (Afterburner)",
+      "family": "Historical Profiles",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 230,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Voron_v1_250_afterburner"
+      ]
+    },
+    {
+      "id": "ps-voron-voron-v1-300-afterburner",
+      "vendor": "Voron",
+      "model": "Voron_v1_300_afterburner",
+      "name": "VORON1 300mm (Afterburner)",
+      "family": "Historical Profiles",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 280,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Voron_v1_300_afterburner"
+      ]
+    },
+    {
+      "id": "ps-voron-voron-v1-350-afterburner",
+      "vendor": "Voron",
+      "model": "Voron_v1_350_afterburner",
+      "name": "VORON1 350mm (Afterburner)",
+      "family": "Historical Profiles",
+      "bed_mm": [
+        350,
+        350
+      ],
+      "max_z_mm": 330,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "Voron_v1_350_afterburner"
+      ]
+    },
+    {
+      "id": "ps-voron-v2-250",
+      "vendor": "Voron",
+      "model": "V2_250",
+      "name": "VORON2 250mm",
+      "family": "VORON2",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "V2_250"
+      ]
+    },
+    {
+      "id": "ps-voron-voron-v2-250-afterburner",
+      "vendor": "Voron",
+      "model": "Voron_v2_250_afterburner",
+      "name": "VORON2 250mm (Afterburner)",
+      "family": "Historical Profiles",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 230,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8,
+        1,
+        1.2
+      ],
+      "prusaslicer_models": [
+        "Voron_v2_250_afterburner"
+      ]
+    },
+    {
+      "id": "ps-voron-voron-v2-250",
+      "vendor": "Voron",
+      "model": "Voron_v2_250",
+      "name": "VORON2 250mm (Mobius)",
+      "family": "Historical Profiles",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 230,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8,
+        1,
+        1.2
+      ],
+      "prusaslicer_models": [
+        "Voron_v2_250"
+      ]
+    },
+    {
+      "id": "ps-voron-v2-300",
+      "vendor": "Voron",
+      "model": "V2_300",
+      "name": "VORON2 300mm",
+      "family": "VORON2",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "V2_300"
+      ]
+    },
+    {
+      "id": "ps-voron-voron-v2-300-afterburner",
+      "vendor": "Voron",
+      "model": "Voron_v2_300_afterburner",
+      "name": "VORON2 300mm (Afterburner)",
+      "family": "Historical Profiles",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 280,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8,
+        1,
+        1.2
+      ],
+      "prusaslicer_models": [
+        "Voron_v2_300_afterburner"
+      ]
+    },
+    {
+      "id": "ps-voron-voron-v2-300",
+      "vendor": "Voron",
+      "model": "Voron_v2_300",
+      "name": "VORON2 300mm (Mobius)",
+      "family": "Historical Profiles",
+      "bed_mm": [
+        300,
+        300
+      ],
+      "max_z_mm": 280,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8,
+        1,
+        1.2
+      ],
+      "prusaslicer_models": [
+        "Voron_v2_300"
+      ]
+    },
+    {
+      "id": "ps-voron-v2-350",
+      "vendor": "Voron",
+      "model": "V2_350",
+      "name": "VORON2 350mm",
+      "family": "VORON2",
+      "bed_mm": [
+        250,
+        250
+      ],
+      "max_z_mm": 210,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8
+      ],
+      "prusaslicer_models": [
+        "V2_350"
+      ]
+    },
+    {
+      "id": "ps-voron-voron-v2-350-afterburner",
+      "vendor": "Voron",
+      "model": "Voron_v2_350_afterburner",
+      "name": "VORON2 350mm (Afterburner)",
+      "family": "Historical Profiles",
+      "bed_mm": [
+        350,
+        350
+      ],
+      "max_z_mm": 330,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8,
+        1,
+        1.2
+      ],
+      "prusaslicer_models": [
+        "Voron_v2_350_afterburner"
+      ]
+    },
+    {
+      "id": "ps-voron-voron-v2-350",
+      "vendor": "Voron",
+      "model": "Voron_v2_350",
+      "name": "VORON2 350mm (Mobius)",
+      "family": "Historical Profiles",
+      "bed_mm": [
+        350,
+        350
+      ],
+      "max_z_mm": 330,
+      "nozzles_mm": [
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8,
+        1,
+        1.2
+      ],
+      "prusaslicer_models": [
+        "Voron_v2_350"
+      ]
+    },
+    {
+      "id": "ps-zonestar-z5",
+      "vendor": "Zonestar",
+      "model": "Z5",
+      "name": "Zonestar Z5",
+      "family": null,
+      "bed_mm": [
+        220,
+        220
+      ],
+      "max_z_mm": 220,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Z5"
+      ]
+    },
+    {
+      "id": "ps-zonestar-z5x",
+      "vendor": "Zonestar",
+      "model": "Z5X",
+      "name": "Zonestar Z5X",
+      "family": null,
+      "bed_mm": [
+        310,
+        310
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Z5X"
+      ]
+    },
+    {
+      "id": "ps-zonestar-z6",
+      "vendor": "Zonestar",
+      "model": "Z6",
+      "name": "Zonestar Z6",
+      "family": null,
+      "bed_mm": [
+        150,
+        150
+      ],
+      "max_z_mm": 150,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Z6"
+      ]
+    },
+    {
+      "id": "ps-zonestar-z8",
+      "vendor": "Zonestar",
+      "model": "Z8",
+      "name": "Zonestar Z8",
+      "family": null,
+      "bed_mm": [
+        310,
+        310
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Z8"
+      ]
+    },
+    {
+      "id": "ps-zonestar-z9",
+      "vendor": "Zonestar",
+      "model": "Z9",
+      "name": "Zonestar Z9",
+      "family": null,
+      "bed_mm": [
+        310,
+        310
+      ],
+      "max_z_mm": 400,
+      "nozzles_mm": [
+        0.4
+      ],
+      "prusaslicer_models": [
+        "Z9"
+      ]
+    }
+  ]
+}
