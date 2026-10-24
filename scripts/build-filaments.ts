@@ -4,7 +4,8 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseIni, resolveInherits } from '../js/ini.js';
+import { parseIni, resolveInherits } from '../src/ini.ts';
+import type { Filament, FilamentsFile, KV } from '../src/types.ts';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT_FILE = resolve(ROOT, 'data', 'filaments.json');
@@ -17,13 +18,13 @@ const EXCLUDED_VENDORS = ['Print With Smile', 'ROSA3D'];
 // Costo oltre questa soglia (EUR/kg) considerato fuori scala: il filamento viene scartato.
 const MAX_COST_EUR_KG = 300;
 
-async function fetchText(url) {
+async function fetchText(url: string): Promise<string> {
   const res = await fetch(url);
   if (!res.ok) throw new Error(`HTTP ${res.status} su ${url}`);
   return res.text();
 }
 
-function compareVersions(a, b) {
+function compareVersions(a: readonly number[], b: readonly number[]): number {
   for (let i = 0; i < Math.max(a.length, b.length); i++) {
     const d = (a[i] ?? 0) - (b[i] ?? 0);
     if (d !== 0) return d;
@@ -32,12 +33,12 @@ function compareVersions(a, b) {
 }
 
 // Versione piu' alta elencata in index.idx (righe tipo "2.5.13 Descrizione...").
-function latestVersion(indexText) {
-  let best = null;
+function latestVersion(indexText: string): string {
+  let best: number[] | null = null;
   for (const line of indexText.split(/\r?\n/)) {
     const m = /^(\d+(?:\.\d+)+)\s/.exec(line);
     if (!m) continue;
-    const parts = m[1].split('.').map(Number);
+    const parts = (m[1] ?? '').split('.').map(Number);
     if (best === null || compareVersions(parts, best) > 0) best = parts;
   }
   if (best === null) throw new Error('Nessuna versione trovata in index.idx');
@@ -45,13 +46,13 @@ function latestVersion(indexText) {
 }
 
 // Numero dal valore INI (primo elemento se la lista e' separata da virgole).
-function toNumber(value) {
+function toNumber(value: string | undefined): number | null {
   if (value === undefined || value === '') return null;
-  const n = Number(String(value).split(',')[0].trim());
+  const n = Number((String(value).split(',')[0] ?? '').trim());
   return Number.isFinite(n) ? n : null;
 }
 
-function slugify(text) {
+function slugify(text: string): string {
   return text
     .normalize('NFKD')
     .replace(/[̀-ͯ]/g, '')
@@ -61,7 +62,7 @@ function slugify(text) {
 }
 
 // Rimuove i gruppi negati `!( ... )` da una condizione, cosi' non si leggono modelli esclusi.
-function stripNegatedGroups(cond) {
+function stripNegatedGroups(cond: string): string {
   let out = '';
   for (let i = 0; i < cond.length; i++) {
     if (cond[i] === '!' && cond[i + 1] !== '=' && cond[i + 1] !== '~') {
@@ -83,13 +84,13 @@ function stripNegatedGroups(cond) {
 }
 
 // Euristica: codici modello positivi da compatible_printers_condition.
-function printersFromCondition(cond) {
+function printersFromCondition(cond: string | undefined): string[] {
   if (!cond) return [];
   const positive = stripNegatedGroups(cond);
-  const models = new Set();
-  for (const m of positive.matchAll(/printer_model\s*==\s*"([^"]+)"/g)) models.add(m[1]);
+  const models = new Set<string>();
+  for (const m of positive.matchAll(/printer_model\s*==\s*"([^"]+)"/g)) models.add(m[1] ?? '');
   for (const m of positive.matchAll(/printer_notes\s*=~\s*\/[^/]*?PRINTER_MODEL_([A-Za-z0-9]+)(?![A-Za-z0-9[(])/g)) {
-    models.add(m[1]);
+    models.add(m[1] ?? '');
   }
   return [...models];
 }
@@ -105,7 +106,8 @@ async function main() {
   // Raggruppa le varianti "Nome @MODELLO" sotto il nome base "Nome".
   // Tiene una sola voce per nome base: la sezione senza '@' se esiste, altrimenti la prima.
   // I modelli compatibili sono l'unione di tutte le varianti.
-  const groups = new Map();
+  interface Group { label: string; values: KV; isVariant: boolean; printers: Set<string> }
+  const groups = new Map<string, Group>();
   let skippedNoCost = 0;
   let skippedVendor = 0;
   let skippedOutOfScale = 0;
@@ -130,7 +132,7 @@ async function main() {
       continue;
     }
 
-    const baseName = label.split(' @')[0].trim();
+    const baseName = (label.split(' @')[0] ?? '').trim();
     const isVariant = baseName !== label;
     const printers = printersFromCondition(values.compatible_printers_condition);
 
@@ -146,8 +148,8 @@ async function main() {
     for (const p of printers) group.printers.add(p);
   }
 
-  const filaments = [];
-  const usedIds = new Set();
+  const filaments: Filament[] = [];
+  const usedIds = new Set<string>();
   for (const [baseName, group] of groups) {
     const values = group.values;
     const base = slugify(baseName) || 'filament';
@@ -170,7 +172,7 @@ async function main() {
     });
   }
 
-  const output = { source, generated: new Date().toISOString(), filaments };
+  const output: FilamentsFile = { source, generated: new Date().toISOString(), filaments };
 
   await mkdir(dirname(OUT_FILE), { recursive: true });
   await writeFile(OUT_FILE, JSON.stringify(output, null, 2) + '\n', 'utf8');

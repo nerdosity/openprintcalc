@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseGcode, parseTime, baseFilamentName } from '../js/gcode.js';
+import { parseGcode, parseTime, baseFilamentName } from '../src/gcode.ts';
 
 // Estratto dalla coda di un G-code PrusaSlicer (docs/notes/gcode-format.md, sample test_vase.gcode).
 const FIXTURE = `G1 X10 Y10 E0.5
@@ -23,7 +23,7 @@ const FIXTURE = `G1 X10 Y10 E0.5
 test('parseGcode: grammi, ore, stampante e filamento dal config', () => {
   const d = parseGcode(FIXTURE);
   assert.equal(d.grams, 1.76);
-  assert.ok(Math.abs(d.hours - (2 * 3600 + 13 * 60 + 5) / 3600) < 1e-9);
+  assert.ok(Math.abs(d.hours! - (2 * 3600 + 13 * 60 + 5) / 3600) < 1e-9);
   assert.equal(d.printerModel, 'MK3MMU2');
   assert.equal(d.filamentName, 'Generic ABS');
   assert.equal(d.filamentType, 'ABS');
@@ -59,7 +59,7 @@ test('parametri di stampa: pareti, strati, riempimento, larghezze (mm, auto, %)'
   assert.equal(d.nozzleTemp, 215);
   assert.equal(d.bedTemp, 60);
   assert.equal(d.nozzleDiameter, 0.4);
-  const p = d.params;
+  const p = d.params!;
   assert.equal(p.perimeters, 3);
   assert.equal(p.topSolidLayers, 5);
   assert.equal(p.bottomSolidLayers, 4);
@@ -68,8 +68,8 @@ test('parametri di stampa: pareti, strati, riempimento, larghezze (mm, auto, %)'
   assert.deepEqual(p.widths['Perimetro esterno'], { kind: 'mm', mm: 0.45 });
   assert.deepEqual(p.widths['Perimetri'], { kind: 'auto' });
   assert.deepEqual(p.widths['Riempimento'], { kind: 'auto' });
-  assert.equal(p.widths['Riempimento solido'].kind, 'pct');
-  assert.ok(Math.abs(p.widths['Riempimento solido'].mm - 0.48) < 1e-9);
+  assert.equal(p.widths['Riempimento solido']!.kind, 'pct');
+  assert.ok(Math.abs((p.widths['Riempimento solido'] as { mm: number }).mm - 0.48) < 1e-9);
   assert.equal(p.widths['Primo strato'], undefined);
   assert.equal(parseGcode('G1 X1').params, null);
 });

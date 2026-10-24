@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { compute, wearPerHour, pickWatt, pricePerKg, isHighTemp, estimateWatts } from '../js/calc.js';
+import { compute, wearPerHour, pickWatt, pricePerKg, isHighTemp, estimateWatts } from '../src/calc.ts';
 
 test('usura = somma costo/vita, ignora voci nulle e valori {value}', () => {
   const w = wearPerHour([
@@ -17,7 +17,7 @@ test('potenza: avg_high_temp per ABS, avg_pla per PLA, ripiego se null', () => {
   assert.equal(pickWatt(p, 'PETG').value, 85);
   assert.equal(pickWatt({ power_w: { avg_pla: 60, avg_high_temp: null } }, 'ASA').value, 60);
   assert.equal(pickWatt({ power_w: null }, 'PLA').value, null);
-  assert.ok(Math.abs(pricePerKg(20, 800) - 25) < 1e-9);
+  assert.ok(Math.abs(pricePerKg(20, 800)! - 25) < 1e-9);
 });
 
 test('compute: totali con scarti, ricarico e pezzi', () => {
@@ -67,15 +67,15 @@ test('estimateWatts: riscaldatori limitano letto/hotend, camera chiusa riduce il
   assert.ok(d.hotend <= 40 && d.bed <= 4000 * 0.0525);
 });
 
-import { mergeCatalogs } from '../js/catalog.js';
+import { mergeCatalogs } from '../src/catalog.ts';
 test('mergeCatalogs: esclude le voci PrusaSlicer gia curate e normalizza le altre', () => {
   const m = mergeCatalogs([{ id: 'a', prusaslicer_models: ['MK4'] }], [
     { id: 'ps-1', vendor: 'V', model: 'M', name: 'V M', bed_mm: [200, 210], nozzles_mm: [0.6, 0.4], prusaslicer_models: ['mk4'] },
     { id: 'ps-2', vendor: 'V', model: 'N', name: 'V N', bed_mm: null, nozzles_mm: [0.6], prusaslicer_models: ['N'] },
   ]);
   assert.deepEqual(m.map((p) => p.id), ['a', 'ps-2']);
-  assert.equal(m[1].nozzle_mm, 0.6);
-  assert.equal(m[1].bed_mm, null);
+  assert.equal(m[1]!.nozzle_mm, 0.6);
+  assert.equal(m[1]!.bed_mm, null);
 });
 
 test('estimateWatts: il riscaldatore hotend limita dispersione+fusione insieme', () => {
@@ -86,9 +86,9 @@ test('estimateWatts: il riscaldatore hotend limita dispersione+fusione insieme',
   assert.ok(free.hotend + free.melt > 20);
 });
 
-import { bestModelMatch } from '../js/catalog.js';
+import { bestModelMatch } from '../src/catalog.ts';
 test('bestModelMatch: sceglie il modello piu lungo contenuto nell id impostazioni', () => {
   const list = [{ id: 'a', model: 'MK3' }, { id: 'b', model: 'MK3S' }, { id: 'c', model: 'MINI' }];
-  assert.equal(bestModelMatch(list, 'Original Prusa MK3S 0.4').id, 'b');
+  assert.equal(bestModelMatch(list, 'Original Prusa MK3S 0.4')!.id, 'b');
   assert.equal(bestModelMatch(list, 'xyz'), null);
 });

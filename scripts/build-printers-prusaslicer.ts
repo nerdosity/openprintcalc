@@ -7,7 +7,11 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseIni, resolveInherits } from '../js/ini.js';
+import { parseIni, resolveInherits } from '../src/ini.ts';
+import type { IniSections, KV, PsPrinter, PsPrintersFile } from '../src/types.ts';
+
+// voce completa: tutti i campi valorizzati (eventualmente null)
+type FullPs = Required<PsPrinter>;
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT_FILE = resolve(ROOT, 'data', 'printers-prusaslicer.json');
@@ -22,15 +26,20 @@ const SKIP_DIRS = ['Templates'];
 
 const MODEL_PREFIX = 'printer_model:';
 const PRINTER_PREFIX = 'printer:';
-const hasOwn = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key);
+const hasOwn = (obj: object, key: string): boolean => Object.prototype.hasOwnProperty.call(obj, key);
 
-async function fetchText(url, headers = {}) {
+const errMsg = (e: unknown): string => (e instanceof Error ? e.message : String(e));
+const isRecord = (x: unknown): x is Record<string, unknown> => x !== null && typeof x === 'object' && !Array.isArray(x);
+
+interface ModelInfo { id: string; name: string; family: string | null; variants: string }
+
+async function fetchText(url: string, headers: Record<string, string> = {}): Promise<string> {
   const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`HTTP ${res.status} su ${url}`);
   return res.text();
 }
 
-function compareVersions(a, b) {
+function compareVersions(a: readonly number[], b: readonly number[]): number {
   for (let i = 0; i < Math.max(a.length, b.length); i++) {
     const d = (a[i] ?? 0) - (b[i] ?? 0);
     if (d !== 0) return d;
@@ -39,30 +48,30 @@ function compareVersions(a, b) {
 }
 
 // Versione piu' alta elencata in index.idx (righe tipo "2.5.13 Descrizione...").
-function latestVersion(indexText) {
-  let best = null;
+function latestVersion(indexText: string): string {
+  let best: number[] | null = null;
   for (const line of indexText.split(/\r?\n/)) {
     const m = /^(\d+(?:\.\d+)+)\s/.exec(line);
     if (!m) continue;
-    const parts = m[1].split('.').map(Number);
+    const parts = (m[1] ?? '').split('.').map(Number);
     if (best === null || compareVersions(parts, best) > 0) best = parts;
   }
   if (best === null) throw new Error('Nessuna versione trovata in index.idx');
   return best.join('.');
 }
 
-const round2 = (v) => Math.round(v * 100) / 100;
+const round2 = (v: number): number => Math.round(v * 100) / 100;
 
 // Primo numero di un valore INI (es. "0.4,0.4" -> 0.4). null se assente o non numerico.
-function toNumber(value) {
+function toNumber(value: string | undefined): number | null {
   if (value === undefined || value === '') return null;
-  const n = Number(String(value).split(',')[0].trim());
+  const n = Number((String(value).split(',')[0] ?? '').trim());
   return Number.isFinite(n) ? n : null;
 }
 
 // Valori distinti numerici di una lista INI separata da virgole (es. "0.4,0.4,0.6" -> [0.4, 0.6]).
-function toNumberList(value) {
-  const out = new Set();
+function toNumberList(value: string | undefined): number[] {
+  const out = new Set<number>();
   for (const part of String(value ?? '').split(',')) {
     const n = Number(part.trim());
     if (Number.isFinite(n) && n > 0) out.add(round2(n));
@@ -71,11 +80,14 @@ function toNumberList(value) {
 }
 
 // bed_shape "0x0,250x0,250x210,0x210" -> bounding box [250, 210].
-function parseBedMm(shape) {
+function parseBedMm(shape: string | undefined): [number, number] | null {
   if (!shape) return null;
   const points = String(shape)
     .split(',')
-    .map((p) => p.trim().split('x').map(Number));
+    .map((p): [number, number] => {
+      const [x, y] = p.trim().split('x').map(Number);
+      return [x ?? NaN, y ?? NaN];
+    });
   if (points.some(([x, y]) => !Number.isFinite(x) || !Number.isFinite(y))) return null;
   const xs = points.map((p) => p[0]);
   const ys = points.map((p) => p[1]);
@@ -85,7 +97,7 @@ function parseBedMm(shape) {
   return [round2(w), round2(h)];
 }
 
-function slugify(text) {
+function slugify(text: unknown): string {
   return String(text)
     .normalize('NFKD')
     .replace(/[̀-ͯ]/g, '')
@@ -95,18 +107,18 @@ function slugify(text) {
 }
 
 // Nomi dei template (`*X*`) ereditati da una sezione, risalendo la catena `inherits` nel file grezzo.
-function templateNames(raw, sectionName, seen = new Set()) {
+function templateNames(raw: IniSections, sectionName: string, seen = new Set<string>()): string[] {
   if (seen.has(sectionName) || !hasOwn(raw, sectionName)) return [];
   seen.add(sectionName);
-  const out = [];
-  const parents = String(raw[sectionName].inherits ?? '')
+  const out: string[] = [];
+  const parents = String(raw[sectionName]?.inherits ?? '')
     .split(';')
     .map((p) => p.trim())
     .filter(Boolean);
   for (const parent of parents) {
     const tpl = /^\*(.+)\*$/.exec(parent);
     if (tpl) {
-      out.push(tpl[1]);
+      out.push(tpl[1] ?? '');
       continue;
     }
     const target = [PRINTER_PREFIX + parent, parent].find((c) => hasOwn(raw, c));
@@ -119,12 +131,12 @@ function templateNames(raw, sectionName, seen = new Set()) {
 // 1) chiave printer_model; 2) template ereditati con lo stesso nome del modello (es. *ENDER3*);
 // 3) token PRINTER_MODEL_<ID> in printer_notes. Se restano piu' modelli, vince il nome modello
 //    piu' lungo che e' prefisso del nome sezione (es. "Original Prusa MK4S MMU3" vs "...MK4S").
-function modelsForPrinter(sectionName, values, raw, models) {
+function modelsForPrinter(sectionName: string, values: KV, raw: IniSections, models: Map<string, ModelInfo>): string[] {
   if (values.printer_model && models.has(values.printer_model)) return [values.printer_model];
 
   const fromTemplates = templateNames(raw, sectionName).filter((t) => models.has(t));
   const fromNotes = [...String(values.printer_notes ?? '').matchAll(/PRINTER_MODEL_([A-Za-z0-9]+)/g)]
-    .map((m) => m[1])
+    .map((m) => m[1] ?? '')
     .filter((id) => models.has(id));
   const candidates = [...new Set(fromTemplates.length ? fromTemplates : fromNotes)];
   if (candidates.length <= 1) return candidates;
@@ -134,26 +146,27 @@ function modelsForPrinter(sectionName, values, raw, models) {
     .replace(/\s*\(.*\)\s*$/, '')
     .replace(/\s+[\d.]+\s*nozzle\s*$/i, '')
     .trim();
-  let best = null;
+  let best: string | null = null;
+  let bestLen = -1;
   for (const id of candidates) {
-    const name = models.get(id).name;
-    if (label.startsWith(name) && (best === null || name.length > models.get(best).name.length)) best = id;
+    const name = models.get(id)?.name ?? '';
+    if (label.startsWith(name) && name.length > bestLen) { best = id; bestLen = name.length; }
   }
   return best === null ? candidates : [best];
 }
 
 // Estrae i modelli FFF e i dati delle stampanti da un bundle .ini.
-function parseBundle(text, fallbackVendor) {
+function parseBundle(text: string, fallbackVendor: string): { vendor: string; printers: FullPs[]; slaModels: number } {
   const raw = parseIni(text);
   const resolved = resolveInherits(raw);
   const vendor = String(raw.vendor?.name ?? fallbackVendor).trim();
 
-  const models = new Map();
+  const models = new Map<string, ModelInfo>();
   let slaModels = 0;
   for (const name of Object.keys(raw)) {
     if (!name.startsWith(MODEL_PREFIX)) continue;
     const id = name.slice(MODEL_PREFIX.length).trim();
-    const v = resolved[name];
+    const v = resolved[name] ?? {};
     if (v.technology !== 'FFF') {
       slaModels++;
       continue;
@@ -166,13 +179,13 @@ function parseBundle(text, fallbackVendor) {
     });
   }
 
-  const agg = new Map();
+  const agg = new Map<string, { bed: [number, number] | null; maxZ: number | null; nozzles: Set<number> }>();
   for (const name of Object.keys(raw)) {
     if (!name.startsWith(PRINTER_PREFIX)) continue;
     if (name.slice(PRINTER_PREFIX.length).trim().startsWith('*')) continue; // template
-    const values = resolved[name];
+    const values = resolved[name] ?? {};
     for (const id of modelsForPrinter(name, values, raw, models)) {
-      const a = agg.get(id) ?? { bed: null, maxZ: null, nozzles: new Set() };
+      const a = agg.get(id) ?? { bed: null, maxZ: null, nozzles: new Set<number>() };
       a.bed ??= parseBedMm(values.bed_shape);
       a.maxZ ??= toNumber(values.max_print_height);
       for (const n of toNumberList(values.nozzle_diameter)) a.nozzles.add(n);
@@ -180,7 +193,7 @@ function parseBundle(text, fallbackVendor) {
     }
   }
 
-  const printers = [];
+  const printers: FullPs[] = [];
   for (const m of models.values()) {
     const a = agg.get(m.id);
     let nozzles = a ? [...a.nozzles].sort((x, y) => x - y) : [];
@@ -189,6 +202,7 @@ function parseBundle(text, fallbackVendor) {
       nozzles = toNumberList(m.variants.split(';').filter((v) => /^\s*\d/.test(v)).join(','));
     }
     printers.push({
+      id: '', // assegnato in main() quando tutti i vendor sono noti
       vendor,
       model: m.id,
       name: m.name,
@@ -202,7 +216,7 @@ function parseBundle(text, fallbackVendor) {
   return { vendor, printers, slaModels };
 }
 
-async function loadNonPrusaVendor(folder) {
+async function loadNonPrusaVendor(folder: string): Promise<{ folder: string; url: string; text: string }> {
   const base = NON_PRUSA_BASE + encodeURIComponent(folder) + '/';
   const version = latestVersion(await fetchText(base + 'index.idx'));
   const url = base + version + '.ini';
@@ -211,7 +225,7 @@ async function loadNonPrusaVendor(folder) {
 
 async function main() {
   const sources = [];
-  const warnings = [];
+  const warnings: string[] = [];
   const bundles = [];
 
   // PrusaResearch: ultima versione indicata da index.idx.
@@ -222,25 +236,26 @@ async function main() {
   bundles.push(parseBundle(await fetchText(prusaUrl), 'PrusaResearch'));
 
   // Vendor non-Prusa: una cartella per vendor, elencate via API GitHub.
-  const headers = { 'User-Agent': 'openprintcalc-build', Accept: 'application/vnd.github+json' };
+  const headers: Record<string, string> = { 'User-Agent': 'openprintcalc-build', Accept: 'application/vnd.github+json' };
   if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
-  const listing = JSON.parse(await fetchText(CONTENTS_API, headers));
-  const folders = listing
-    .filter((e) => e.type === 'dir' && !SKIP_DIRS.includes(e.name))
+  const listing: unknown = JSON.parse(await fetchText(CONTENTS_API, headers));
+  const folders = (Array.isArray(listing) ? listing : [])
+    .filter((e): e is { type: 'dir'; name: string } =>
+      isRecord(e) && e.type === 'dir' && typeof e.name === 'string' && !SKIP_DIRS.includes(e.name))
     .map((e) => e.name);
 
   const settled = await Promise.allSettled(folders.map(loadNonPrusaVendor));
   settled.forEach((r, i) => {
     if (r.status === 'rejected') {
-      warnings.push(`${folders[i]}: ${r.reason.message}`);
+      warnings.push(`${folders[i]}: ${errMsg(r.reason)}`);
       return;
     }
     sources.push(r.value.url);
     bundles.push(parseBundle(r.value.text, r.value.folder));
   });
 
-  const skippedVendors = [];
-  const printers = [];
+  const skippedVendors: string[] = [];
+  const printers: FullPs[] = [];
   for (const b of bundles) {
     if (b.printers.length === 0) {
       skippedVendors.push(b.vendor);
@@ -250,7 +265,7 @@ async function main() {
   }
 
   // Id univoco: ps-<vendor>-<model>.
-  const usedIds = new Set();
+  const usedIds = new Set<string>();
   for (const p of printers) {
     const base = `ps-${slugify(p.vendor) || 'vendor'}-${slugify(p.model) || 'model'}`;
     let id = base;
@@ -273,7 +288,7 @@ async function main() {
       prusaslicer_models,
     }));
 
-  const output = {
+  const output: PsPrintersFile = {
     generated: new Date().toISOString(),
     sources,
     printers: ordered,

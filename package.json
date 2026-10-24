@@ -2,5 +2,14 @@
   "name": "openprintcalc",
   "private": true,
   "type": "module",
-  "scripts": { "test": "node --test tests/*.test.js" }
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.tools.json",
+    "test": "node --test tests/*.test.ts",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  }
 }
