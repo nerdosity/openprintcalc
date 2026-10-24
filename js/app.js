@@ -2,7 +2,7 @@ import { compute, quoteText, eur, unwrap, isEstimated, wearPerHour, pickWatt, pr
 import { parseGcode, paramLines } from './gcode.js';
 import { parseBgcode } from './bgcode.js';
 import { importProfiles, mergeProfiles } from './profiles.js';
-import { mergeCatalogs } from './catalog.js';
+import { mergeCatalogs, bestModelMatch } from './catalog.js';
 import { loadState, saveState, loadProfiles, saveProfiles } from './state.js';
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -51,6 +51,7 @@ function setAuto(f, v, est = false, force = false) {
   if (v === null || v === undefined || !Number.isFinite(Number(v))) {
     delete state.auto[f];
     delete state.autoEst[f];
+    if (state.autoSrc) delete state.autoSrc[f];
     if (force || !manual) delete state.values[f];
     return;
   }
@@ -60,25 +61,39 @@ function setAuto(f, v, est = false, force = false) {
   if (force || !manual) state.values[f] = val;
 }
 
+const normText = (s) => String(s ?? '').toLowerCase().replace(/[-_\s]+/g, ' ').trim();
+
 const estFlag = (p, key, raw) => isEstimated(raw) ||
   (Array.isArray(p.estimated) && p.estimated.some((e) => e === key || e.startsWith(key + '.') || e.startsWith(key + '[')));
 
-/** Valore automatico dei campi del modello: i dati assenti non cancellano quelli gia' presenti (es. dal G-code). */
-function setModel(f, v, force) {
-  if (v === null || v === undefined) { if (force) setAuto(f, null, false, true); return; }
-  if (!force && f in state.auto) return;
-  setAuto(f, v, false, force);
+/**
+ * Valore automatico dei campi del modello. `src` ('catalog'|'gcode') ricorda l'origine: in ricarica
+ * (force=false) quelli di origine catalogo (o default) si ricalcolano, quelli da G-code restano.
+ * Con v nullo (solo catalogo, solo con force): mNozzle torna a 0.4, le temperature non si toccano, gli altri si cancellano.
+ */
+function setModel(f, v, force, est = false, src = 'catalog') {
+  state.autoSrc ??= {};
+  if (v === null || v === undefined) {
+    if (!force || src !== 'catalog' || f === 'mNozzleTemp' || f === 'mBedTemp') return;
+    if (f === 'mNozzle') { setAuto(f, 0.4, false, true); state.autoSrc[f] = 'default'; return; }
+    setAuto(f, null, false, true);
+    return;
+  }
+  if (!force && f in state.auto && !['catalog', 'default'].includes(state.autoSrc[f])) return;
+  setAuto(f, v, est, force);
+  if (f in state.auto) state.autoSrc[f] = src;
 }
 
 function modelFromPrinter(p, force) {
   if (!p) return;
   const bed = Array.isArray(p.bed_mm) ? p.bed_mm : [];
-  setModel('mBedX', unwrap(bed[0]), force);
-  setModel('mBedY', unwrap(bed[1]), force);
-  setModel('mNozzle', unwrap(p.nozzle_mm), force);
-  setModel('mEnclosed', typeof p.enclosed === 'boolean' ? Number(p.enclosed) : null, force);
-  setModel('mBedW', unwrap(p.bed_heater_w), force);
-  setModel('mHotW', unwrap(p.hotend_heater_w), force);
+  const e = (k, raw) => estFlag(p, k, raw);
+  setModel('mBedX', unwrap(bed[0]), force, e('bed_mm', bed[0]));
+  setModel('mBedY', unwrap(bed[1]), force, e('bed_mm', bed[1]));
+  setModel('mNozzle', unwrap(p.nozzle_mm), force, e('nozzle_mm', p.nozzle_mm));
+  setModel('mEnclosed', typeof p.enclosed === 'boolean' ? Number(p.enclosed) : null, force, e('enclosed', null));
+  setModel('mBedW', unwrap(p.bed_heater_w), force, e('bed_heater_w', p.bed_heater_w));
+  setModel('mHotW', unwrap(p.hotend_heater_w), force, e('hotend_heater_w', p.hotend_heater_w));
 }
 
 function modelFromFilament(f, force) {
@@ -137,7 +152,7 @@ function applyPrinter(id, force = true) {
   const cons = Array.isArray(p.consumables) ? p.consumables : [];
   const wear = wearPerHour(cons);
   setAuto('wear', cons.length ? wear : null,
-    cons.some((c) => !c?.optional && (estFlag(p, 'consumables', c?.cost_eur) || isEstimated(c?.life_h))), force);
+    cons.some((c, i) => !c?.optional && (estFlag(p, `consumables[${i}]`, c?.cost_eur) || isEstimated(c?.life_h))), force);
   updateWatt(force);
 }
 
@@ -166,9 +181,9 @@ function el(tag, props = {}, text) {
 
 function buildPrinterSelect() {
   const sel = $('#printer');
-  const terms = $('#psearch').value.toLowerCase().split(/\s+/).filter(Boolean);
+  const terms = normText($('#psearch').value).split(' ').filter(Boolean);
   const match = (p) => {
-    const hay = `${p.brand ?? ''} ${p.model ?? ''} ${p.name ?? ''}`.toLowerCase();
+    const hay = normText(`${p.brand ?? ''} ${p.model ?? ''} ${p.name ?? ''}`);
     return terms.every((t) => hay.includes(t)) || p.id === state.printerId;
   };
   sel.replaceChildren(el('option', { value: '' }, '— scegli una stampante —'),
@@ -190,15 +205,15 @@ function buildPrinterSelect() {
   group('Catalogo curato (prezzi e consumi)', curated, printerLabel);
   group('Profili importati', imported, (p) => p.model);
   const names = [...vendors.keys()].sort((a, b) => (a === 'Prusa Research' ? -1 : b === 'Prusa Research' ? 1 : a.localeCompare(b)));
-  for (const v of names) group(v, vendors.get(v).sort((a, b) => a.name.localeCompare(b.name)), (p) => p.name);
+  for (const v of names) group(v, vendors.get(v).sort((a, b) => String(a.name ?? '').localeCompare(String(b.name ?? ''))), (p) => p.name);
   sel.value = state.printerId;
 }
 
 function buildFilamentSelect() {
   const sel = $('#filament');
-  const terms = $('#fsearch').value.toLowerCase().split(/\s+/).filter(Boolean);
+  const terms = normText($('#fsearch').value).split(' ').filter(Boolean);
   const match = (f) => {
-    const hay = `${f.name} ${f.vendor ?? ''} ${f.material ?? ''}`.toLowerCase();
+    const hay = normText(`${f.name ?? ''} ${f.vendor ?? ''} ${f.material ?? ''}`);
     return terms.every((t) => hay.includes(t)) || f.id === state.filamentId;
   };
   sel.replaceChildren(el('option', { value: '' }, '— scegli un filamento —'));
@@ -212,7 +227,7 @@ function buildFilamentSelect() {
   const keys = [...groups.keys()].sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
   for (const g of keys) {
     const og = el('optgroup', { label: g });
-    for (const f of groups.get(g).sort((a, b) => a.name.localeCompare(b.name))) {
+    for (const f of groups.get(g).sort((a, b) => String(a.name ?? '').localeCompare(String(b.name ?? '')))) {
       const price = unwrap(f.cost_eur_kg);
       og.append(el('option', { value: f.id }, `${f.name}${f.user ? ' (importato)' : ''}${price !== null ? ` · ${fmt(price)} €/kg` : ''}`));
     }
@@ -353,12 +368,7 @@ function findPrinter(data) {
   }
   const sid = norm(data.printerSettingsId);
   if (!sid) return null;
-  let best = null;
-  for (const p of allPrinters()) {
-    const m = p.model ? norm(p.model) : '';
-    if (m.length >= 3 && sid.includes(m) && (!best || m.length > norm(best.model).length)) best = p;
-  }
-  return best;
+  return bestModelMatch(allPrinters(), sid);
 }
 
 function findFilament(data) {
@@ -397,9 +407,9 @@ async function handleFile(file) {
     }
     if (prn) applyPrinter(prn.id, true);
     else updateWatt(true);
-    setModel('mNozzleTemp', data.nozzleTemp, true);
-    setModel('mBedTemp', data.bedTemp, true);
-    setModel('mNozzle', data.nozzleDiameter, true);
+    setModel('mNozzleTemp', data.nozzleTemp, true, false, 'gcode');
+    setModel('mBedTemp', data.bedTemp, true, false, 'gcode');
+    setModel('mNozzle', data.nozzleDiameter, true, false, 'gcode');
     if (state.printerId === OTHER) syncOtherWatt(true);
 
     const got = [];
@@ -521,8 +531,8 @@ async function init() {
   ]);
   catalog = { printers: mergeCatalogs(curated, psPrinters), filaments };
   // Aggiorna i valori auto dai dati appena caricati; quelli modificati a mano restano.
-  applyPrinter(state.printerId, false);
-  applyFilament(state.filamentId, false);
+  if (printerById(state.printerId)) applyPrinter(state.printerId, false);
+  if (filamentById(state.filamentId)) applyFilament(state.filamentId, false);
   refresh();
 }
 

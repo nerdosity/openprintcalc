@@ -2006,7 +2006,8 @@
         }
       ],
       "prusaslicer_models": [
-        "COREONE"
+        "COREONE",
+        "COREONEMMU3"
       ],
       "notes": "1349 EUR e il prezzo di lancio 2025 (IVA inclusa), non il listino attuale. Nessuna misura di consumo trovata: stime. Il nome del profilo PrusaSlicer va verificato. Prezzo piastra da Botland (CORE One L, non necessariamente la piastra della Core One standard). [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13 (name \"Prusa CORE One\"). Ricerca prezzi: prezzo ufficiale EUR attuale non confermato; 1349 EUR resta il lancio. Kit 1049 EUR (IVA incl.) riportato da Manufactur3D. Consumo dichiarato Prusa nella scheda tecnica.",
       "sources": [
@@ -2068,7 +2069,8 @@
         }
       ],
       "prusaslicer_models": [
-        "COREONEL"
+        "COREONEL",
+        "COREONELMMU3"
       ],
       "notes": "Prezzo ufficiale EU NON trovato (store Prusa non raggiungibile): 1852 EUR e il prezzo IVA incl. di un rivenditore (Eolas Prints, consegna 7-8 settimane), quindi e una stima; altri rivenditori indicano 1699 EUR (esaurito) e circa 1864 EUR. Volume di stampa 300x300x330 mm: confermato da piu listini. enclosed true: presentata come stampante chiusa con camera riscaldata attiva fino a 60 C (dato da un listino). L'affermazione 'fully enclosed' e stata letta sulla CORE One, non esplicitamente sulla L. Consumi: nessuna misura e nessun dato di alimentatore trovato. Tutti i valori di potenza (idle 15, PLA 120, ABS 180, picco 600) sono stime, non misure; il picco 600 W non e il wattaggio nominale dell'alimentatore (non trovato). Riscaldatori, durata e consumabili sono stime; il consumabile hardened e opzionale. Il nome COREONEL in PrusaSlicer e un'ipotesi da verificare.",
       "sources": [
@@ -2180,7 +2182,8 @@
         }
       ],
       "prusaslicer_models": [
-        "MINI"
+        "MINI",
+        "MINIIS"
       ],
       "notes": "Vita utile 3000 h: stampante entry-level con meccanica semplice, ammortamento prudente. Prezzo stimato. [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13 (MINI, name \"Original Prusa MINI && MINI+\"). Ricerca prezzi: retailer 459-479 EUR (IVA incl.) per la MINI+ assemblata; prezzo ufficiale non trovato, 449 mantenuto come stima. Consumi misurati su MINI (non MINI+, dati non specifici del modello plus): idle 3 W dal fact-check ab3d.at (metodo non dichiarato); PLA 75 W = media del range 60-90 W osservato con wattmetro plug-in nel thread forum \"Power Draw Mini+\"; picco 148 W in riscaldamento da una recensione YouTube riportata nel forum (la PSU da 150 W e il massimo teorico, non una misura).",
       "sources": [
@@ -2232,7 +2235,8 @@
         }
       ],
       "prusaslicer_models": [
-        "MK3.5"
+        "MK3.5",
+        "MK3.5MMU3"
       ],
       "notes": "Il MK3.5 non e venduto come stampante completa: e un kit di upgrade per chi possiede una MK3S/MK3S+ (Prusa lo chiama ora MK3.5S upgrade kit). Il prezzo 279 EUR IVA incl. e quello del kit di upgrade (pagina Prusa in ricerca, data non chiara, possibile promozione), non di una stampante completa: per questo e in estimated. Volume di stampa 250x210 mm: dato della famiglia MK3S/MK3.5, NON verificato sulla scheda ufficiale MK3.5 (pagina non raggiungibile): in estimated. Consumi: nessun wattmeter specifico per MK3.5 trovato. avg_pla 65 W e idle 5 W sono stime dalla famiglia MK3 (utente forum: circa 65 W in PLA con picchi ~100 W; ~45-55 W con piatto spento). Il picco 240 W e il wattaggio nominale dell'alimentatore della MK3S (stima non verificata, il PSU MK3.5 dovrebbe essere lo stesso). Riscaldatori, durata e consumabili sono stime; prezzi consumabili non verificati. Prezzo del kit di aggiornamento da MK3S+.",
       "sources": [
@@ -2294,7 +2298,10 @@
         }
       ],
       "prusaslicer_models": [
-        "MK3.9"
+        "MK3.9",
+        "MK3.9S",
+        "MK3.9MMU3",
+        "MK3.9SMMU3"
       ],
       "notes": "Il prezzo 549 EUR IVA incl. (450 EUR netto) e quello ufficiale Prusa, verificato sulla pagina tedesca, ma riferito al kit di upgrade MK3S/MK3S+ -> MK3.9S: non e il prezzo di una stampante completa, che non e stato trovato. Per questo price_eur e in estimated. Volume di stampa 250x210x220 mm dichiarato da Prusa (verificato). Il kit riusa telaio, alimentatore e motori della MK3S+; la scheda non dichiara il wattaggio dell'alimentatore. enclosed false: stampante a telaio aperto, dato non esplicitamente dichiarato nella scheda. Consumi: unica misura trovata e un singolo utente con presa smart su una stampa PLA: picchi sopra 200 W in riscaldamento del piatto, circa 100 W in stampa. Quindi avg_pla 100 W e stimato da un solo campione. idle 10 W e stimato. Il picco 240 W e il wattaggio nominale dell'alimentatore MK4 (Prusa dichiara il MK3.9 compatibile con l'alimentatore MK4S), non verificato per il MK3.9. Riscaldatori, durata e consumabili sono derivati dalla voce MK4, non verificati per MK3.9. avg_high_temp null (nessun dato). Prezzo del kit di aggiornamento da MK3S+.",
       "sources": [
@@ -2349,7 +2356,9 @@
         }
       ],
       "prusaslicer_models": [
-        "MK3S"
+        "MK3S",
+        "MK3SMMU2S",
+        "MK3SMMU3"
       ],
       "notes": "Modello precedente: prezzo non trovato (null, da completare o rimuovere se fuori produzione). Consumi stimati. Vita utile 5000 h, meccanica matura. [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13 (MK3S, name \"MK3S && MK3S+\"). PLA 85 W confermato da un commento con wattmetro a parete (Kill-a-Watt-like): circa 80-90 W a regime su PLA. Misura aneddotica, non da laboratorio.",
       "sources": [
@@ -2463,7 +2472,9 @@
         }
       ],
       "prusaslicer_models": [
-        "MK4"
+        "MK4",
+        "MK4IS",
+        "MK4ISMMU3"
       ],
       "notes": "Idle 13 W misurato da un utente del forum Prusa su MK4 (1 campione/s per 1 h). 80 W PLA e 120 W ABS sono dichiarati da Prusa (temperatura ambiente 26 C, non verificati indipendentemente). Picco stimato dalla PSU da 240 W. Prezzo assemblato stimato. Ugello hardened da Botland (EUR). [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13. Ugello hardened (nickel plated) 37.90 EUR da Botland (prezzo ufficiale Prusa in USD 33.90).",
       "sources": [
@@ -2523,7 +2534,8 @@
         }
       ],
       "prusaslicer_models": [
-        "MK4S"
+        "MK4S",
+        "MK4SMMU3"
       ],
       "notes": "Idle stimato dal MK4. Consumi 80/120 W dichiarati da Prusa. Vita utile 5000 h per una stampante premium con meccanica robusta. [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13. Prezzo 999 EUR assemblata da prusa3d.com (pagina MK4S, VAT incl.); kit 719 EUR nella stessa pagina. Il 799 EUR della promo estiva era scaduto. Idle 15 W (display acceso) misurato su MK4S con MMU3 (xargas.eu). La stessa fonte riporta 160 W medi in stampa con PETG e 240 W in riscaldamento, ma con MMU3 e profilo PETG: non usati per i campi PLA/alta temperatura.",
       "sources": [
@@ -2580,7 +2592,9 @@
         }
       ],
       "prusaslicer_models": [
-        "XLP1T"
+        "XLP1T",
+        "XL",
+        "XLIS"
       ],
       "notes": "I consumi di riferimento vengono da un post del forum per l'XL 5T (standby 80 W, riscaldamento 550 W, stampa 235 W): per l'XL 1T sono stime. Piastra PEI XL da Botland. Prezzo non verificato. [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13 (name \"Prusa XL+\", single tool). Il vecchio profilo legacy \"XL\" non e stato usato.",
       "sources": [
@@ -2633,7 +2647,9 @@
         }
       ],
       "prusaslicer_models": [
-        "XLP5T"
+        "XLP5T",
+        "XL5",
+        "XL5IS"
       ],
       "notes": "Valori da un post del forum che riporta dati del produttore (standby 80 W, riscaldamento 550 W, stampa 235 W): non misure indipendenti. Prezzo stimato. Con 5 teste il consumo varia molto in base alle tile riscaldate. [PrusaSlicer] Profilo verificato in PrusaResearch 2.5.13 (name \"Prusa XL+ 5T\"). Il legacy \"XL5\" non e stato usato.",
       "sources": [
@@ -2683,7 +2699,9 @@
         }
       ],
       "prusaslicer_models": [
-        "XLP2T"
+        "XLP2T",
+        "XL2",
+        "XL2IS"
       ],
       "notes": "Prezzo ufficiale EU della XL 2T NON trovato: 3277 EUR e una stima ricavata sommando due prezzi di rivenditori: XL singolo assemblato 2699 EUR (Eolas Prints) + kit di upgrade da 1 a 2 toolhead 577,95 EUR (West3D). Non e un prezzo Prusa. Volume di stampa 360x360x360 mm: confermato da piu listini (dato verificato sul volume, non sulla scheda Prusa). enclosed false: la XL e a telaio aperto (dato di famiglia, non esplicitamente verificato). Consumi: nessun wattmeter specifico per XL 2T trovato. Dati forum sulla XL 5T (non misure Prusa): consumo medio in stampa 235 W, usato come avg_pla stimato per la 2T; riscaldamento 550 W, usato come peak stimato. ATTENZIONE: il 550 W e un dato di riscaldamento, non il wattaggio nominale dell'alimentatore, quindi peak non rispetta la regola PSU nominale: da correggere se si trova il dato PSU. Una misura con 2 tile su 16 attivi riporta 182 W (solo riferimento). idle 15 W e bed_heater_w 500 W sono stime (una fonte indica 490-650 W di riscaldamento a pieno piatto). hotend 40 W stimato. Durata e consumabili sono stime, non verificate per il modello XL. Picco = fase di riscaldamento.",
       "sources": [
@@ -2738,7 +2756,10 @@
           "life_h": 2000
         }
       ],
-      "prusaslicer_models": [],
+      "prusaslicer_models": [
+        "X-Plus 4",
+        "X-Plus 4 + BOX"
+      ],
       "notes": "Volume di stampa 305x305x280 mm dalla tabella comparativa Qidi. Camera chiusa con riscaldamento attivo: 400 W dichiarati (limitati al 40 per cento secondo igorsLAB). Consumi misurati da igorsLAB (test Plus4, a wattmeter): idle 31,9 W; stampa PLA (ugello 220 C, bed 65 C) 245 W come singola lettura, non come media dell intero job; riscaldamento simultaneo di ugello e bed 570 W di picco; riscaldamento camera con bed a 80 C 523 W di picco, circa 450 W dopo qualche minuto. Il valore power_w.peak = 850 W e la potenza nominale dell alimentatore da schede retailer (non verificata da fonte ufficiale), non un valore misurato. Dichiarati (non misurati): hotend 80 W, rated 450 W + 400 W camera (ca.qidi3d.com TechSpecs). avg_high_temp e null perche la fonte non riporta una media con PETG o ABS. Il prezzo 749 EUR di igorsLAB e quello di lancio, non uno store EU attuale: quindi stimato. Riscaldatore del bed stimato.",
       "sources": [
         "https://www.igorslab.de/qidi-tech-plus4-3d-printer-test/7/",
@@ -2954,7 +2975,23 @@
           "life_h": 4000
         }
       ],
-      "prusaslicer_models": [],
+      "prusaslicer_models": [
+        "VC4_300_HY",
+        "VC4_300_IDEX",
+        "VC4_300_IDEX_Copy",
+        "VC4_300_IDEX_Mirror",
+        "VC4_300_XY",
+        "VC4_400_HY",
+        "VC4_400_IDEX",
+        "VC4_400_IDEX_Copy",
+        "VC4_400_IDEX_Mirror",
+        "VC4_400_XY",
+        "VC4_500_HY",
+        "VC4_500_IDEX",
+        "VC4_500_IDEX_Copy",
+        "VC4_500_IDEX_Mirror",
+        "VC4_500_XY"
+      ],
       "notes": "Kit DIY, venduto come kit (pre-assemblato non disponibile dalle fonti). Volume 300 x 300 x 300 mm da ratrig.com (varianti 400 e 500 mm). Prezzo: il ratrig.com mostra 796.82 EUR in promo, ma senza indicazione della taglia; il valore e una stima per il 300 mm. Un rivenditore tedesco riporta il kit 400 mm a 1799 EUR (IVA inclusa), che non e il 300 mm. Enclosure, elettronica e Raspberry Pi non inclusi nel prezzo base. Consumo: nessuna misura trovata; tutti i valori sono stime tipiche, dipendono dalla build. Il valore 500 W in peak e una stima di alimentatore.",
       "sources": [
         "https://ratrig.com/products/rat-rig-v-core-4",

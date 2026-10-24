@@ -77,3 +77,18 @@ test('mergeCatalogs: esclude le voci PrusaSlicer gia curate e normalizza le altr
   assert.equal(m[1].nozzle_mm, 0.6);
   assert.equal(m[1].bed_mm, null);
 });
+
+test('estimateWatts: il riscaldatore hotend limita dispersione+fusione insieme', () => {
+  const r = estimateWatts({ bedX: 250, bedY: 210, bedTemp: 60, nozzleTemp: 255, nozzleDiam: 0.8, hotendHeaterW: 20 });
+  assert.ok(Math.abs(r.hotend + r.melt - 20) < 1e-9);
+  assert.ok(r.melt > 0);
+  const free = estimateWatts({ bedX: 250, bedY: 210, bedTemp: 60, nozzleTemp: 255, nozzleDiam: 0.8, hotendHeaterW: 1000 });
+  assert.ok(free.hotend + free.melt > 20);
+});
+
+import { bestModelMatch } from '../js/catalog.js';
+test('bestModelMatch: sceglie il modello piu lungo contenuto nell id impostazioni', () => {
+  const list = [{ id: 'a', model: 'MK3' }, { id: 'b', model: 'MK3S' }, { id: 'c', model: 'MINI' }];
+  assert.equal(bestModelMatch(list, 'Original Prusa MK3S 0.4').id, 'b');
+  assert.equal(bestModelMatch(list, 'xyz'), null);
+});

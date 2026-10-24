@@ -70,8 +70,12 @@ export function estimateWatts({ bedX, bedY, bedTemp, nozzleDiam, nozzleTemp, amb
   const dT = (t) => Math.max(0, v(t, 0) - amb);
   const base = v(idleW, 12) + 12;
   const bed = Math.min(v(bedHeaterW, 4000 * area), 18 * area * dT(bedTemp));
-  const hotend = Math.min(v(hotendHeaterW, 40), 0.07 * dT(nozzleTemp));
-  const melt = meltFlow(v(nozzleDiam, 0.4)) * (v(densityGcm3, 1.24) / 1000) * 2 * dT(nozzleTemp);
+  const loss = 0.07 * dT(nozzleTemp);
+  const rawMelt = meltFlow(v(nozzleDiam, 0.4)) * (v(densityGcm3, 1.24) / 1000) * 2 * dT(nozzleTemp);
+  // il riscaldatore limita dispersione e fusione insieme: tot = min(cap, loss+melt); la dispersione ha la precedenza
+  const cap = v(hotendHeaterW, 40);
+  const hotend = Math.min(cap, loss);
+  const melt = Math.min(rawMelt, cap - hotend);
   return { watts: base + bed + hotend + melt, bed, hotend, melt, base };
 }
 

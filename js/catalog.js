@@ -26,8 +26,23 @@ export function normalizePs(e) {
 /** Curate + voci PrusaSlicer il cui prusaslicer_models non coincide con quello di una curata. */
 export function mergeCatalogs(curated, psEntries) {
   const known = new Set(curated.flatMap((p) => (p.prusaslicer_models ?? []).map(norm)));
+  const ids = new Set(curated.map((p) => p.id));
   const extra = psEntries
-    .filter((e) => !(e.prusaslicer_models ?? []).some((m) => known.has(norm(m))))
+    .filter((e) => !ids.has(e.id) && !(e.prusaslicer_models ?? []).some((m) => known.has(norm(m))))
     .map(normalizePs);
   return [...curated, ...extra];
+}
+
+/** Stampante il cui model/name e' la sottostringa piu lunga (>= 3 car.) contenuta in printer_settings_id. */
+export function bestModelMatch(printers, settingsId) {
+  const sid = norm(settingsId);
+  if (!sid) return null;
+  let best = null, bestLen = 0;
+  for (const p of printers) {
+    for (const s of [p.model, p.name]) {
+      const m = norm(s);
+      if (m.length >= 3 && m.length > bestLen && sid.includes(m)) { best = p; bestLen = m.length; }
+    }
+  }
+  return best;
 }

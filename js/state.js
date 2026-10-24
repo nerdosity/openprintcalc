@@ -7,6 +7,7 @@ export const defaults = () => ({
   filamentId: '',
   values: { energyRate: 0.25, laborRate: 15, laborMin: 0, pieces: 1, failPct: 5, markupPct: 30 },
   auto: {},      // valore precompilato per campo (serve a badge e reset)
+  autoSrc: {},   // origine del valore auto dei campi modello: 'catalog' | 'gcode' | 'default'
   autoEst: {},   // campi il cui valore automatico e' una stima
   fileName: '',
   fileParams: null, // parametri di stampa dal G-code (solo informativi)
@@ -27,7 +28,7 @@ export function loadState() {
   return {
     ...d, ...s,
     values: { ...d.values, ...(s.values ?? {}) },
-    auto: s.auto ?? {}, autoEst: s.autoEst ?? {},
+    auto: s.auto ?? {}, autoEst: s.autoEst ?? {}, autoSrc: s.autoSrc ?? {},
   };
 }
 export const saveState = (s) => write(KEY, s);
